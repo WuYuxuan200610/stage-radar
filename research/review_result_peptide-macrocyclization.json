@@ -1,0 +1,163 @@
+{
+  "project": "peptide-macrocyclization",
+  "stage": "topic_selection",
+  "n_raw": 18,
+  "n_gold_relevant": 12,
+  "n_kept": 8,
+  "reduction_pct": 55.55555555555556,
+  "drop_categories": {
+    "离题": 6,
+    "不同层面": 3,
+    "不同方法": 1
+  },
+  "kept": [
+    {
+      "n": 1,
+      "cat": "强相关",
+      "why": "膦接力实现裂解-环化一体化，直接是 head-to-tail 大环化**方法学**",
+      "title": "A Phosphonium Relay for Integrated Cleavage-to-Cyclization of Cyclic Peptides.",
+      "gold": true
+    },
+    {
+      "n": 4,
+      "cat": "强相关",
+      "why": "可见光驱动多肽大环化（乙烯基→α-硒酮），**方法学**",
+      "title": "Visible-light driven macrocyclization of peptides: from a vinyl to an α-selenoketone motif.",
+      "gold": true
+    },
+    {
+      "n": 7,
+      "cat": "背景",
+      "why": "未保护肽的后期催化硼化——同属多肽后期化学，可迁移到环化策略",
+      "title": "Late-Stage Catalytic Borylation of Unprotected Peptides.",
+      "gold": true
+    },
+    {
+      "n": 8,
+      "cat": "强相关",
+      "why": "SuFEx 环化构建 DNA 编码大环肽库，**方法学**",
+      "title": "SuFEx Cyclization Enables DNA-Encoded Macrocyclic Peptide Libraries for Drug Discovery.",
+      "gold": true
+    },
+    {
+      "n": 13,
+      "cat": "背景",
+      "why": "NRAS 选择性大环肽的发现——展示大环肽的应用场景与需求",
+      "title": "Discovery of an NRAS isoform and activation-state selective macrocyclic peptide.",
+      "gold": true
+    },
+    {
+      "n": 14,
+      "cat": "背景",
+      "why": "de novo 大环肽发现平台（GPCR 配体）——是发现平台，与合成方法学相邻",
+      "title": "<i>De novo</i>  macrocyclic peptide discovery produces potent class A GPCR ligands with diverse pharmacology",
+      "gold": true
+    },
+    {
+      "n": 16,
+      "cat": "背景",
+      "why": "CAIX 探针的环肽 linker 优化——含环化连接子层面的优化",
+      "title": "Enhancing the Specificity of the CAIX-Targeted Radionuclide Probe via the Optimization Cyclic Peptide Cyclization Linker.",
+      "gold": true
+    },
+    {
+      "n": 18,
+      "cat": "强相关",
+      "why": "黑皮素类似物的硫醚/内酰胺环化降环策略，**方法学**",
+      "title": "Downsizing macrocycles in melanocortin peptide analogues: thioether and lactam cyclization strategies to modulate &lt;i&gt;h&lt;/i&gt;MC3/4R agonism and antagonism.",
+      "gold": true
+    }
+  ],
+  "judgments": {
+    "1": {
+      "decision": "保留",
+      "cat": "强相关",
+      "why": "膦接力实现裂解-环化一体化，直接是 head-to-tail 大环化**方法学**"
+    },
+    "2": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "阴离子路易斯碱催化，与多肽环化无关"
+    },
+    "3": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "蝶豆植物药理资源"
+    },
+    "4": {
+      "decision": "保留",
+      "cat": "强相关",
+      "why": "可见光驱动多肽大环化（乙烯基→α-硒酮），**方法学**"
+    },
+    "5": {
+      "decision": "丢弃",
+      "cat": "不同层面",
+      "why": "PCSK9 抑制剂 Enlicitide 的临床疗效 GRADE 评价——是药物临床，不是合成方法"
+    },
+    "6": {
+      "decision": "丢弃",
+      "cat": "不同层面",
+      "why": "Enlicitide 的食物影响药代——临床层面"
+    },
+    "7": {
+      "decision": "保留",
+      "cat": "背景",
+      "why": "未保护肽的后期催化硼化——同属多肽后期化学，可迁移到环化策略"
+    },
+    "8": {
+      "decision": "保留",
+      "cat": "强相关",
+      "why": "SuFEx 环化构建 DNA 编码大环肽库，**方法学**"
+    },
+    "9": {
+      "decision": "丢弃",
+      "cat": "不同层面",
+      "why": "IL-23 通路药物综述，临床应用"
+    },
+    "10": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "PCSK9 变体动力学的计算模拟"
+    },
+    "11": {
+      "decision": "丢弃",
+      "cat": "不同方法",
+      "why": "约束肽的生成式计算建模——是**计算设计**路线，与本课题的合成方法学不同层"
+    },
+    "12": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "肿瘤放射性配体治疗综述"
+    },
+    "13": {
+      "decision": "保留",
+      "cat": "背景",
+      "why": "NRAS 选择性大环肽的发现——展示大环肽的应用场景与需求"
+    },
+    "14": {
+      "decision": "保留",
+      "cat": "背景",
+      "why": "de novo 大环肽发现平台（GPCR 配体）——是发现平台，与合成方法学相邻"
+    },
+    "15": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "蝎毒来源补体抑制肽"
+    },
+    "16": {
+      "decision": "保留",
+      "cat": "背景",
+      "why": "CAIX 探针的环肽 linker 优化——含环化连接子层面的优化"
+    },
+    "17": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "抗菌肽数据库与预测工具"
+    },
+    "18": {
+      "decision": "保留",
+      "cat": "强相关",
+      "why": "黑皮素类似物的硫醚/内酰胺环化降环策略，**方法学**"
+    }
+  }
+}

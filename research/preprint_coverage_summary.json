@@ -1,0 +1,44 @@
+{
+  "window": "2026-10-18..11-17",
+  "index": "2026-04..2026-11",
+  "by_family": {
+    "Nature 及子刊": {
+      "total": 1453,
+      "with_pre": 40
+    },
+    "Cell 及子刊": {
+      "total": 451,
+      "with_pre": 22
+    },
+    "Science 及子刊": {
+      "total": 534,
+      "with_pre": 18
+    },
+    "ACS 系列": {
+      "total": 1917,
+      "with_pre": 13
+    },
+    "Angew": {
+      "total": 390,
+      "with_pre": 2
+    },
+    "PNAS": {
+      "total": 434,
+      "with_pre": 26
+    },
+    "Vita 及子刊": {
+      "total": 11,
+      "with_pre": 0
+    }
+  },
+  "total": 5190,
+  "with_preprint": 121,
+  "chem": {
+    "total": 2307,
+    "with_preprint": 15
+  },
+  "bio": {
+    "total": 2883,
+    "with_preprint": 106
+  }
+}

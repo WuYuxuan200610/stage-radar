@@ -1,0 +1,79 @@
+{
+  "rows": [
+    [
+      "mrna-capping",
+      3,
+      1,
+      2,
+      5,
+      60.0
+    ],
+    [
+      "peptide-macrocyclization",
+      3,
+      4,
+      8,
+      15,
+      46.666666666666664
+    ],
+    [
+      "trna-detection",
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "prime-editing",
+      8,
+      2,
+      5,
+      15,
+      66.66666666666666
+    ],
+    [
+      "aptamer-selex",
+      2,
+      8,
+      43,
+      53,
+      18.867924528301888
+    ],
+    [
+      "spatial-transcriptomics",
+      114,
+      17,
+      45,
+      170,
+      73.52941176470588
+    ],
+    [
+      "base-editing",
+      11,
+      7,
+      10,
+      26,
+      61.53846153846154
+    ],
+    [
+      "protein-design",
+      96,
+      22,
+      81,
+      174,
+      53.44827586206896
+    ]
+  ],
+  "union": 453,
+  "only_preprint": 233,
+  "only_journal": 61,
+  "only_epmc": 193,
+  "unique_preprint": 199,
+  "unique_journal": 60,
+  "unique_epmc": 160,
+  "overlap_pj": 1,
+  "overlap_pe": 33,
+  "overlap_je": 0,
+  "overlap_all": 0
+}

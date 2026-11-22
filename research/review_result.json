@@ -1,0 +1,294 @@
+{
+  "n_raw": 44,
+  "n_gold_relevant": 7,
+  "n_kept": 3,
+  "reduction_pct": 93.18181818181819,
+  "gold_precision_raw": 0.1590909090909091,
+  "gold_precision_after_review": 0.6666666666666666,
+  "gold_recall_after_review": 0.2857142857142857,
+  "gold_missed_by_rule": [
+    {
+      "n": 37,
+      "title": "Cap-specific N6-adenosine methyltransferases and applications in m6A Cap-1 mRNA synthesis"
+    }
+  ],
+  "review_dropped_gold": [
+    {
+      "n": 5,
+      "cat": "不同生物学",
+      "title": "The U6 snRNA capping enzyme Amus/MePCE is required for the stability of U6atac and the processing of introns with features of both major and minor classes"
+    },
+    {
+      "n": 6,
+      "cat": "不同靶点",
+      "title": "Lysine-Targeted Covalent Inhibition of eIF4E with an Anionic Electrophile Warhead."
+    },
+    {
+      "n": 8,
+      "cat": "不同靶点",
+      "title": "&lt;i&gt;Drosophila&lt;/i&gt; eIF4E paralogs: a paradigm of functional divergence."
+    },
+    {
+      "n": 11,
+      "cat": "离题",
+      "title": "Resistin is a new player in murine hippocampal neuronal cells: expression and action on cell metabolic activity, proliferation, cell cycle, and expression of selected proliferative and apoptosis genes in HT-22 cells."
+    },
+    {
+      "n": 12,
+      "cat": "离题",
+      "title": "Starve, stress, and mate: Activation of the CCAAT-Binding complex overrides sterility of mating-type heterozygous  <i>Candida albicans</i>"
+    }
+  ],
+  "drop_categories": {
+    "无关圈": 5,
+    "离题": 32,
+    "不同生物学": 1,
+    "不同靶点": 2,
+    "缩写误命中": 1
+  },
+  "kept": [
+    {
+      "n": 1,
+      "cat": "背景/机制",
+      "why": "mRNA 重新加帽(recapping)的酶学机制，与加帽酶改造同属一类，可作机制参考；但不构成竞争",
+      "title": "Cytoplasmic mRNA recapping is essential for stress recovery and intracellular proliferation in &lt;i&gt;Trypanosoma cruzi&lt;/i&gt;.",
+      "gold": true
+    },
+    {
+      "n": 2,
+      "cat": "强相关",
+      "why": "无活化剂化学合成 5'-5' 三磷酸加帽试剂——IVT 加帽的**化学路线**，与我们的酶法路线直接可比",
+      "title": "An activator-free method for the synthesis of nucleotide 5'-5' triphosphate mRNA capping agent.",
+      "gold": true
+    },
+    {
+      "n": 37,
+      "cat": "强相关",
+      "why": "**PCIF1 催化的 cap 特异性 N6-腺苷甲基化（m6A）及其在 Cap-1 mRNA 合成中的应用**——正是本课题的两大卖点之一，且面向 mRNA 合成应用",
+      "title": "Cap-specific N6-adenosine methyltransferases and applications in m6A Cap-1 mRNA synthesis",
+      "gold": false
+    }
+  ],
+  "judgments": {
+    "1": {
+      "decision": "保留",
+      "cat": "背景/机制",
+      "why": "mRNA 重新加帽(recapping)的酶学机制，与加帽酶改造同属一类，可作机制参考；但不构成竞争"
+    },
+    "2": {
+      "decision": "保留",
+      "cat": "强相关",
+      "why": "无活化剂化学合成 5'-5' 三磷酸加帽试剂——IVT 加帽的**化学路线**，与我们的酶法路线直接可比"
+    },
+    "3": {
+      "decision": "丢弃",
+      "cat": "无关圈",
+      "why": "命中画像无关圈 viral；且是病毒 L 蛋白结构，非人源加帽酶改造"
+    },
+    "4": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "非 AUG 翻译起始，与加帽无关"
+    },
+    "5": {
+      "decision": "丢弃",
+      "cat": "不同生物学",
+      "why": "U6 snRNA 的 γ-单甲基磷酸帽，与 mRNA cap1 不是同一套加帽机制"
+    },
+    "6": {
+      "decision": "丢弃",
+      "cat": "不同靶点",
+      "why": "eIF4E（帽结合蛋白）的共价抑制剂，属下游读取端，非加帽酶工程"
+    },
+    "7": {
+      "decision": "丢弃",
+      "cat": "无关圈",
+      "why": "抗病毒药物开发，命中无关圈 antiviral；但见下方重要观察"
+    },
+    "8": {
+      "decision": "丢弃",
+      "cat": "不同靶点",
+      "why": "eIF4E 旁系同源的功能分化，非加帽酶"
+    },
+    "9": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "C9orf72 非 AUG 翻译起始"
+    },
+    "10": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "家禽表观转录组综述，对象与加帽酶无关"
+    },
+    "11": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "Resistin 与海马神经元代谢"
+    },
+    "12": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "白色念珠菌交配型），与加帽无关"
+    },
+    "13": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "真菌胞质分裂"
+    },
+    "14": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "Cul4b 与生发中心 B 细胞"
+    },
+    "15": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "真菌 ADP-核糖基化"
+    },
+    "16": {
+      "decision": "丢弃",
+      "cat": "无关圈",
+      "why": "mRNA 疫苗，命中无关圈 vaccine"
+    },
+    "17": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "非小细胞肺癌抗 PD-1 耐药"
+    },
+    "18": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "亨廷顿病体细胞不稳定"
+    },
+    "19": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "蜜蜂-植物生态网络"
+    },
+    "20": {
+      "decision": "丢弃",
+      "cat": "无关圈",
+      "why": "干扰素抗病毒功能，命中 antiviral"
+    },
+    "21": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "胞内适配体治疗"
+    },
+    "22": {
+      "decision": "丢弃",
+      "cat": "无关圈",
+      "why": "碳纳米管 mRNA 疫苗递送，命中 vaccine"
+    },
+    "23": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "SARS-CoV-2 免疫细胞播散"
+    },
+    "24": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "糖尿病与癌症综述"
+    },
+    "25": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "两栖动物多样性"
+    },
+    "26": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "NLRP12 与 I 型干扰素信号"
+    },
+    "27": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "胶质母细胞瘤 14q 缺失"
+    },
+    "28": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "骨软骨瘤超声诊断"
+    },
+    "29": {
+      "decision": "丢弃",
+      "cat": "缩写误命中",
+      "why": "「CAP」= 睡眠中的周期性交替模式(cyclic alternating pattern)，**纯缩写假阳性**"
+    },
+    "30": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "流感 RNA 感知与免疫病理"
+    },
+    "31": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "FOSL1 与银屑病"
+    },
+    "32": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "空气污染颗粒毒性"
+    },
+    "33": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "脓肿分枝杆菌与囊性纤维化"
+    },
+    "34": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "ICU 肺炎采样"
+    },
+    "35": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "雷公藤红素纳米粒递送"
+    },
+    "36": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "TRIM27 与哮喘"
+    },
+    "37": {
+      "decision": "保留",
+      "cat": "强相关",
+      "why": "**PCIF1 催化的 cap 特异性 N6-腺苷甲基化（m6A）及其在 Cap-1 mRNA 合成中的应用**——正是本课题的两大卖点之一，且面向 mRNA 合成应用"
+    },
+    "38": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "TRAF1 信号"
+    },
+    "39": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "SMRT 测序诊断地贫"
+    },
+    "40": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "结核传播筛查"
+    },
+    "41": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "TCF3 与 H3K4 甲基化"
+    },
+    "42": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "eIF5 模拟蛋白与起始密码子选择"
+    },
+    "43": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "透明带蛋白 2"
+    },
+    "44": {
+      "decision": "丢弃",
+      "cat": "离题",
+      "why": "斑马鱼抗血管生成药物筛选"
+    }
+  }
+}

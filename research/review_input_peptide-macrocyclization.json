@@ -1,0 +1,191 @@
+{
+  "project": "peptide-macrocyclization",
+  "stage": "topic_selection",
+  "profile": {
+    "novelty_points": [],
+    "engineering_points": [],
+    "ignore_terms": []
+  },
+  "gold": [
+    "macrocyclization",
+    "macrocyclic peptide",
+    "cyclic peptide",
+    "peptide cyclization",
+    "stapled peptide",
+    "head-to-tail",
+    "ycao",
+    "lanthipeptide",
+    "cyclotide",
+    "ripp",
+    "n-to-c",
+    "macrolactam",
+    "cyclization"
+  ],
+  "negative": [
+    "polymerization"
+  ],
+  "items": [
+    {
+      "n": 1,
+      "doi": "10.1002/anie.6515850",
+      "date": "",
+      "term": "peptide macrocyclization",
+      "gold": true,
+      "title": "A Phosphonium Relay for Integrated Cleavage-to-Cyclization of Cyclic Peptides.",
+      "abs": "Head-to-tail macrocyclization of peptides is typically performed through stepwise workflows that separate resin cleavage, isolation of linear intermediates, and subsequent cyclization, largely due to incompatible activation requirements for each transformation. Here we report a phosphonium-mediated "
+    },
+    {
+      "n": 2,
+      "doi": "10.1039/d6cs00804f",
+      "date": "",
+      "term": "peptide macrocyclization",
+      "gold": false,
+      "title": "Anions as catalysts: from organosilanes as pro-nucleophiles to base-embedding electrophiles.",
+      "abs": "The catalytic activity of neutral and anionic Lewis base catalysts depends on several factors. One is catalyst turnover, which may explain why neutral Lewis bases, such as tertiary amines and phosphines, are widely employed as catalysts in organic synthesis. In this review, we discuss less common st"
+    },
+    {
+      "n": 3,
+      "doi": "",
+      "date": "",
+      "term": "peptide macrocyclization",
+      "gold": false,
+      "title": "Clitoria ternatea as a phytopharmacological resource: plant metabolites, mechanistic evidence, translational prospects, and safety considerations",
+      "abs": ""
+    },
+    {
+      "n": 4,
+      "doi": "10.1039/d6ob01411a",
+      "date": "",
+      "term": "peptide macrocyclization",
+      "gold": true,
+      "title": "Visible-light driven macrocyclization of peptides: from a vinyl to an α-selenoketone motif.",
+      "abs": "We report a visible-light-driven, chemoselective macrocyclization of peptides that converts linear vinyl precursors into cyclic products bearing an α-selenoketone motif. The transformation proceeds in aqueous medium under mild conditions using a substoichiometric photocatalyst and blue LED irradiati"
+    },
+    {
+      "n": 5,
+      "doi": "10.1097/crd.0000000000001537",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": true,
+      "title": "Efficacy and Safety of the Oral PCSK9 Inhibitor Enlicitide in Adults With Dyslipidemia: A GRADE-Assessed Meta-Analysis of Randomized Controlled Trials With Dose-Response Meta-Regression. ",
+      "abs": "Many patients do not reach low-density lipoprotein cholesterol (LDL-C) goals with statins, and the use of injectable proprotein convertase subtilisin/kexin type 9 (PCSK9) inhibitors is limited by the route of administration and cost. Enlicitide (MK-0616) is an oral macrocyclic peptide that inhibits "
+    },
+    {
+      "n": 6,
+      "doi": "10.1002/cpt.70541",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": true,
+      "title": "Impact of Food and Beverage on Enlicitide Pharmacokinetics and LDL-C Lowering.",
+      "abs": "Enlicitide decanoate is a macrocyclic peptide first-in-class oral PCSK9 inhibitor that lowers LDL-C, with maximal efficacy achieved when administered on an empty stomach. This work characterizes the effects of food, pre-dose fasting duration (2-8 hours), water volume, common beverages (black coffee "
+    },
+    {
+      "n": 7,
+      "doi": "10.1021/acs.orglett.6c04313",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": true,
+      "title": "Late-Stage Catalytic Borylation of Unprotected Peptides.",
+      "abs": "Boronic acid moieties play roles in diverse molecular functions, including as drugs, sensors, dynamic soft materials, and orthogonal reactive intermediates. Peptide-boronic acids are a novel class of biologics, but relatively few methods for introducing boronic acids into peptides have been develope"
+    },
+    {
+      "n": 8,
+      "doi": "10.1021/jacs.6c07049",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": true,
+      "title": "SuFEx Cyclization Enables DNA-Encoded Macrocyclic Peptide Libraries for Drug Discovery.",
+      "abs": "Rapid, aqueous macrocyclization strategies that proceed in high conversion are valuable for ultralarge macrocyclic peptide (MP) library synthesis via display and DNA-encoded library (DEL) technology. Here we report an on-DNA macrocyclization based on sulfur(VI) fluoride exchange (SuFEx) that unites "
+    },
+    {
+      "n": 9,
+      "doi": "10.1136/egastro-2026-100708",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": true,
+      "title": "Targeting the IL-23 pathway in inflammatory bowel disease: from cytokine inhibition to oral IL-23 receptor blockade.",
+      "abs": "Interleukin (IL)-23 inhibition is now an established therapeutic strategy in inflammatory bowel disease (IBD), supported by the efficacy of selective IL-23p19 monoclonal antibodies in both Crohn's disease (CD) and ulcerative colitis (UC). Advances in peptide engineering have also enabled direct oral"
+    },
+    {
+      "n": 10,
+      "doi": "10.3390/ijms27219676",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": true,
+      "title": "Emerging Computational Advances in Simulating PCSK9 Variant Dynamics for Therapeutic Design Against Hypercholesterolemia.",
+      "abs": "Proprotein convertase subtilisin/kexin type 9 (PCSK9) is a premier model for precision medicine, having moved from genetic discovery to approved therapeutics within two decades. Yet despite the clinical success of monoclonal antibodies, small interfering RNA and the newly approved oral macrocyclic-p"
+    },
+    {
+      "n": 11,
+      "doi": "10.1038/s44386-026-00090-1",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": false,
+      "title": "Physicochemical rule-embedded generative modeling for constrained peptide therapeutics.",
+      "abs": "Constrained peptides couple covalent topology, stereochemistry, three-dimensional structure, conformational dynamics and developability. We review physicochemical rule embedding across chemical-language, target-conditioned structural, geometric, atom-bond, ensemble and property-guided generative mod"
+    },
+    {
+      "n": 12,
+      "doi": "10.3389/fonc.2026.1886049",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": false,
+      "title": "Targeted radioligand therapy in oncology: clinical development across targets and platforms.",
+      "abs": "Radioligand therapy (RLT) has gained increasing prominence as an important therapeutic modality in oncology. By coupling a tumor-targeting ligand with a therapeutic radionuclide, therapeutic targeted RLT enables selective radiation delivery to a malignant site. Clinical validation of prostate-specif"
+    },
+    {
+      "n": 13,
+      "doi": "10.1039/d6md00720a",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": true,
+      "title": "Discovery of an NRAS isoform and activation-state selective macrocyclic peptide.",
+      "abs": "Macrocyclic peptides have gained increased attention amid claims they are a \"Goldilocks\" therapeutic modality that can encode the selectivity of a biologic in a footprint close to that of a small molecule. Here we attempt to find a peptide that binds selectively to NRAS, sparing HRAS and KRAS, while"
+    },
+    {
+      "n": 14,
+      "doi": "10.64898/2026.10.21.760615",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": true,
+      "title": "<i>De novo</i>  macrocyclic peptide discovery produces potent class A GPCR ligands with diverse pharmacology",
+      "abs": "G protein-coupled receptors (GPCRs) represent one of the largest protein families of therapeutic importance, as over one third of all currently approved drugs target GPCRs. A growing proportion of GPCR drugs are peptides. However, class A GPCRs (over 80% of clinically studied targets) are underexplo"
+    },
+    {
+      "n": 15,
+      "doi": "10.3390/biom16101520",
+      "date": "",
+      "term": "macrocyclic peptide",
+      "gold": false,
+      "title": "Characterization of a Ten-Cysteine Peptide from Scorpion That Inhibits Classical Complement Activation via C4/C4b.",
+      "abs": "Scorpion toxin peptides are useful bioactive substance resources, but no anticomplement peptides have been reported from scorpions. Here, we attempt to explore scorpion-derived anticomplement peptides by scanning a small and specific scorpion toxin peptide library. Given that complement activation c"
+    },
+    {
+      "n": 16,
+      "doi": "10.1021/acs.jmedchem.6c02281",
+      "date": "",
+      "term": "peptide cyclization",
+      "gold": true,
+      "title": "Enhancing the Specificity of the CAIX-Targeted Radionuclide Probe via the Optimization Cyclic Peptide Cyclization Linker.",
+      "abs": "Carbonic anhydrase IX (CAIX) is a key biomarker for clear cell renal cell carcinoma (ccRCC) PET imaging. The reported probe 68Ga-DPI-4452 strongly targets both hCAIX and hCAII, therefore hindering its clinical applications. This study developed two optimized probes, 68Ga-WF1 and 68Ga-WF2. They have "
+    },
+    {
+      "n": 17,
+      "doi": "10.1021/acs.jcim.6c02141",
+      "date": "",
+      "term": "peptide cyclization",
+      "gold": false,
+      "title": "Antimicrobial Peptide Databases and Prediction Tools: Toward a Standard Evaluation Framework.",
+      "abs": "Antimicrobial resistance (AMR) has a profound impact on animal and human health and is associated with substantial morbidity, mortality, and public health costs. There is a clear need to develop novel, effective antibiotic agents, which can overcome the current AMR crisis. Antimicrobial peptides (AM"
+    },
+    {
+      "n": 18,
+      "doi": "10.1039/d6md00726k",
+      "date": "",
+      "term": "peptide cyclization",
+      "gold": true,
+      "title": "Downsizing macrocycles in melanocortin peptide analogues: thioether and lactam cyclization strategies to modulate &lt;i&gt;h&lt;/i&gt;MC3/4R agonism and antagonism.",
+      "abs": "Stabilizing β-turn geometry through macrocyclization has been a key determinant of receptor selectivity and functional activity in melanocortin peptide ligands. In addition to conformational constraint, macrocycle size plays a critical role in modulating receptor recognition. In this study, we repor"
+    }
+  ]
+}

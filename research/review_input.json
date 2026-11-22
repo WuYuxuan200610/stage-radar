@@ -1,0 +1,424 @@
+{
+  "project": "capping-ivt",
+  "gold": [
+    "mrna capping",
+    "capping enzyme",
+    "cap1",
+    "cap 1",
+    "cap methyltransferase",
+    "guanylyltransferase",
+    "m7g",
+    "cap structure",
+    "recapping",
+    "rna cap",
+    "capped mrna",
+    "vaccinia capping",
+    "2'-o-methyltransferase",
+    "n7-methyltransferase",
+    "cap-specific",
+    "mrna cap"
+  ],
+  "ignore": [
+    "vaccine",
+    "viral",
+    "antiviral"
+  ],
+  "items": [
+    {
+      "n": 1,
+      "doi": "10.1261/rna.081035.126",
+      "date": "",
+      "term": "mRNA capping",
+      "gold": true,
+      "title": "Cytoplasmic mRNA recapping is essential for stress recovery and intracellular proliferation in &lt;i&gt;Trypanosoma cruzi&lt;/i&gt;.",
+      "abs": "<i>Trypanosoma cruzi</i>, the causative agent of Chagas disease, regulates gene expression predominantly after transcription because it lacks conventional gene-specific promoters. Cytoplasmic mRNA recapping has been proposed to restore translation-competent mR"
+    },
+    {
+      "n": 2,
+      "doi": "10.1039/d6ra08498b",
+      "date": "",
+      "term": "mRNA capping",
+      "gold": true,
+      "title": "An activator-free method for the synthesis of nucleotide 5'-5' triphosphate mRNA capping agent.",
+      "abs": "The traditional synthesis of nucleotide 5'-5' triphosphate linkages involves a \"2 + 1\" phosphate coupling mediated by a large excess of metal salts, where the salt removal is a labor and waste-intensive step. We have omitted the metal salts from this reaction "
+    },
+    {
+      "n": 3,
+      "doi": "10.1126/sciadv.aej0664",
+      "date": "",
+      "term": "mRNA capping",
+      "gold": false,
+      "title": "Structure of vesicular stomatitis virus L-P-N&lt;sup&gt;0&lt;/sup&gt; complex by cryo-electron microscopy.",
+      "abs": "The large protein (L) of nonsegmented, negative-strand RNA viruses, a viral order that includes rabies, Ebola, Nipah, and respiratory syncytial viruses, catalyze RNA-dependent RNA polymerization on nucleocapsid-sheathed RNA templates. L coordinates two distinc"
+    },
+    {
+      "n": 4,
+      "doi": "10.1126/sciadv.aek4290",
+      "date": "",
+      "term": "capping enzyme",
+      "gold": false,
+      "title": "Evolutionarily reinforced GC-rich motif enables non-AUG translation in mammals under eIF1/5MP-mediated fidelity control.",
+      "abs": "Non-AUG translation contributes to proteome diversity, but its regulatory principles remain unclear. Here, we show that a GCC-rich upstream extension, termed the <i>NAT1</i> motif, acts as a potent enhancer of near-cognate initiation in mammals. Cell-free and "
+    },
+    {
+      "n": 5,
+      "doi": "10.64898/2026.10.22.761030",
+      "date": "",
+      "term": "capping enzyme",
+      "gold": true,
+      "title": "The U6 snRNA capping enzyme Amus/MePCE is required for the stability of U6atac and the processing of introns with features of both major and minor classes",
+      "abs": "Over 99% of the introns in humans are removed by the major spliceosome with the U6 snRNA as the catalytic component while the rest 1% by the minor spliceosome containing U6atac. Recent evidence supports mechanistic interactions between the two splicing pathway"
+    },
+    {
+      "n": 6,
+      "doi": "10.1021/acschembio.6c00714",
+      "date": "",
+      "term": "mRNA cap",
+      "gold": true,
+      "title": "Lysine-Targeted Covalent Inhibition of eIF4E with an Anionic Electrophile Warhead.",
+      "abs": "Covalent strategies offer a powerful route to expand the druggable proteome, yet selective lysine targeting remains difficult due to the high pKa and protonation of the amine side chain. The translation initiation factor eIF4E, an mRNA cap-binding protein that"
+    },
+    {
+      "n": 7,
+      "doi": "10.1021/acs.jmedchem.6c01763",
+      "date": "",
+      "term": "mRNA cap",
+      "gold": false,
+      "title": "A Novel Chemotype of Orally Active SARS-CoV-2 NSP14 Methyltransferase Inhibitors.",
+      "abs": "The periodic emergence of human coronaviruses (hCoVs) necessitates direct-acting antivirals targeting underexploited viral proteins with broad-spectrum potential. Building on our discovery of TDI-015051, a first-in-class SARS-CoV-2 mRNA cap guanine-N7 methyltr"
+    },
+    {
+      "n": 8,
+      "doi": "10.1080/15476286.2026.2753988",
+      "date": "",
+      "term": "mRNA cap",
+      "gold": true,
+      "title": "&lt;i&gt;Drosophila&lt;/i&gt; eIF4E paralogs: a paradigm of functional divergence.",
+      "abs": "A cardinal factor in the regulation of mRNA life and function is the cap-binding protein eIF4E. eIF4E promotes the recruitment of mRNA to the ribosome during the initiation step of translation, but other activities have been described, including mRNA processin"
+    },
+    {
+      "n": 9,
+      "doi": "",
+      "date": "",
+      "term": "mRNA cap",
+      "gold": false,
+      "title": "Structural basis for repeat-associated non-AUG translation initiation on C9orf72 mRNA",
+      "abs": ""
+    },
+    {
+      "n": 10,
+      "doi": "10.3389/fvets.2026.1950849",
+      "date": "",
+      "term": "mRNA cap",
+      "gold": false,
+      "title": "Epitranscriptomics in poultry: RNA modifications as emerging regulators of growth, immunity, and metabolism: a narrative review.",
+      "abs": "Epitranscriptomics has recently emerged as a dynamic layer of gene expression regulation, in which chemical modifications in RNA molecules, such as N6-methyladenosine (m6A), 5-methylcytosine (m5C), N1-methyladenosine (m1A), pseudouridine (Ψ), and 2'-O-methylat"
+    },
+    {
+      "n": 11,
+      "doi": "10.1007/s43440-026-00925-8",
+      "date": "",
+      "term": "cap1",
+      "gold": true,
+      "title": "Resistin is a new player in murine hippocampal neuronal cells: expression and action on cell metabolic activity, proliferation, cell cycle, and expression of selected proliferative and apoptosis genes in HT-22 cells.",
+      "abs": "<h4>Background</h4>Resistin, initially identified as an adipocyte-derived hormone, is associated with obesity, insulin resistance, and diabetes. However, its role in hippocampal neuronal cells remains unclear. This study aimed to investigate the effects of res"
+    },
+    {
+      "n": 12,
+      "doi": "10.64898/2026.11.05.764546",
+      "date": "",
+      "term": "cap1",
+      "gold": true,
+      "title": "Starve, stress, and mate: Activation of the CCAAT-Binding complex overrides sterility of mating-type heterozygous  <i>Candida albicans</i>",
+      "abs": "Sexual reproduction in the human fungal pathogen  Candida albicans is typically restricted by a strict genetic lock: the  a 1-α2 repressor present in standard mating-type heterozygous (  MTL  a /α  ) diploid strains, which actively represses mating competency."
+    },
+    {
+      "n": 13,
+      "doi": "10.1371/journal.ppat.1014731",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "One ring to rule: Cytokinesis in model and pathogenic fungi.",
+      "abs": ""
+    },
+    {
+      "n": 14,
+      "doi": "10.1093/immhor/vlag056",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Cul4b sustains cell cycle in germinal center B cells and enables protective humoral immunity against influenza A virus.",
+      "abs": "Influenza A viruses (IAVs) are a major public health burden, infecting millions of people worldwide. Seasonal vaccines mitigate disease, in part, by triggering the production of IAV-specific antibodies by B cells. Viral evasion and limited vaccine-induced immu"
+    },
+    {
+      "n": 15,
+      "doi": "10.1042/bst20260689",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Fungal ADP-ribosylation: an emerging signalling pathway in adaptation and virulence.",
+      "abs": "ADP-ribosylation is a posttranslational modification conserved across all domains of life and some viruses. While it is well established as a critical signalling mechanism in humans and is widely exploited as a therapeutic target in cancer, its roles in other "
+    },
+    {
+      "n": 16,
+      "doi": "10.71150/jm.2609004",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Epitope-guided optimization improves the protective efficacy of NA-based mRNA vaccines against seasonal influenza A(H3N2) virus.",
+      "abs": "Neuraminidase (NA) is increasingly recognized as a promising target antigen for improving the breadth and durability of influenza vaccines, yet NA-based mRNA vaccines remain comparatively unexplored relative to hemagglutinin-based approaches. Here, we applied "
+    },
+    {
+      "n": 17,
+      "doi": "10.1155/humu/7216680",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Shining a Light on the Mechanisms of Drug Resistance to Anti-PD-1 Therapy in Non-small Cell Lung Cancer.",
+      "abs": "Immune checkpoint inhibitors (ICIs) are first-line therapies for advanced Nonsmall cell lung cancer (NSCLC), yet managing ICI resistance remains a critical, unavoidable challenge. This study identified genetic markers of anti-PD-1 resistance and developed an e"
+    },
+    {
+      "n": 18,
+      "doi": "10.1038/s41467-026-78769-2",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Computational modeling and preclinical evaluation support targeting somatic instability for Huntington's disease treatment.",
+      "abs": "Genetic modifiers of Huntington's disease (HD) disease onset and progression implicate somatic instability (SI) of the expanded CAG repeat as a key pathogenic driver, with MSH3 emerging as a therapeutic target. Here, we generated a computational model that use"
+    },
+    {
+      "n": 19,
+      "doi": "10.1002/ece3.74549",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Network Indices and Diversity Follow Distinct Patterns for Bee-Plant Networks Along a Neotropical Elevational Gradient.",
+      "abs": "A critical goal of ecology is to quantify mutualistic network structure across all ecosystems and organisms, as these networks often represent essential ecosystem services and therefore network metrics are often used as conservation targets. Some major gaps st"
+    },
+    {
+      "n": 20,
+      "doi": "10.3389/fimmu.2026.1961358",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Antiviral functions of Interferon-stimulated genes and virus-mediated antagonism.",
+      "abs": "Interferons (IFNs) are cytokines that play crucial roles in antiviral activity, anti-proliferation, stimulation of cytotoxic T cells, and modulation of host immune responses. Like other cytokines, IFNs bind their receptors on the cell surface to activate intra"
+    },
+    {
+      "n": 21,
+      "doi": "10.1016/j.omtn.2026.103134",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Re-entering the cell: Is the intracellular space the true therapeutic niche for aptamers?",
+      "abs": ""
+    },
+    {
+      "n": 22,
+      "doi": "10.1021/acsomega.6c06230",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Scaled Production, Dose-Sparing Immunogenicity, and Biodistribution of Short Carbon Nanotubes as mRNA Vaccine Delivery Vehicles.",
+      "abs": "Clinical translation of carbon nanotube (CNT)-based biomedical technologies requires a comprehensive understanding of scalable manufacturing, in vivo behavior, and dose efficiency. Here, we investigate NanoVac, a vaccine delivery platform based on functionaliz"
+    },
+    {
+      "n": 23,
+      "doi": "10.3389/fimmu.2026.1951246",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "A novel model demonstrating that human immune cells promote multiorgan SARS-CoV-2 dissemination and human T cells limit anti-viral innate immunity.",
+      "abs": "<h4>Introduction</h4>Despite extensive studies, many questions remain regarding the pathology and mechanisms behind Coronavirus disease 2019 (COVID-19), and particularly on post-acute sequelae of COVID-19 (PASC).<h4>Methods</h4>Because existing mouse models ca"
+    },
+    {
+      "n": 24,
+      "doi": "10.3390/cimb48101086",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Diabetes and Cancer-Pathophysiology and Clinical Implications: A Systematic Review.",
+      "abs": "Diabetes Mellitus and cancer are major global health problems with rising incidence worldwide. This systematic review was conducted following PRISMA 2020 guidelines by searching PubMed, Scopus, ScienceDirect, SpringerLink, and Google Scholar for studies publis"
+    },
+    {
+      "n": 25,
+      "doi": "10.1002/ece3.74556",
+      "date": "",
+      "term": "cap1",
+      "gold": false,
+      "title": "Patterns and Environmental Drivers of Amphibian Alpha and Beta Diversity in the Huangshan Mountains, Southern Anhui, China.",
+      "abs": "Understanding the spatial patterns of biodiversity and their environmental determinants is fundamental to ecology and conservation, particularly in mountainous transitional zones where species assemblages can shift rapidly. Amphibians, as highly sensitive orga"
+    },
+    {
+      "n": 26,
+      "doi": "10.1016/j.fsi.2026.111821",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "NLRP12 negatively regulates RIP2, TRAF6, TRAF3, and TBK1 mediated type I IFN signaling and inflammatory response in large yellow croaker Larimichthys crocea.",
+      "abs": "Nucleotide-binding leucine-rich repeat-containing receptor 12 (NLRP12) functions to restrain inflammatory and type I interferon signaling, thereby contributing to maintenance of host immune homeostasis. In large yellow croaker (Larimichthys crocea), an NLRP12 "
+    },
+    {
+      "n": 27,
+      "doi": "10.1007/s11060-026-05855-2",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "Chromosome 14q loss is associated with adverse survival and a distinct transcriptional phenotype in IDH-wildtype glioblastoma.",
+      "abs": "<h4>Purpose</h4>In IDH-wildtype glioblastoma, prognostic biomarkers beyond MGMT promoter methylation remain limited. Chromosome 14q contains candidate tumor suppressors, yet the significance of arm-level 14q loss in molecularly defined glioblastoma is unclear."
+    },
+    {
+      "n": 28,
+      "doi": "10.5811/cpcem.63912",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "Diagnosing a Fractured Pedunculated Osteochondroma Using Point-of-Care Ultrasound in the Emergency Department: A Case Report.",
+      "abs": "<h4>Introduction</h4>This case report discusses the use of point-of-care ultrasound (POCUS) in the diagnosis of a fractured pedunculated osteochondroma in an 8-year-old boy after minor trauma. Although osteochondromas are the most common benign bone tumors, es"
+    },
+    {
+      "n": 29,
+      "doi": "",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "An automated EEG–ECG framework for CAP–HRV analysis: enabling brain–heart coupling studies in sleep disorders",
+      "abs": ""
+    },
+    {
+      "n": 30,
+      "doi": "10.1038/s42003-026-11027-9",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "Aberrant RNA sensing and host-specific immunopathology in highly pathogenic influenza infections.",
+      "abs": "Innate immune activation is critical for mounting protective host immune responses against viral infections. Viruses have evolved mechanisms to counteract host innate immune responses and restrict host defence. Intriguingly, growing evidence suggests that RNA "
+    },
+    {
+      "n": 31,
+      "doi": "10.1126/sciadv.aeh6541",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "FOSL1-associated condensates modulate superenhancer-mediated selected IL-1 family gene activation in psoriasis.",
+      "abs": "Psoriasis is a chronic inflammatory skin disease involving abnormal keratinocyte gene expression, yet the upstream epigenetic mechanisms driving these alterations remain unclear. Here we performed multiomics analyses (chromatin immunoprecipitation sequencing, "
+    },
+    {
+      "n": 32,
+      "doi": "10.3389/ftox.2026.1951777",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "ExposomeMap-PM: fine and ultrafine particle-induced toxicity - from adverse outcome pathways to systems biomedicine disease models.",
+      "abs": "<h4>Background</h4>Air pollution is one of the leading global environmental health risks, associated with millions of premature deaths annually. It represents a substantial share of the global disease burden. Despite well-established epidemiological associatio"
+    },
+    {
+      "n": 33,
+      "doi": "10.3389/fcimb.2026.1903803",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "&lt;i&gt;Mycobacterium abscessus&lt;/i&gt; induces immune suppression in cystic fibrosis macrophages.",
+      "abs": "<h4>Introduction</h4>People with cystic fibrosis (pwCF) are highly susceptible to chronic lung infections with <i>Mycobacterium abscessus</i> (<i>MAB</i>), a nontuberculous mycobacterium (NTM) that is intrinsically resistant to antibiotics. While macrophage dy"
+    },
+    {
+      "n": 34,
+      "doi": "10.1136/bmjoq-2026-004563",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "Timeliness versus diagnostic accuracy in ICU pneumonia sampling: is ND-BAL ready for broader adoption?",
+      "abs": ""
+    },
+    {
+      "n": 35,
+      "doi": "10.1016/j.mtbio.2026.103779",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "Targeted delivery of celastrol and siRNA via macrophage biomimetic nanoparticles for doxorubicin-induced cardiomyopathy therapy.",
+      "abs": "Doxorubicin-induced cardiomyopathy (DIC) is a severe complication following anthracycline chemotherapy, and its main pathogenesis is inflammatory responses and ferroptosis. This study constructed hyaluronic acid-based macrophage biomimetic nanoparticles (M@HCD"
+    },
+    {
+      "n": 36,
+      "doi": "10.1007/s11033-026-12999-x",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "TRIM27 enhances NF-κB/MAPK activation by ubiquitinating and degrading TRAF3 to drive asthma-induced airway inflammation.",
+      "abs": "<h4>Background</h4>Asthma is a chronic inflammatory airway disease, and airway epithelial cell injury is closely associated with disease progression. TRIM27, as an E3 ubiquitin ligase, plays a significant role in immune-inflammatory responses. This study aims "
+    },
+    {
+      "n": 37,
+      "doi": "10.64898/2026.10.22.757692",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "Cap-specific N6-adenosine methyltransferases and applications in m6A Cap-1 mRNA synthesis",
+      "abs": "In addition to the 5’ Cap-1 structure, the initiating adenosine of mammalian mRNA can be further modified by PCIF1 (Phosphorylated C-terminal domain-interacting factor 1) to form 2’-O,N6-dimethyladenosine (m6A Cap-1). While the biological role is still under i"
+    },
+    {
+      "n": 38,
+      "doi": "10.1016/j.lfs.2026.124744",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "One protein, many faces: TRAF1 from signaling hub to disease diversity.",
+      "abs": "Tumor necrosis factor receptor-associated factor 1 (TRAF1) is a unique member of the TRAF family, distinguished by its lack of an N-terminal RING domain. At the transcriptional level, TRAF1 expression is regulated by diverse mechanisms, including methylation, "
+    },
+    {
+      "n": 39,
+      "doi": "10.3389/fmed.2026.1833379",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "Single-molecule real-time (SMRT) sequencing technology shows advantages in the clinical diagnosis of complex thalassemia.",
+      "abs": "<h4>Background</h4>Thalassemia is a hereditary hemolytic anemia caused by pathogenic variants in the α- or β-globin genes, resulting in imbalanced globin chain synthesis. Clinical manifestations vary from asymptomatic carrier states to severe transfusion-depen"
+    },
+    {
+      "n": 40,
+      "doi": "10.3389/fpubh.2026.1907926",
+      "date": "",
+      "term": "Cap-1",
+      "gold": false,
+      "title": "Tuberculosis transmission and community outreach screening in an informal urban settlement in a low-incidence European setting.",
+      "abs": ""
+    },
+    {
+      "n": 41,
+      "doi": "10.1093/nar/gkag968",
+      "date": "",
+      "term": "capped mRNA",
+      "gold": false,
+      "title": "Transcription factor 3 cooperates with CXXC finger protein 1 to regulate histone H3K4 trimethylation and developmental competence in mouse oocytes.",
+      "abs": "During oogenesis, the establishment of oocyte-specific gene expression relies on epigenetic and transcriptional remodeling. Both histone modifications and transcription factors are crucial for the oocyte to acquire developmental competence; however, the mechan"
+    },
+    {
+      "n": 42,
+      "doi": "10.1126/sciadv.aeg5840",
+      "date": "",
+      "term": "capped mRNA",
+      "gold": false,
+      "title": "Structural basis for start codon selection by eIF5-mimic proteins.",
+      "abs": "Start codon selection extensively regulates the cellular proteome and is implicated in cancer and other diseases. The eIF5-mimic proteins (5MPs: 5MP1/BZW2 and 5MP2/BZW2) restrict non-AUG start codon usage and thereby reprogram proteoform expression from mRNAs "
+    },
+    {
+      "n": 43,
+      "doi": "10.1186/s12864-026-13487-z",
+      "date": "",
+      "term": "capped mRNA",
+      "gold": false,
+      "title": "Proteomic and transcriptomic analysis reveals an intracellular role for zona pellucida protein 2 in mouse morula-blastocyst transition.",
+      "abs": "<h4>Background</h4>Since the first description in 1827, the zona pellucida (ZP) has been viewed as an extracellular structure surrounding mammalian oocytes, with three canonical roles: encasement of the oocyte in the follicle, sperm binding at fertilization, a"
+    },
+    {
+      "n": 44,
+      "doi": "10.21769/bioprotoc.5846",
+      "date": "",
+      "term": "capped mRNA",
+      "gold": false,
+      "title": "Antiangiogenic Drug Testing Using Proangiogenic and Hypoxia Zebrafish Model.",
+      "abs": "Zebrafish is an excellent in vivo model for high-throughput antiangiogenic drug testing, commonly known as the zebrafish angiogenesis assay. Conventional zebrafish angiogenesis assays are performed in wild-type zebrafish to evaluate the vascular changes in int"
+    }
+  ]
+}

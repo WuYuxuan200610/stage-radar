@@ -1,0 +1,43 @@
+{
+  "n": 32,
+  "delivered": 313,
+  "relevant": 120,
+  "noise_rate": 0.6166134185303515,
+  "top5_delivered": 126,
+  "top5_relevant": 56,
+  "empty_queries": 5,
+  "per_topic": {
+    "mrna-capping": {
+      "delivered": 28,
+      "relevant": 2
+    },
+    "peptide-macrocyclization": {
+      "delivered": 23,
+      "relevant": 7
+    },
+    "trna-detection": {
+      "delivered": 0,
+      "relevant": 0
+    },
+    "prime-editing": {
+      "delivered": 52,
+      "relevant": 6
+    },
+    "aptamer-selex": {
+      "delivered": 49,
+      "relevant": 22
+    },
+    "spatial-transcriptomics": {
+      "delivered": 56,
+      "relevant": 30
+    },
+    "base-editing": {
+      "delivered": 29,
+      "relevant": 11
+    },
+    "protein-design": {
+      "delivered": 76,
+      "relevant": 42
+    }
+  }
+}

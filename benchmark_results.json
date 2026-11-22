@@ -1,0 +1,2224 @@
+{
+  "benchmark_version": 2,
+  "generated_at": "2026-11-18T01:06:19.603511",
+  "window": [
+    "2026-10-18",
+    "2026-11-17"
+  ],
+  "pooling_depth": 20,
+  "n": 32,
+  "topics": 8,
+  "systems": {
+    "fulltext": "「卖点词」全文/元数据检索（竞品默认行为）",
+    "title_only": "TITLE:\"卖点词\"（只限定标题）",
+    "stageradar": "(TITLE:\"锚点\") AND \"卖点词\"（锚点当硬门，改前的做法）",
+    "stageradar_v2": "TITLE/ABSTRACT:\"卖点词\" + 本地按锚点分档重排（改后的做法，锚点降为加权信号）"
+  },
+  "labeling": "预定义 gold 概念集命中标题（多词概念回退摘要），排除 negative 词；gold 含未被任何查询使用的词",
+  "limitations": [
+    "相关性为规则标注 + 人工定义 gold 概念集，非多人人工评分。",
+    "recall 分母为池内相关数，受 pooling 深度限制，是上界估计。",
+    "窗口固定为 2026-10-18..2026-11-17，重跑数字会变。"
+  ],
+  "rows": [
+    {
+      "topic": "mrna-capping",
+      "term": "cap1 methyltransferase",
+      "pool_size": 0,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 13116,
+        "n": 0,
+        "chars": 0
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 17128,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 13005,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 13973,
+        "n": 0,
+        "chars": 0
+      }
+    },
+    {
+      "topic": "mrna-capping",
+      "term": "capping enzyme",
+      "pool_size": 3,
+      "pool_relevant": 2,
+      "fulltext": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 1.0,
+        "f1": 0.3333,
+        "mrr": 0.5
+      },
+      "fulltext_cost": {
+        "ms": 889,
+        "n": 3,
+        "chars": 4360
+      },
+      "title_only": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 0.5,
+        "f1": 0.1667,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 14070,
+        "n": 1,
+        "chars": 1831
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 962,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 1.0,
+        "f1": 0.3333,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 810,
+        "n": 2,
+        "chars": 3149
+      }
+    },
+    {
+      "topic": "mrna-capping",
+      "term": "m6A",
+      "pool_size": 35,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 1321,
+        "n": 20,
+        "chars": 31152
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 27628,
+        "n": 20,
+        "chars": 34461
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 1974,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 40436,
+        "n": 20,
+        "chars": 36927
+      }
+    },
+    {
+      "topic": "mrna-capping",
+      "term": "capped mRNA",
+      "pool_size": 5,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 15273,
+        "n": 5,
+        "chars": 7010
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 11096,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 1086,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 10127,
+        "n": 0,
+        "chars": 0
+      }
+    },
+    {
+      "topic": "peptide-macrocyclization",
+      "term": "macrocyclic peptide",
+      "pool_size": 11,
+      "pool_relevant": 7,
+      "fulltext": {
+        "p5": 0.8,
+        "p10": 0.7,
+        "r10": 1.0,
+        "f1": 0.8235,
+        "mrr": 1.0
+      },
+      "fulltext_cost": {
+        "ms": 14861,
+        "n": 11,
+        "chars": 16417
+      },
+      "title_only": {
+        "p5": 0.6,
+        "p10": 0.3,
+        "r10": 0.4286,
+        "f1": 0.3529,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 4792,
+        "n": 3,
+        "chars": 3913
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 5244,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 1.0,
+        "p10": 0.7,
+        "r10": 1.0,
+        "f1": 0.8235,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 5461,
+        "n": 7,
+        "chars": 11369
+      }
+    },
+    {
+      "topic": "peptide-macrocyclization",
+      "term": "peptide cyclization",
+      "pool_size": 3,
+      "pool_relevant": 1,
+      "fulltext": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 1.0,
+        "f1": 0.1818,
+        "mrr": 1.0
+      },
+      "fulltext_cost": {
+        "ms": 909,
+        "n": 3,
+        "chars": 4657
+      },
+      "title_only": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 1.0,
+        "f1": 0.1818,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 12917,
+        "n": 1,
+        "chars": 1132
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 6292,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 1.0,
+        "f1": 0.1818,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 3561,
+        "n": 1,
+        "chars": 1132
+      }
+    },
+    {
+      "topic": "peptide-macrocyclization",
+      "term": "radical cyclization",
+      "pool_size": 5,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 3298,
+        "n": 5,
+        "chars": 6246
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 4292,
+        "n": 1,
+        "chars": 1048
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 3907,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 945,
+        "n": 3,
+        "chars": 2201
+      }
+    },
+    {
+      "topic": "peptide-macrocyclization",
+      "term": "head-to-tail cyclization",
+      "pool_size": 4,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 3360,
+        "n": 4,
+        "chars": 7222
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 3835,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 3526,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 1748,
+        "n": 1,
+        "chars": 1947
+      }
+    },
+    {
+      "topic": "trna-detection",
+      "term": "tRNA sensor",
+      "pool_size": 0,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 4290,
+        "n": 0,
+        "chars": 0
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 7892,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 7807,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 4612,
+        "n": 0,
+        "chars": 0
+      }
+    },
+    {
+      "topic": "trna-detection",
+      "term": "fluorescent tRNA",
+      "pool_size": 0,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 1025,
+        "n": 0,
+        "chars": 0
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 7178,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 5959,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 7282,
+        "n": 0,
+        "chars": 0
+      }
+    },
+    {
+      "topic": "trna-detection",
+      "term": "live-cell tRNA",
+      "pool_size": 0,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 9947,
+        "n": 0,
+        "chars": 0
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 1863,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 6117,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 7426,
+        "n": 0,
+        "chars": 0
+      }
+    },
+    {
+      "topic": "trna-detection",
+      "term": "tRNA imaging",
+      "pool_size": 0,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 3122,
+        "n": 0,
+        "chars": 0
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 768,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 20510,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 23520,
+        "n": 0,
+        "chars": 0
+      }
+    },
+    {
+      "topic": "prime-editing",
+      "term": "pegRNA",
+      "pool_size": 4,
+      "pool_relevant": 3,
+      "fulltext": {
+        "p5": 0.6,
+        "p10": 0.3,
+        "r10": 1.0,
+        "f1": 0.4615,
+        "mrr": 1.0
+      },
+      "fulltext_cost": {
+        "ms": 1546,
+        "n": 4,
+        "chars": 3787
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 5438,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 0.6667,
+        "f1": 0.3077,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 5212,
+        "n": 2,
+        "chars": 2034
+      },
+      "stageradar_v2": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 0.3333,
+        "f1": 0.1538,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 3624,
+        "n": 1,
+        "chars": 1296
+      }
+    },
+    {
+      "topic": "prime-editing",
+      "term": "prime editor",
+      "pool_size": 8,
+      "pool_relevant": 2,
+      "fulltext": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 1.0,
+        "f1": 0.3333,
+        "mrr": 0.5
+      },
+      "fulltext_cost": {
+        "ms": 4144,
+        "n": 8,
+        "chars": 9424
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 847,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 0.5,
+        "f1": 0.1667,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 958,
+        "n": 1,
+        "chars": 2032
+      },
+      "stageradar_v2": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 0.5,
+        "f1": 0.1667,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 3533,
+        "n": 1,
+        "chars": 2032
+      }
+    },
+    {
+      "topic": "prime-editing",
+      "term": "off-target",
+      "pool_size": 36,
+      "pool_relevant": 4,
+      "fulltext": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 0.25,
+        "f1": 0.1429,
+        "mrr": 0.3333
+      },
+      "fulltext_cost": {
+        "ms": 1882,
+        "n": 20,
+        "chars": 35935
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 1609,
+        "n": 18,
+        "chars": 27622
+      },
+      "stageradar": {
+        "p5": 0.6,
+        "p10": 0.3,
+        "r10": 0.75,
+        "f1": 0.4286,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 15056,
+        "n": 3,
+        "chars": 3944
+      },
+      "stageradar_v2": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 0.25,
+        "f1": 0.1429,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 15093,
+        "n": 20,
+        "chars": 35935
+      }
+    },
+    {
+      "topic": "prime-editing",
+      "term": "reverse transcriptase",
+      "pool_size": 37,
+      "pool_relevant": 1,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 6781,
+        "n": 20,
+        "chars": 45622
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 4562,
+        "n": 8,
+        "chars": 12515
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 3739,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 1263,
+        "n": 20,
+        "chars": 45759
+      }
+    },
+    {
+      "topic": "aptamer-selex",
+      "term": "SELEX",
+      "pool_size": 27,
+      "pool_relevant": 13,
+      "fulltext": {
+        "p5": 0.2,
+        "p10": 0.4,
+        "r10": 0.3077,
+        "f1": 0.3478,
+        "mrr": 0.3333
+      },
+      "fulltext_cost": {
+        "ms": 1243,
+        "n": 20,
+        "chars": 37328
+      },
+      "title_only": {
+        "p5": 0.8,
+        "p10": 0.4,
+        "r10": 0.3077,
+        "f1": 0.3478,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 1838,
+        "n": 4,
+        "chars": 5181
+      },
+      "stageradar": {
+        "p5": 1.0,
+        "p10": 1.0,
+        "r10": 0.7692,
+        "f1": 0.8696,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 23853,
+        "n": 11,
+        "chars": 17263
+      },
+      "stageradar_v2": {
+        "p5": 0.6,
+        "p10": 0.6,
+        "r10": 0.4615,
+        "f1": 0.5217,
+        "mrr": 0.5
+      },
+      "stageradar_v2_cost": {
+        "ms": 2637,
+        "n": 17,
+        "chars": 30680
+      }
+    },
+    {
+      "topic": "aptamer-selex",
+      "term": "cell-SELEX",
+      "pool_size": 6,
+      "pool_relevant": 3,
+      "fulltext": {
+        "p5": 0.4,
+        "p10": 0.3,
+        "r10": 1.0,
+        "f1": 0.4615,
+        "mrr": 0.25
+      },
+      "fulltext_cost": {
+        "ms": 5714,
+        "n": 6,
+        "chars": 11149
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 5949,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.6,
+        "p10": 0.3,
+        "r10": 1.0,
+        "f1": 0.4615,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 7640,
+        "n": 3,
+        "chars": 4209
+      },
+      "stageradar_v2": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 0.3333,
+        "f1": 0.1538,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 882,
+        "n": 1,
+        "chars": 2524
+      }
+    },
+    {
+      "topic": "aptamer-selex",
+      "term": "aptamer sensor",
+      "pool_size": 3,
+      "pool_relevant": 2,
+      "fulltext": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 1.0,
+        "f1": 0.3333,
+        "mrr": 0.5
+      },
+      "fulltext_cost": {
+        "ms": 8743,
+        "n": 3,
+        "chars": 5259
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 7533,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 0.5,
+        "f1": 0.1667,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 5484,
+        "n": 1,
+        "chars": 2113
+      },
+      "stageradar_v2": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 1.0,
+        "f1": 0.3333,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 6683,
+        "n": 2,
+        "chars": 3674
+      }
+    },
+    {
+      "topic": "aptamer-selex",
+      "term": "aptasensor",
+      "pool_size": 34,
+      "pool_relevant": 24,
+      "fulltext": {
+        "p5": 0.4,
+        "p10": 0.5,
+        "r10": 0.2083,
+        "f1": 0.2941,
+        "mrr": 0.3333
+      },
+      "fulltext_cost": {
+        "ms": 9143,
+        "n": 20,
+        "chars": 28604
+      },
+      "title_only": {
+        "p5": 1.0,
+        "p10": 1.0,
+        "r10": 0.4167,
+        "f1": 0.5882,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 12058,
+        "n": 20,
+        "chars": 28953
+      },
+      "stageradar": {
+        "p5": 1.0,
+        "p10": 0.5,
+        "r10": 0.2083,
+        "f1": 0.2941,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 6988,
+        "n": 5,
+        "chars": 8659
+      },
+      "stageradar_v2": {
+        "p5": 0.8,
+        "p10": 0.8,
+        "r10": 0.3333,
+        "f1": 0.4706,
+        "mrr": 0.5
+      },
+      "stageradar_v2_cost": {
+        "ms": 9281,
+        "n": 20,
+        "chars": 27604
+      }
+    },
+    {
+      "topic": "spatial-transcriptomics",
+      "term": "single-cell spatial",
+      "pool_size": 37,
+      "pool_relevant": 18,
+      "fulltext": {
+        "p5": 0.8,
+        "p10": 0.6,
+        "r10": 0.3333,
+        "f1": 0.4286,
+        "mrr": 0.5
+      },
+      "fulltext_cost": {
+        "ms": 7221,
+        "n": 20,
+        "chars": 35350
+      },
+      "title_only": {
+        "p5": 0.6,
+        "p10": 0.3,
+        "r10": 0.1667,
+        "f1": 0.2143,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 7871,
+        "n": 6,
+        "chars": 11979
+      },
+      "stageradar": {
+        "p5": 1.0,
+        "p10": 1.0,
+        "r10": 0.5556,
+        "f1": 0.7143,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 9129,
+        "n": 10,
+        "chars": 14604
+      },
+      "stageradar_v2": {
+        "p5": 1.0,
+        "p10": 0.8,
+        "r10": 0.4444,
+        "f1": 0.5714,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 7788,
+        "n": 20,
+        "chars": 36858
+      }
+    },
+    {
+      "topic": "spatial-transcriptomics",
+      "term": "spatial multi-omics",
+      "pool_size": 35,
+      "pool_relevant": 30,
+      "fulltext": {
+        "p5": 1.0,
+        "p10": 1.0,
+        "r10": 0.3333,
+        "f1": 0.5,
+        "mrr": 1.0
+      },
+      "fulltext_cost": {
+        "ms": 11407,
+        "n": 20,
+        "chars": 34499
+      },
+      "title_only": {
+        "p5": 1.0,
+        "p10": 1.0,
+        "r10": 0.3333,
+        "f1": 0.5,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 12080,
+        "n": 12,
+        "chars": 22791
+      },
+      "stageradar": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 0.0667,
+        "f1": 0.1,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 11958,
+        "n": 2,
+        "chars": 3769
+      },
+      "stageradar_v2": {
+        "p5": 1.0,
+        "p10": 1.0,
+        "r10": 0.3333,
+        "f1": 0.5,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 16043,
+        "n": 20,
+        "chars": 38274
+      }
+    },
+    {
+      "topic": "spatial-transcriptomics",
+      "term": "in situ sequencing",
+      "pool_size": 10,
+      "pool_relevant": 4,
+      "fulltext": {
+        "p5": 0.4,
+        "p10": 0.4,
+        "r10": 1.0,
+        "f1": 0.5714,
+        "mrr": 0.5
+      },
+      "fulltext_cost": {
+        "ms": 21422,
+        "n": 10,
+        "chars": 15434
+      },
+      "title_only": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 0.5,
+        "f1": 0.2857,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 2607,
+        "n": 2,
+        "chars": 1719
+      },
+      "stageradar": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 0.5,
+        "f1": 0.2857,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 15030,
+        "n": 2,
+        "chars": 3382
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 119140,
+        "n": 0,
+        "chars": 0
+      }
+    },
+    {
+      "topic": "spatial-transcriptomics",
+      "term": "spatial barcoding",
+      "pool_size": 0,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 47143,
+        "n": 0,
+        "chars": 0
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 7366,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 7553,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 7425,
+        "n": 0,
+        "chars": 0
+      }
+    },
+    {
+      "topic": "base-editing",
+      "term": "cytosine base editor",
+      "pool_size": 2,
+      "pool_relevant": 2,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 7120,
+        "n": 0,
+        "chars": 0
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 28615,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 1.0,
+        "f1": 0.3333,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 2149,
+        "n": 2,
+        "chars": 1427
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 120430,
+        "n": 0,
+        "chars": 0
+      }
+    },
+    {
+      "topic": "base-editing",
+      "term": "adenine base editor",
+      "pool_size": 3,
+      "pool_relevant": 3,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 7071,
+        "n": 0,
+        "chars": 0
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 7416,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 8044,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.6,
+        "p10": 0.3,
+        "r10": 1.0,
+        "f1": 0.4615,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 6808,
+        "n": 3,
+        "chars": 3169
+      }
+    },
+    {
+      "topic": "base-editing",
+      "term": "lipid nanoparticle delivery",
+      "pool_size": 10,
+      "pool_relevant": 0,
+      "fulltext": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "fulltext_cost": {
+        "ms": 24797,
+        "n": 10,
+        "chars": 12340
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 1174,
+        "n": 1,
+        "chars": 1487
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 1205,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 2440,
+        "n": 4,
+        "chars": 6697
+      }
+    },
+    {
+      "topic": "base-editing",
+      "term": "in vivo base editing",
+      "pool_size": 4,
+      "pool_relevant": 1,
+      "fulltext": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 1.0,
+        "f1": 0.1818,
+        "mrr": 1.0
+      },
+      "fulltext_cost": {
+        "ms": 1672,
+        "n": 4,
+        "chars": 3493
+      },
+      "title_only": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 1.0,
+        "f1": 0.1818,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 1677,
+        "n": 1,
+        "chars": 117
+      },
+      "stageradar": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 1.0,
+        "f1": 0.1818,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 1191,
+        "n": 1,
+        "chars": 117
+      },
+      "stageradar_v2": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 1.0,
+        "f1": 0.1818,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 1647,
+        "n": 1,
+        "chars": 117
+      }
+    },
+    {
+      "topic": "protein-design",
+      "term": "de novo protein design",
+      "pool_size": 16,
+      "pool_relevant": 7,
+      "fulltext": {
+        "p5": 0.4,
+        "p10": 0.4,
+        "r10": 0.5714,
+        "f1": 0.4706,
+        "mrr": 1.0
+      },
+      "fulltext_cost": {
+        "ms": 2108,
+        "n": 16,
+        "chars": 18925
+      },
+      "title_only": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 0.1429,
+        "f1": 0.1176,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 925,
+        "n": 1,
+        "chars": 1403
+      },
+      "stageradar": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 0.2857,
+        "f1": 0.2353,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 813,
+        "n": 2,
+        "chars": 1472
+      },
+      "stageradar_v2": {
+        "p5": 1.0,
+        "p10": 0.5,
+        "r10": 0.7143,
+        "f1": 0.5882,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 2902,
+        "n": 5,
+        "chars": 8063
+      }
+    },
+    {
+      "topic": "protein-design",
+      "term": "protein language model",
+      "pool_size": 32,
+      "pool_relevant": 30,
+      "fulltext": {
+        "p5": 1.0,
+        "p10": 1.0,
+        "r10": 0.3333,
+        "f1": 0.5,
+        "mrr": 1.0
+      },
+      "fulltext_cost": {
+        "ms": 1920,
+        "n": 20,
+        "chars": 34900
+      },
+      "title_only": {
+        "p5": 1.0,
+        "p10": 1.0,
+        "r10": 0.3333,
+        "f1": 0.5,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 1997,
+        "n": 20,
+        "chars": 35815
+      },
+      "stageradar": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "stageradar_cost": {
+        "ms": 1406,
+        "n": 0,
+        "chars": 0
+      },
+      "stageradar_v2": {
+        "p5": 1.0,
+        "p10": 1.0,
+        "r10": 0.3333,
+        "f1": 0.5,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 1187,
+        "n": 20,
+        "chars": 35431
+      }
+    },
+    {
+      "topic": "protein-design",
+      "term": "directed evolution",
+      "pool_size": 32,
+      "pool_relevant": 26,
+      "fulltext": {
+        "p5": 1.0,
+        "p10": 0.8,
+        "r10": 0.3077,
+        "f1": 0.4444,
+        "mrr": 1.0
+      },
+      "fulltext_cost": {
+        "ms": 1466,
+        "n": 20,
+        "chars": 29849
+      },
+      "title_only": {
+        "p5": 1.0,
+        "p10": 0.6,
+        "r10": 0.2308,
+        "f1": 0.3333,
+        "mrr": 1.0
+      },
+      "title_only_cost": {
+        "ms": 2064,
+        "n": 6,
+        "chars": 8283
+      },
+      "stageradar": {
+        "p5": 0.2,
+        "p10": 0.1,
+        "r10": 0.0385,
+        "f1": 0.0556,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 3007,
+        "n": 1,
+        "chars": 1055
+      },
+      "stageradar_v2": {
+        "p5": 1.0,
+        "p10": 1.0,
+        "r10": 0.3846,
+        "f1": 0.5556,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 2169,
+        "n": 20,
+        "chars": 29164
+      }
+    },
+    {
+      "topic": "protein-design",
+      "term": "structure prediction",
+      "pool_size": 40,
+      "pool_relevant": 6,
+      "fulltext": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 0.3333,
+        "f1": 0.25,
+        "mrr": 0.5
+      },
+      "fulltext_cost": {
+        "ms": 2822,
+        "n": 20,
+        "chars": 33639
+      },
+      "title_only": {
+        "p5": 0.0,
+        "p10": 0.0,
+        "r10": 0.0,
+        "f1": 0.0,
+        "mrr": 0.0
+      },
+      "title_only_cost": {
+        "ms": 3721,
+        "n": 12,
+        "chars": 19586
+      },
+      "stageradar": {
+        "p5": 0.4,
+        "p10": 0.2,
+        "r10": 0.3333,
+        "f1": 0.25,
+        "mrr": 1.0
+      },
+      "stageradar_cost": {
+        "ms": 1519,
+        "n": 2,
+        "chars": 1826
+      },
+      "stageradar_v2": {
+        "p5": 0.2,
+        "p10": 0.2,
+        "r10": 0.3333,
+        "f1": 0.25,
+        "mrr": 1.0
+      },
+      "stageradar_v2_cost": {
+        "ms": 1535,
+        "n": 20,
+        "chars": 33432
+      }
+    }
+  ],
+  "journal_coverage": {
+    "window": [
+      "2026-10-18",
+      "2026-11-17"
+    ],
+    "corpus_size": 5303,
+    "journals": 51,
+    "partial_or_error": [
+      {
+        "source": "crossref:natcommun",
+        "status": "partial",
+        "count": 600,
+        "name": "Nature Communications",
+        "error": "达到 12 页上限，窗口未翻完（共 776 条）"
+      }
+    ],
+    "per_topic_relevant": {
+      "mrna-capping": 1,
+      "peptide-macrocyclization": 4,
+      "trna-detection": 0,
+      "prime-editing": 2,
+      "aptamer-selex": 8,
+      "spatial-transcriptomics": 17,
+      "base-editing": 7,
+      "protein-design": 22
+    },
+    "_hits": {
+      "mrna-capping": [
+        {
+          "id": "10.1126/sciadv.aej0664",
+          "doi": "10.1126/sciadv.aej0664",
+          "title": "Structure of vesicular stomatitis virus L-P-N\n                    <sup>0</sup>\n                    complex by cyro-electron microscopy",
+          "abstract": "The large protein (L) of nonsegmented, negative-strand RNA viruses, a viral order that includes rabies, Ebola, Nipah, and respiratory syncytial viruses, catalyze RNA-dependent RNA polymerization on nucleocapsid-sheathed RNA templates. L coordinates two distinct processes: messenger RNA (mRNA) transcription and genome replication. During transcription, L catalyzes cotranscriptional mRNA capping, methylation, and polyadenylation. The additional activities are not required during genome replication; instead, RNA synthesis is coupled to encapsidation by soluble nucleoprotein (N 0 ) recruited by the phosphoprotein (P). We determined the structure of a vesicular stomatitis virus polymerase complex comprising L-P and N 0 . P directly engages the carboxyl-terminal domain of L (L CTD ) to anchor N 0 in a continuum of conformations including a more stable configuration with N 0 positioned at the RNA-product exit channel, poised for encapsidation. This study reveals a function for L CTD in encapsidation of nascent RNAs and provides the structure of a polymerase complex required for genomic RNA replication.",
+          "journal": "Science Advances"
+        }
+      ],
+      "peptide-macrocyclization": [
+        {
+          "id": "10.1038/s41467-026-79042-2",
+          "doi": "10.1038/s41467-026-79042-2",
+          "title": "Lipidated macrocyclic peptide S-880008 inhibits SARS-CoV-2 fusion by suppressing protomer dissociation at conserved spike sites",
+          "abstract": "",
+          "journal": "Nature Communications"
+        },
+        {
+          "id": "10.1021/jacs.6c17795",
+          "doi": "10.1021/jacs.6c17795",
+          "title": "Lysine Side-Chain-to-Backbone\nMacroamidine Formation\nReveals Activation-First YcaO Catalysis",
+          "abstract": "Abstract YcaO enzymes use ATP to modify chemically inert peptide-backbone amides, but the order of catalytic steps has remained unresolved. Here, we characterize a minimal Lysobacter ribosomally synthesized and post-translationally modified peptide (RiPP) pathway in which the stand-alone YcaO LmaB sequentially forms two lysine side-chain-to-backbone macroamidine linkages in the precursor peptide LmaA, revealing a previously unrecognized mode of YcaO-catalyzed peptide cyclization. Bioinformatic analyses place this pathway within a broader class of macroamidine-containing RiPPs, collectively termed macroamitides, which also includes the antibiotic bottromycins. High-resolution LmaB–LmaA structures directly resolve an O-phosphorylated peptide-backbone intermediate coordinated by ADP and three Mg2+ ions and capture the first macroamidine together with O-phosphorylation at the second reaction site. These snapshots reveal iterative substrate repositioning within a single active site. A structure of LmaB H75A retains the O-phosphorylated intermediate but traps the intact lysine nucleophile in a nonproductive conformation, identifying H75 as the general base that activates and positions the lysine ε-amino group for attack. Alanine scanning further reveals extensive tolerance of both ring-forming sequences. Together, these data establish that backbone O-phosphorylation precedes nucleophilic attack, revise the prevailing YcaO mechanism, and provide a model for engineering peptide-backbone chemistry during macroamidine formation.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/acs.orglett.6c04383",
+          "doi": "10.1021/acs.orglett.6c04383",
+          "title": "Head-to-Tail\nPeptide Cyclization of\n                    <i>N</i>\n                    -Aryl Peptide Hydrazides",
+          "abstract": "Abstract A novel method for the macrocyclization of unprotected peptides is presented, featuring in situ oxidation of N-aryl peptide hydrazides and chemoselective hydrazone bond formation. A series of &amp;gt;50 macrocyclic peptides were accessed with a variety of sequences, ring sizes (16–25 atoms), and substitution at the site of ligation. Analogs of Gramicidin S and Cilengitide were also synthesized. The resulting stable keto-hydrazone linkages can be used in chemoselective postligation modifications such as reductions and isomerizations.",
+          "journal": "Organic Letters"
+        },
+        {
+          "id": "10.1002/anie.6515850",
+          "doi": "10.1002/anie.6515850",
+          "title": "A Phosphonium Relay for Integrated Cleavage‐to‐Cyclization of Cyclic Peptides",
+          "abstract": "ABSTRACT Head‐to‐tail macrocyclization of peptides is typically performed through stepwise workflows that separate resin cleavage, isolation of linear intermediates, and subsequent cyclization, largely due to incompatible activation requirements for each transformation. Here we report a phosphonium‐mediated relay that unifies these steps within a single activation node. In this design, an electrophile‐activated phosphonium species promotes cleavage from standard 2‐chlorotrityl chloride (2‐CTC) resin and is proposed to enable in situ formation of a C ‐terminally activated intermediate for intramolecular amidation. The strategy directly couples cleavage to cyclization on standard peptide supports without auxiliary linkers, intermediate purification, or high‐dilution cyclization conditions. The method is compatible with diverse peptide sequccnces and functional handles and can be integrated into a closed‐loop automated workflow for end‐to‐end synthesis, with advantages for hydrophobic substrates by avoiding isolation of poorly soluble linear intermediates such as Vespid chemotactic peptide 5f . Process‐level benchmarking against side‐chain anchoring further demonstrated favorable process metrics and gram‐scale scalability. This work establishes a linker‐free cleavage‐to‐cyclization strategy and provides a practical framework for integrated and automation‐compatible cyclic peptide synthesis.",
+          "journal": "Angewandte Chemie International Edition"
+        }
+      ],
+      "trna-detection": [],
+      "prime-editing": [
+        {
+          "id": "10.1038/d41586-026-03371-x",
+          "doi": "10.1038/d41586-026-03371-x",
+          "title": "A first for CRISPR: powerful prime editing alters DNA directly in the human body",
+          "abstract": "",
+          "journal": "Nature"
+        },
+        {
+          "id": "10.1126/scitranslmed.aef9466",
+          "doi": "10.1126/scitranslmed.aef9466",
+          "title": "Cas9 nickase–mediated contraction of CAG/CTG repeats is associated with phenotypic improvements in a Huntington’s disease mouse model",
+          "abstract": "Expanded CAG/CTG repeats cause more than 15 different diseases that all remain without a disease-modifying treatment. Because repeat length accounts for most of the variation in disease severity, contracting CAG/CTG repeats presents an attractive therapeutic avenue. Here, we show that the CRISPR-Cas9 nickase targeted to CAG/CTG repeats leads to efficient repeat contractions in Huntington’s disease (HD) patient–derived neurons and astrocytes and in myotonic dystrophy type 1 patient–derived neurons. The approach was allele selective and free of detectable off-target mutations. Injection of the Cas9 nickase into the striatum of the R6/1 mouse model of HD using adeno-associated viral vectors led to repeat contractions in more than half of striatal neurons. Upon injection, we observed a reduction in the number of inclusion bodies, an improved gene expression profile, and amelioration of locomotion deficits in the open field test. The effects were greater than expected from the contractions induced, suggesting that non–cell autonomous mechanisms may be involved. Our results provide the proof of concept that correction of CAG/CTG repeats can improve HD phenotypes in a mouse disease model.",
+          "journal": "Science Translational Medicine"
+        }
+      ],
+      "aptamer-selex": [
+        {
+          "id": "10.1038/s41592-026-03284-7",
+          "doi": "10.1038/s41592-026-03284-7",
+          "title": "Aptamer-mediated multivalent endogenous ADAR1 recruitment for highly efficient RNA editing",
+          "abstract": "",
+          "journal": "Nature Methods"
+        },
+        {
+          "id": "10.1126/sciadv.aee3585",
+          "doi": "10.1126/sciadv.aee3585",
+          "title": "A TROP2-targeting aptamer enables selective drug delivery and potent antitumor activity in pancreatic cancer",
+          "abstract": "Pancreatic ductal adenocarcinoma (PDAC) remains difficult to treat, highlighting the need for strategies that selectively deliver cytotoxic agents to tumor cells. Trophoblast cell-surface antigen 2 (TROP2) has been proposed as a candidate therapeutic target in PDAC, but non-antibody-based delivery formats remain underexplored. Using protein-SELEX, we identified T17, a high-affinity aptamer that specifically binds to TROP2, and conjugated it to monomethyl auristatin E through an MC-Val-Cit-PAB linker to generate the aptamer-drug conjugate T17-M. Preclinical evaluation in cellular and animal models showed that T17-M retained TROP2-dependent binding, underwent clathrin-mediated internalization and lysosomal processing, and suppressed tumor growth in cell-line-derived and patient-derived xenografts. T17-M also reduced liver metastasis and induced calreticulin exposure, ATP release, and HMGB1 secretion, consistent with immunogenic cell death. In immunocompetent models, T17-M promoted dendritic-cell activation and CD8 + T cell infiltration, while its combination with PD-1 blockade further enhanced tumor control and prolonged survival. These findings provide preclinical proof-of-concept for T17-M as an alternative TROP2-targeted drug-delivery strategy for PDAC.",
+          "journal": "Science Advances"
+        },
+        {
+          "id": "10.1126/sciadv.aem8494",
+          "doi": "10.1126/sciadv.aem8494",
+          "title": "Erratum for the Research Article “Aptamer-functionalized Apoptotic Vesicles Ameliorate Osteoarthritis via Resuming Mitochondria OXPHOS of Chondrocytes”",
+          "abstract": "",
+          "journal": "Science Advances"
+        },
+        {
+          "id": "10.1126/sciadv.aeh8187",
+          "doi": "10.1126/sciadv.aeh8187",
+          "title": "Spatial decoupling of recognition and signaling in aptamer switches via tri-strand intermolecular competition",
+          "abstract": "Despite decades of progress in aptamer engineering, the development of a single, modular signaling architecture capable of transducing target recognition into a measurable output across structurally diverse analytes remains an unmet challenge in biosensing. We report the Competitor Bridge Aptamer (CoBrA) framework: a modular DNA tridomain architecture that functionally isolates target recognition from signal transduction. Unlike conventional sensors where signal output depends on unpredictable aptamer folding, the CoBrA system uses an aptamer switch to trigger a predictable, concerted spatial displacement between signaling end points. By leveraging computational simulations and energetic balancing, we systematically optimized the CoBrA framework to consolidate recognition, displacement, and ratiometric signaling within a single, minimal-component system. Using the dopamine and cortisol aptamers as models, we demonstrate strong thermodynamic and kinetic synchronization between the Cy3 and Cy5 channels across both targets for dopamine (Cy3: K d = 13.3 ± 3.2 μM, τ = 447 ± 31 seconds; Cy5: K d = 24.0 ± 3.3 μM, τ = 537 ± 22 seconds) and cortisol (Cy3: K d = 36.6 ± 3.9 μM, τ = 205 ± 7 seconds; Cy5: K d = 30.7 ± 5.5 μM, τ = 259 ± 4 seconds) in buffer, serum, and artificial cerebrospinal fluid. Because the signaling event is a predictable, geometry-defined change rather than a fluorescence-specific phenomenon, this architecture is in principle adaptable to surface-based transduction modalities, including electrochemical, field-effect transistor, and plasmonic readouts.",
+          "journal": "Science Advances"
+        },
+        {
+          "id": "10.1021/jacs.6c18490",
+          "doi": "10.1021/jacs.6c18490",
+          "title": "A Mirror-Image L-RNA\nAptamer Targeting Hypoxia-Inducible\nFactor-1α Promoter G-Quadruplex Potentiates Tumor Radiotherapy\n                    <i>In Vivo</i>",
+          "abstract": "Abstract The hypoxia-inducible factor (HIF) coordinates the response of tumors to low oxygen by stimulating genes involved in metabolism and angiogenesis. HIF pathway activation is highly associated with tumor progression and radiotherapy resistance. Ligands that target this pathway are potential agents for the treatment of solid tumor malignancies. We developed an L-RNA aptamer, L-Apt5–4, targeting the HIF-1α promoter DNA G-quadruplex (dG4) via mirror-image SELEX. This L-RNA aptamer adopts a stem-loop secondary structure, binds HIF-1α dG4 with high affinity and specificity, and enters the nucleus to effectively downregulate HIF-1α and its downstream targets in cancer cells. By suppressing HIF-1α, L-Apt5–4 not only inhibits tumor cell proliferation, migration, and invasion, but also acts as a potent radiosensitizer, synergizing with radiotherapy to enhance cancer cell death. The combination therapy significantly suppresses tumor growth and metastasis while exhibiting excellent biosafety in vivo. Thus, L-Apt5–4 represents a novel HIF-1α-targeted therapeutic and radiosensitizer for combined cancer treatment.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/jacs.6c14740",
+          "doi": "10.1021/jacs.6c14740",
+          "title": "Efficient Chemical\nSynthesis and Enzymatic Replication\nof 3′-Deoxyapionucleic Acid (ApioNA): An RNA-Selective XNA\nwith Conformational Flexibility",
+          "abstract": "Abstract Xeno-nucleic acids (XNAs) have emerged as versatile platforms due to their sugar scaffolds that enable precise chemical tuning, leading to distinct classes ranging from fully compatible systems to orthogonal systems. However, sugar-modified XNAs capable of discriminating between RNA and DNA have remained elusive. In this work, we establish 3′-deoxyapionucleic acid (ApioNA) as a structurally flexible XNA with inherent RNA-selective hybridization properties. We achieved efficient production of ApioNA oligonucleotides through an efficient asymmetric synthesis of their building blocks and systematically characterized their properties. Thermal melting analyses demonstrate that ApioNA forms moderately stable duplexes with RNA while exhibiting weak pairing with DNA and negligible self-association. Quantum mechanical calculations reveal that the apiofuranose ring populates two low-energy puckering states, and the addition of an extra methylene group enhances backbone flexibility, thereby favoring A-form geometry for RNA pairing while requiring a higher-energy state to accommodate B-form DNA. Despite its weak affinity for DNA, ApioNA supports a complete enzymatic replication cycle using commercial Therminator and Bst 3.0 polymerases with approximately 98% fidelity and is processed by native E. coli machinery in vivo. This work fills the RNA-selective niche in the XNA functional landscape and establishes sugar puckering dynamics and backbone flexibility as key design principles for programming nucleic acid pairing specificity.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/acs.accounts.6c00684",
+          "doi": "10.1021/acs.accounts.6c00684",
+          "title": "The Long and\nLucky Road to Continuous Molecular Monitoring:\nA Personal History of Electrochemical Aptamer-Based Sensors",
+          "abstract": "Conspectus “Continuous molecular monitoring”, the ability to measure specific molecules in vivo, in real time, and at high frequency, could transform biomedical science and clinical practice. It could, for example, expose physiological dynamics that current “sample-then-analyze” paradigms obscure and improve the personalization of medical treatment, such as via feedback-controlled dosing that responds automatically to a patient’s changing physiology. Unlocking the full potential of continuous molecular monitoring requires a reagentless, reversible sensing mechanism both selective enough to deploy in the body and general enough to detect almost any analyte, a combination that had long proven elusive. Enzymatic sensors, for example, including the continuous glucose monitor, often work well in vivo but are limited to the small number of analytes for which suitably transforming enzymes exist. “Affinity biosensors”, in contrast, do not require the chemical transformation of their target, rendering them far more general. However, these have historically relied on adsorption to generate a signal (e.g., binding-induced changes in mass), a mechanism that performs poorly in unprocessed biofluids in vitro, much less in vivo. In this Account, I describe the near-30-year effort required to create and bring to clinical trials the first affinity biosensor architecture that performs well in vivo: electrochemical aptamer-based (EAB) sensors. To achieve this, EAB sensors use the binding-induced folding of an electrode-attached aptamer to alter the electron transfer kinetics of an attached redox reporter, a biomimetic signaling mechanism that is reagentless, spontaneously reversible, highly selective, and thus supports the real-time, in vivo measurement of almost any analyte for which a suitable aptamer is available. The road to EAB sensors began in the late 1990s with coincidentally convergent evidence suggesting that binding-induced folding is a near-universal property of destabilized proteins. Through the years-long contributions of many creative collaborators, this ultimately evolved into a nucleic acid-based, electrochemical biosensor architecture of broad utility. However, while even the first examples worked well in blood serum in vitro, EAB sensors drift when placed in the body, a problem ultimately solved by an engineering insight: the strongly frequency-dependent signaling of EAB sensors makes it possible to use them as their own drift-correcting reference. Leveraging this, in 2017, we demonstrated the first real-time, multihour in vivo monitoring of circulating drugs, an advance since extended to a wide range of analytes, to week-long in vivo operation and to feedback-controlled drug delivery. Given these unique measurement and control capabilities, EAB sensors can answer scientific questions and solve clinical problems that other technologies cannot. Seconds-resolved EAB sensor measurements are beginning to reveal, for example, previously unrecognized regulatory and clearance mechanisms and to reshape our understanding of drug and metabolite transport within the body, and the recent successful clinical trial of wearable EAB sensor “patches” supporting real-time measurements of the antibiotic vancomycin suggests the technology could similarly advance the measurement of drugs and biomarkers in healthcare. In short, I believe the continuous molecular monitoring that EAB sensors enable is poised to revolutionize our understanding of physiology and our ability to detect, monitor, and treat disease.",
+          "journal": "Accounts of Chemical Research"
+        },
+        {
+          "id": "10.1021/acsami.6c16686",
+          "doi": "10.1021/acsami.6c16686",
+          "title": "IMAN: An Integrated Colorimetric Sensor for Direct Detection of PD-L1 on Extracellular Vesicles in Lung Cancer Diagnosis",
+          "abstract": "Abstract Lung cancer is a leading cause of cancer mortality, yet early diagnosis remains difficult, highlighting the need for sensitive, noninvasive methods. Extracellular vesicles (EVs) and their surface proteins (e.g., PD-L1) are promising biomarkers; nevertheless, current EV detection requires time-consuming purification, sophisticated instrumentation, and long measurement protocols, resulting in high expenses and operational difficulties. This study developed an integrated colorimetric sensor, IMAN, based on a strategy of “Immunomagnetic Microbeads (IM) capture + Aptamer(Apt) recognition + Nanozyme (N) catalysis”. IMAN employs magnetic beads modified with antibodies against CD9 and CD81 to directly capture EVs from serum, eliminating the need for time-consuming prior isolation; combined with a one-step colorimetric readout, the entire workflow can be completed with only ∼40 min of hands-on time, requiring no complex instrumentation. The PD-L1 protein on the EV surface is specifically recognized by a nanoparticle-bound nucleic acid aptamer. Signal generation is achieved through the catalytic oxidation of 3,3',5,5'-tetramethylbenzidine (TMB) by a platinum-gold bimetallic nanozyme (Pt@Au). The facile IMAN colorimetric method demonstrated a relatively broad dynamic range (107–1010 particles/mL), high specificity (unaffected by 100 pg/mL soluble PD-L1 in serum), and reproducibility (relative standard deviation, RSD = 9.1%). Analysis of clinical serum samples revealed significantly elevated EV-PD-L1 levels in patients with lung cancer compared with healthy donors and patients with benign nodule (p &amp;lt; 0.01). Receiver operating characteristic (ROC) analysis yielded areas under the curve (AUC) of 0.849 for distinguishing patients with lung cancer from healthy donors and 0.860 for distinguishing patients with lung cancer from patients with benign nodules, which are superior to those of the conventional serum biomarkers CEA and Cyfra21-1. By addressing the cost, complexity, and slow response of current methods, IMAN offers a simple, cost-effective platform for direct EV surface protein detection without complex instrumentation, providing a novel tool for the noninvasive lung cancer diagnosis.",
+          "journal": "ACS Applied Materials & Interfaces"
+        }
+      ],
+      "spatial-transcriptomics": [
+        {
+          "id": "10.1038/s41592-026-03272-x",
+          "doi": "10.1038/s41592-026-03272-x",
+          "title": "Benchmarking segmentation methods for spatial transcriptomics",
+          "abstract": "",
+          "journal": "Nature Methods"
+        },
+        {
+          "id": "10.1038/s41467-026-78923-w",
+          "doi": "10.1038/s41467-026-78923-w",
+          "title": "Visual LLM-guided consensus spatial domain detection with L-STAR",
+          "abstract": "Abstract Spatial transcriptomics measures gene activity while preserving the locations of cells within tissue. A key analysis step is to divide the tissue into spatial domains, but the performance of computational methods varies considerably across datasets, and no single method consistently performs best. Here we show that a large language model can compare spatial domain maps and identify the better-performing methods. We developed L-STAR, which visually compares and ranks candidate methods, then builds a consensus map from the highest-ranked results. Across datasets representing different tissues, species, and technologies, L-STAR matched expert annotations more closely than individual methods or consensus analysis using a fixed set of methods. Its rankings were reproducible and generally stable when image colors or presentation order changed. L-STAR also provided rationales for its comparisons and assigned biologically meaningful names to the detected domains. These findings show that large language models can make spatial transcriptomics analysis more adaptive, robust, and interpretable.",
+          "journal": "Nature Communications"
+        },
+        {
+          "id": "10.1038/s41467-026-79323-w",
+          "doi": "10.1038/s41467-026-79323-w",
+          "title": "Isoform-resolved spatial transcriptomics on a lab-made high-density array via a single-chip NGS-TGS workflow",
+          "abstract": "",
+          "journal": "Nature Communications"
+        },
+        {
+          "id": "10.1038/s41588-026-02812-7",
+          "doi": "10.1038/s41588-026-02812-7",
+          "title": "Principles and assumptions underlying domain detection in spatial transcriptomics",
+          "abstract": "",
+          "journal": "Nature Genetics"
+        },
+        {
+          "id": "10.1038/s41589-026-02356-1",
+          "doi": "10.1038/s41589-026-02356-1",
+          "title": "In vivo-compatible spatial multi-omics via hydrogen peroxide-independent APEX2 labeling",
+          "abstract": "",
+          "journal": "Nature Chemical Biology"
+        },
+        {
+          "id": "10.1038/s41591-026-04741-8",
+          "doi": "10.1038/s41591-026-04741-8",
+          "title": "An ulcerative colitis taxonomy defined by individual patient-reported response trajectories",
+          "abstract": "Abstract A barrier to precision medicine for ulcerative colitis (UC) is the inability to predict and mechanistically explain treatment responses. Using patient-reported outcomes (PROs) from a phase 3b comparative trial of 768 participants, we identified four distinct patient response-trajectory groups for vedolizumab (anti-integrin) and adalimumab (antitumor necrosis factor). Validation in a second phase 3 trial of 576 participants linked PRO-defined vedolizumab trajectories to long-term disease complications. Bulk, single cell, and spatial transcriptomics and proteomics identified vascular inflammation as associated with vedolizumab nonresponse through interactions between SPP1 + macrophages and endothelial cells. In two separate real-world cohorts of 4,981 and 3,854 patients with UC, concomitant use of renin–angiotensin system inhibitors (modulators of vascular inflammation) was associated with reduced long-term complications for vedolizumab but not anticytokine therapies. These findings define a response-trajectory-based taxonomy that requires prospective validation for clinical utility and applications for selecting vedolizumab combination therapy in UC.",
+          "journal": "Nature Medicine"
+        },
+        {
+          "id": "10.1016/j.cell.2026.10.023",
+          "doi": "10.1016/j.cell.2026.10.023",
+          "title": "Spatial transcriptomics reveals molecular organization of human and nonhuman primate basal ganglia",
+          "abstract": "",
+          "journal": "Cell"
+        },
+        {
+          "id": "10.1016/j.cell.2026.09.064",
+          "doi": "10.1016/j.cell.2026.09.064",
+          "title": "Multimodal spatial transcriptomics redefines cortical pathology in Huntington’s disease",
+          "abstract": "",
+          "journal": "Cell"
+        },
+        {
+          "id": "10.1126/science.aef4622",
+          "doi": "10.1126/science.aef4622",
+          "title": "A cellular atlas of the preinvasive breast cancer microenvironment",
+          "abstract": "Ductal carcinoma in situ (DCIS) is the most common preinvasive breast cancer, however our knowledge of the DCIS tumor microenvironment (TME) remains limited. We constructed a comprehensive atlas of the TME in estrogen-receptor positive DCIS using fresh samples collected from normal breast tissues, DCIS and invasive breast cancers. We analyzed 854,911 cells from 159 patients by single cell RNA sequencing and 39 samples by spatial transcriptomics, which identified 9 cell types and 60 cell states. Our data shows remodeling of fibroblasts, vascular and basal cells that encircle the DCIS regions and immunosuppressive ducts that support the growth of the preinvasive cancer cells. This study delineates early alterations in the DCIS TME, including many changes that persist during invasive progression.",
+          "journal": "Science"
+        },
+        {
+          "id": "10.1126/science.aee5093",
+          "doi": "10.1126/science.aee5093",
+          "title": "Spatial coordination in the codevelopment of the human urogenital system during organogenesis",
+          "abstract": "The human urogenital system originates from a common embryonic domain, yet the mechanisms guiding its spatiotemporal coordination remain understudied. Here, we combined high-resolution spatial transcriptomics with single-cell multiomics to profile human embryos from Carnegie stages 15 to 23, capturing the codevelopmental dynamics of the urogenital system. We revealed mesonephros- and adrenal primordium–derived signals that promote gonadal specification and enable efficient in vitro generation of cells resembling early gonadal lineages. We also uncovered a possible mesonephric origin of gonadal supporting cells through rete testis or ovarii linking the mesonephros. Finally, we delineate three transcriptionally distinct steroidogenic lineages differing in cholesterol sourcing, cortisol synthesis, and sex hormone production that together orchestrate sex differentiation. These findings deepen our understanding of urogenital system assembly and guide the exploration of coordinated multiorgan development.",
+          "journal": "Science"
+        },
+        {
+          "id": "10.1126/science.aeg1125",
+          "doi": "10.1126/science.aeg1125",
+          "title": "Whole-body single-cell atlas of an adult vertebrate,\n                    <i>Danionella cerebrum</i>",
+          "abstract": "A complete cell type transcriptome atlas of a vertebrate could promote understanding of animal cell type composition, organization, and evolution. The miniaturized, transparent, and regenerative teleost Danionella cerebrum brings whole-vertebrate single-cell profiling experiments within reach. We performed region-stratified single-cell RNA sequencing across the adult Danionella body and mapped cell types and gene expression at single-cell resolution using spatial transcriptomics. We delineated spatially distinct neural cell types on the basis of their regional gene expression signatures. The body-wide atlas elucidated cell types harboring adult molecular positional memory, uncovered paedomorphic features, and revealed conserved body-region and appendage-specification programs in adult connective tissue. Comparative analyses revealed conserved neural cell types, and regeneration datasets uncovered expression dynamics during telencephalon regeneration. This whole-vertebrate transcriptome atlas yields a comprehensive resource for myriad questions in biology and neuroscience.",
+          "journal": "Science"
+        },
+        {
+          "id": "10.1126/sciadv.ady5085",
+          "doi": "10.1126/sciadv.ady5085",
+          "title": "Decoder-FFPE-seq enables sensitive, genome-wide spatial transcriptomics of archival tissues at single-cell resolution",
+          "abstract": "Formalin-fixed paraffin-embedded (FFPE) tissue–compatible spatial transcriptomics (ST) is transforming biology and histopathology, but achieving high sensitivity, genome-wide coverage, single-cell resolution, and researcher accessibility remains challenging. To address these challenges, we here present a dendrimeric DNA coordinate barcoding design for FFPE tissue–adapted spatial RNA sequencing (Decoder-FFPE-seq) by integrating RNA-to-DNA probe conversion with blotting-assisted barcoding. Decoder-FFPE-seq provides single-cell resolution with a &gt;2.6-fold sensitivity increase in whole-transcriptome mouse brain and archived human sample profiling over existing platforms, resolving potential cellular identity of low-abundance genes, finer tissue architecture, and capturing an epithelial-mesenchymal transition–associated signature for prognostic value. With expanded probe libraries, Decoder-FFPE-seq captures long noncoding and viral RNAs, revealing their spatial coregulatory networks with messenger RNAs in oral squamous cell carcinomas (OSCCs). In an OSCC immunotherapy cohort, two CD8 + T cell subpopulations were respectively identified in pre- and postchemoimmunotherapy samples, potentially linked to treatment response. Decoder-FFPE-seq establishes a robust, high-resolution, and accessible framework for sensitive ST profiling of archival tissues in fundamental and translational studies.",
+          "journal": "Science Advances"
+        },
+        {
+          "id": "10.1126/sciadv.aef5563",
+          "doi": "10.1126/sciadv.aef5563",
+          "title": "Human hair–bearing skin organoids reveal cell type–specific susceptibility and innate immune responses to herpes simplex virus 1",
+          "abstract": "Epithelial surfaces are the primary sites of lytic herpes simplex virus 1 (HSV-1) infection following initial exposure or reactivation from latency. To model this complex environment, we used human hair–bearing skin organoids and combined single-cell spatial transcriptomics with imaging to map viral spread and host responses across skin architecture. Our data suggest delayed progression of the HSV-1 life cycle in epidermal keratinocytes and hair follicle cells compared to the dermis. Infection triggered spatially organized host responses, including induction of IER3 in papillary fibroblasts. In basal keratinocytes, IRF3 was up-regulated in both infected and neighboring uninfected cells, consistent with paracrine activation of antiviral signaling. Inflammatory responses were compartmentalized in a cell type–specific manner, with TNFSF9 (4-1BBL) induced in papillary fibroblasts and tumor necrosis factor–α (TNF-α) induced in keratinocytes. Enzyme-linked immunosorbent assays confirmed secretion of these cytokines and the TNF-α–responsive chemokines CXCL2 and CXCL10. CXCL2 expression was enriched in cells adjacent to TNF-α–expressing cells, highlighting spatial coordination of inflammatory signaling. While interferon-β reduced viral replication, TNF-α and 4-1BBL did not, suggesting that their primary role is to orchestrate immune cell recruitment and activation. These findings establish human hair–bearing skin organoids as a physiologically relevant model for investigating spatial host–HSV-1 interactions.",
+          "journal": "Science Advances"
+        },
+        {
+          "id": "10.1126/scitranslmed.aeb7924",
+          "doi": "10.1126/scitranslmed.aeb7924",
+          "title": "TWEAK signaling drives the transition from psoriasis to atopic dermatitis–like inflammation in paradoxical eczema",
+          "abstract": "Targeted biologics have transformed the treatment of inflammatory skin diseases such as plaque psoriasis. However, some patients with psoriasis paradoxically develop eczematous skin reactions after therapy targeting tumor necrosis factor (TNF), interleukin-17 (IL-17), or IL-23. Although paradoxical eczema (PE) resembles atopic dermatitis (AD) clinically and histologically, the molecular mechanisms that drive its development remain poorly understood. Here, we generated high-resolution cellular and spatial maps of human skin using single-cell RNA sequencing, spatial transcriptomics, immunohistochemistry, and in vitro assays, profiling lesional biopsies from patients with PE ( n = 8 donors), alongside healthy control, psoriasis, and AD skin ( n = 4 donors per group). In PE, we identified distinct transcriptional changes characterized by myeloid and T cell expansion and an altered keratinocyte phenotype shaped by TNF-like weak inducer of apoptosis (TWEAK; encoded by TNFSF12 ) signaling through its receptor TNFRSF12A , confirmed at the protein level by immunohistochemistry. To define the underlying mechanism, we stimulated immortalized (N-TERT) and primary human keratinocytes and found that TWEAK acted together with IL-13 to drive a T helper 2– and type I interferon–polarized epithelial program that partially recapitulated the keratinocyte signature of PE lesions. We validated key target genes by quantitative polymerase chain reaction in primary keratinocytes. In THP-1 cells and primary human CD14 + monocytes, anti-TNF treatment induced TWEAK expression, suggesting a compensatory inflammatory circuit. Together, these findings identify the TWEAK–IL-13 axis as a key driver of PE and suggest how cytokine blockade may reshape cutaneous immune responses.",
+          "journal": "Science Translational Medicine"
+        },
+        {
+          "id": "10.1126/scitranslmed.adz4081",
+          "doi": "10.1126/scitranslmed.adz4081",
+          "title": "MIF-CD74 orchestrates synovial macrophage metabolic-inflammatory reprogramming by ENO2 interaction to drive osteoarthritis pathogenesis",
+          "abstract": "Synovitis is a central driver of osteoarthritis (OA) progression, yet the cellular and molecular mechanisms sustaining inflammatory circuits in the synovium remain incompletely understood. Through integrative analysis of time-resolved single-cell RNA sequencing in murine synovium and spatial transcriptomics of human OA tissues, we identified a pathogenic CD74 + macrophage subset that expands in OA and localizes at the synovial-cartilage interface. This subset exhibits a proinflammatory, nonclassical polarization and displays a metabolic dependency on glycolysis. Multiomics and mechanistic studies revealed that CD74 interacts with the glycolytic enzyme enolase 2 (ENO2). This interaction orchestrates a feed-forward signaling axis wherein CD74/ENO2 facilitates the nuclear translocation of hypoxia-inducible factor 1-α (HIF-1α)/β-catenin dimers, which coactivate glycolytic and inflammatory gene programs, thereby sustaining a metabolically driven inflammatory state. Genetic ablation of CD74 in myeloid cells or its pharmacological blockade mitigated synovitis and cartilage degradation in murine OA models. To translate this axis therapeutically, we developed synovium-targeted cationic lipid nanoparticles decorated with MIF-mimetic peptides (PcLNPs) for the delivery of CD74 siRNA. Intra-articular administration of PcLNPs efficiently targeted CD74 + macrophages, attenuated their inflammatory and glycolytic phenotypes, and ameliorated murine OA progression in vivo. Our findings establish the CD74/ENO2/HIF-1α/β-catenin axis as a critical integrator of metabolic reprogramming and inflammation in OA synovitis and present a potential targeted nanotherapeutic strategy for disease modification.",
+          "journal": "Science Translational Medicine"
+        },
+        {
+          "id": "10.1073/pnas.2623177123",
+          "doi": "10.1073/pnas.2623177123",
+          "title": "Spatial transcriptomics reveals organizational properties of the mouse spinal cord and alterations in neuropathic pain",
+          "abstract": "The spinal cord integrates diverse somatosensory inputs and executes motor outputs through anatomically and functionally distinct circuits. Here, we employed spatially resolved single-cell transcriptomic profiling of the adult mouse spinal cord to gain insights into the organizational logic of the spinal cord. Our results reveal distinct spatial and laminar distributions of neuronal subtypes, including axial level and sex-specific differences. Many neuronal subtypes exhibit lamina-specific somatic proximities, suggesting potential regionally specific connectivity. Additionally, neuronal subtypes within the dorsal horn exhibit a wide range of predicted cell-cell communication motifs, as assessed by the spatial distribution of neuropeptide- and other ligand-receptor pairs. Finally, we identified several neuronal subtypes with altered transcriptomic states and predicted cell–cell communications in a model of neuropathic pain. This spatially resolved cellular and molecular map of the spinal cord will facilitate the decoding of circuit mechanisms underlying somatosensory and motor functions in health and disease.",
+          "journal": "Proceedings of the National Academy of Sciences"
+        },
+        {
+          "id": "10.1073/pnas.2611959123",
+          "doi": "10.1073/pnas.2611959123",
+          "title": "Identification and characterization of neoplastic cells in keratin-positive giant cell–rich tumors",
+          "abstract": "Keratin-positive giant cell–rich tumor (KPGCT) is a newly described bone and soft tissue tumor. The tumor is characterized by scattered keratin-positive cells and the presence of HMGA2::NCOR2 fusions. It is not known if the HMGA2::NCOR2 fusion is located in the keratin-positive cells, and little is known about how KPGCT develops. KPGCT shares some histologic features with tenosynovial giant cell tumor (TGCT), a soft tissue tumor with CSF1 rearrangements. Single-nuclei RNA sequencing and Xenium spatial transcriptomics were used to elucidate the most likely mechanisms driving KPGCT and compare KPGCT to TGCT. We identified a population of cells coexpressing keratin, HMGA2 , and CSF1 as the likely neoplastic cells; these cells constitute the minority of the cells in the tumor. These cells express no synovial markers, confirming KPGCT as a distinct entity, separate from TGCT. The bulk of the tumor consists of CSF1R -expressing macrophages and multinucleated giant cells (MNGCs), suggesting an important role for CSF1–CSF1R signaling. In addition, we find that the likely neoplastic cell population shows activation of the hippo signaling pathway, a possible central pathway in KPGCT tumorigenesis. The CSF1–CSF1R axis likely stimulates the migration and proliferation of macrophages, which form the majority of cells in the tumor, as well as their differentiation into MNGCs. These results provide a rationale for the use of CSF1R inhibitors, which have already shown efficacy in TGCT, as a therapy for KPGCT.",
+          "journal": "Proceedings of the National Academy of Sciences"
+        }
+      ],
+      "base-editing": [
+        {
+          "id": "10.1038/s41586-026-11233-9",
+          "doi": "10.1038/s41586-026-11233-9",
+          "title": "In Vivo CRISPR Base Editing of ANGPTL3 for Durable Lipid Lowering",
+          "abstract": "",
+          "journal": "Nature"
+        },
+        {
+          "id": "10.1038/s41587-026-03359-y",
+          "doi": "10.1038/s41587-026-03359-y",
+          "title": "Engineered human Argonaute 2 for targeted C-to-U RNA base editing",
+          "abstract": "",
+          "journal": "Nature Biotechnology"
+        },
+        {
+          "id": "10.1038/s41467-026-79730-z",
+          "doi": "10.1038/s41467-026-79730-z",
+          "title": "Author Correction: Adenine base editing-mediated exon skipping restores dystrophin in humanized Duchenne mouse model",
+          "abstract": "",
+          "journal": "Nature Communications"
+        },
+        {
+          "id": "10.1038/s41467-026-79623-1",
+          "doi": "10.1038/s41467-026-79623-1",
+          "title": "Author Correction: Programmable DNA pyrimidine base editing via engineered uracil-DNA glycosylase",
+          "abstract": "",
+          "journal": "Nature Communications"
+        },
+        {
+          "id": "10.1038/s41467-026-79197-y",
+          "doi": "10.1038/s41467-026-79197-y",
+          "title": "Author Correction: In vivo mitochondrial base editing restores genotype and visual function in a mouse model of LHON",
+          "abstract": "",
+          "journal": "Nature Communications"
+        },
+        {
+          "id": "10.1038/s41591-026-04786-9",
+          "doi": "10.1038/s41591-026-04786-9",
+          "title": "Author Correction: In vivo base editing gene therapy for heterozygous familial hypercholesterolemia: a phase 1 trial",
+          "abstract": "",
+          "journal": "Nature Medicine"
+        },
+        {
+          "id": "10.1016/j.molcel.2026.10.012",
+          "doi": "10.1016/j.molcel.2026.10.012",
+          "title": "The chromatin context differently impacts prime editors and base editors and controls the fidelity and purity of base editing",
+          "abstract": "",
+          "journal": "Molecular Cell"
+        }
+      ],
+      "protein-design": [
+        {
+          "id": "10.1038/s41586-026-11317-6",
+          "doi": "10.1038/s41586-026-11317-6",
+          "title": "De novo design of enantioselective artificial metalloenzyme photocatalysts",
+          "abstract": "",
+          "journal": "Nature"
+        },
+        {
+          "id": "10.1038/s41587-026-03344-5",
+          "doi": "10.1038/s41587-026-03344-5",
+          "title": "A CD7-targeted AAV variant enables efficient T and NK cell engineering in vivo",
+          "abstract": "Abstract Adeno-associated virus (AAV) vectors have been applied for precise genome engineering in human T cells but poor tropism restricts their efficiency and translational potential. Here, through directed evolution of the AAV6 capsid in primary human T cells, we identified a family of variants containing an APR motif at residues 455–457. The lead candidate, AAV.APR31, enabled robust transduction of primary T and NK cells at nearly 100–1,000-fold lower doses than AAV6 and outperformed the human T cell-tropic capsid AAV-hT7. CRISPR screening identified CD7 as a lineage-specific entry enhancer alongside the canonical AAVR pathway and structural analysis suggested that the APR motif facilitates CD7 engagement. Unlike existing delivery systems confined to one engineering mode, AAV.APR31 enabled transient transgene delivery, site-specific knock-in and transposon integration in human T and NK cells, generating CAR-T cells functionally equivalent to lentiviral vector-manufactured products. Systemic administration of AAV.APR31-generated CAR-T cells in vivo resulted in potent tumor control in hematologic and solid tumor mouse models.",
+          "journal": "Nature Biotechnology"
+        },
+        {
+          "id": "10.1038/s41587-026-03389-6",
+          "doi": "10.1038/s41587-026-03389-6",
+          "title": "De novo design of proteases",
+          "abstract": "",
+          "journal": "Nature Biotechnology"
+        },
+        {
+          "id": "10.1038/s41467-026-79127-y",
+          "doi": "10.1038/s41467-026-79127-y",
+          "title": "Continuous directed evolution using engineered human B cell lines",
+          "abstract": "Abstract The B cells of the human immune system have evolved somatic hypermutation (SHM) mechanisms that introduce mutations at the immunoglobulin genomic loci at a significantly higher frequency than the rest of the genome thereby allowing them to evolve antibody sequences without compromising fitness due to genome-wide mutations. Inspired by these observations, here we develop a continuous directed evolution platform in human B cell lines (CODE-HB) that repurposes the SHM mechanisms to a stable, non-immunoglobulin genomic locus of the human B cell lines to continuously evolve cytosolic and surface displayed proteins with a broad mutational spectrum comprising of substitutions, deletions and insertions. Using our human B cell surface display platform and CODE-HB, we evolve neutralizing antibodies targeting avian influenza and escape variants of influenza. Given the modularity and simplicity of CODE-HB, we anticipate that this platform can be used for rapidly evolving biotechnologically relevant biomolecules directly in human cells.",
+          "journal": "Nature Communications"
+        },
+        {
+          "id": "10.1016/j.chembiol.2026.09.022",
+          "doi": "10.1016/j.chembiol.2026.09.022",
+          "title": "Shared α-helix chimeraffibodies enable linker-free bispecific protein design",
+          "abstract": "",
+          "journal": "Cell Chemical Biology"
+        },
+        {
+          "id": "10.1021/jacs.6c14033",
+          "doi": "10.1021/jacs.6c14033",
+          "title": "Reprogramming ThDP-Dependent\nEnzyme for Intermolecular\n[3 + 2] Annulation via a Homoenolate Intermediate",
+          "abstract": "Abstract Thiamine diphosphate (ThDP)-dependent enzymes are versatile biocatalysts for carbon–carbon bond formation, yet their catalytic repertoire has been largely confined to linear homologation and intramolecular cyclizations that rely on single-site reactive intermediates such as the Breslow or ketyl radical species. Intermolecular annulation─a powerful strategy for constructing cyclic architectures─has remained elusive within this enzyme class. Here, we report the first intermolecular [3 + 2] annulation catalyzed by a ThDP-dependent enzyme, achieved through a homoenolate-mediated nucleophilic addition pathway. A phylogeny-guided enzyme mining identified a previously uncharacterized enzyme from Variovorax boronicumulans(ThDP-5), and subsequent protein engineering yielded the F484S variant, which exhibits markedly enhanced activity and exquisite stereocontrol. This biocatalytic system exhibits a broad substrate scope (30 examples), accommodating diverse substituted cinnamaldehydes and isatins to afford chiral spirooxindole lactones with excellent stereoselectivity (up to &amp;gt; 20:1 dr and 99% ee). Preparative-scale reactions (2 mmol) validate its synthetic utility. This work expands ThDP-dependent biocatalysis to intermolecular annulations, providing a robust and selective platform for the construction of pharmaceutically relevant spirocyclic architectures.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/jacs.6c20679",
+          "doi": "10.1021/jacs.6c20679",
+          "title": "Design and Evolution\nof an Orthogonal HaloTag for\nMultiplexed Labeling in Cells",
+          "abstract": "Abstract The self-labeling protein HaloTag is used to install a wide variety of functional small molecules in cells and living organisms with exquisite specificity with respect to cell type and subcellular localization. HaloTag is a core part of many biotechnology-based tools for sensing, tracking, and manipulating biological systems with a high degree of spatial and temporal control. Due to the limitations of fluorescent proteins and other self-labeling proteins, most of these tools have historically been restricted to a single channel. In this work, we used structure-guided rational design and directed evolution to produce an orthogonal HaloTag protein called OrthoTag which reacts selectively with a modified chloroalkane substrate. OrthoTag retains many of HaloTag’s superior properties, and reaction rate measurements with purified proteins show OrthoTag and its substrate have 109-fold mutual orthogonality to HaloTag with respect to substrate concentration. We demonstrate the application of OrthoTag for multiplexed labeling experiments in mammalian cells with minimal optimization. Going forward, OrthoTag should be straightforward to incorporate into HaloTag-based systems to allow simultaneous measurement or manipulation of two biological targets or processes. The availability of multiple high-performance self-labeling proteins will enable the continued development of new multiplexed biotechnology methods.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/jacs.6c11808",
+          "doi": "10.1021/jacs.6c11808",
+          "title": "Porphyrin-Driven\nRedox Tuning in Structurally Defined\n                    <i>De Novo</i>\n                    Heme\nProteins",
+          "abstract": "Abstract Designing redox proteins with predictable and tunable electron transfer properties is a major goal in de novo bioenergetics. Here we show that replacing heme B with a series of structurally conservative non-natural metalloporphyrins enables broad modulation of redox potentials over 400 mV in the de novo designed monoheme m4D2 and diheme 4D2 T19D. The non-natural porphyrins bind with high affinity and do not compromise either the heme binding site or global protein structure, as evidenced by X-ray crystallography and NMR spectroscopy. We also report the native-like NMR structure of m4D2 loaded with the non-natural and symmetric iron 2,4-dimethyldeuteroporphyrin IX, confirming our modular approach to tetrahelical redox protein design. This work establishes a versatile platform for constructing tunable electron carriers for engineered bioenergetic pathways and bioelectronic applications.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/jacs.6c08768",
+          "doi": "10.1021/jacs.6c08768",
+          "title": "De Novo\nDesign of Catalytically Active Salen-Binding\nProteins",
+          "abstract": "Abstract De novo design of catalytic metalloproteins has the potential to generate enzymes that combine the efficiency of natural proteins with the reactivity of synthetic organometallic catalysts. Here, we develop a computational strategy to design enzymes with novel tertiary structures that bind metal salen complexes, classic small-molecule catalysts not found in biology. Six proteins were designed and screened for function; five of six express well, bind a Co-salen cofactor, and catalyze a transition metal hydrogen atom transfer (MHAT)-mediated deallylation reaction, representing the first de novo proteins to catalyze this class of transformation. The spectroscopic properties and crystal structure of the most active sequence were in excellent agreement with the design, and the holoprotein retained its structure and activity over a broad range of pH (2–12), temperatures up to 95 °C, and aqueous/organic solvent mixtures. We suggest that the combinatorial space provided by metal ion identity, ligand substitution, and active site structure can be used to generate artificial metalloenzymes that catalyze many chemical transformations.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/jacs.6c15079",
+          "doi": "10.1021/jacs.6c15079",
+          "title": "Coupling Enzyme Activity\nto Host Survival via Genetic\nCode Expansion: An\n                    <i>In Vivo</i>\n                    Evolution System for Biocatalysts",
+          "abstract": "Abstract Survival-based selection facilitates the exploration of enzyme mutational space, but coupling the activity of noncanonical amino acid (ncAA)-producing biocatalysts to host survival remains challenging. Here, we report an in vivo selection platform that links biocatalyst activity to host cell survival via genetic code expansion. In this system, the intracellularly generated ncAA serves as a substrate for an orthogonal aminoacyl-tRNA synthetase (aaRS). Its incorporation triggers the readthrough of an amber (TAG) stop codon to yield a functional chloramphenicol resistance protein, allowing cells harboring active biocatalyst variants to survive under antibiotic selection. The applicability of this approach was validated using three biocatalysts: tyrosine phenol-lyase (TPL), tryptophan synthase β-subunit (TrpB), and a hydrolytic carbamoylase (SmLcar). Using this directed evolution system, we evolved TPL and TrpB to process previously inactive substrates, enabling the gram-scale preparative biosynthesis of target ncAAs with final titers reaching 36.8 g/L. Furthermore, because cell survival requires both in vivo ncAA synthesis and its subsequent orthogonal translation, this dual dependency enables the simultaneous selection of upstream biocatalysts and downstream aaRS variants. Leveraging this mechanism, we performed the selection of TPL and chPylRS libraries simultaneously, yielding enzyme pairs for the generation and recognition of target ncAAs. This platform provides a powerful tool for the directed evolution of ncAA-producing biocatalysts.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/jacs.6c17512",
+          "doi": "10.1021/jacs.6c17512",
+          "title": "Molecular Diversity\nGeneration via Selective Enzymatic\nC–CN Bond Scission",
+          "abstract": "Abstract Selective removal of functional groups offers a powerful route to streamline molecular design and generate structural diversity. The use of such deletion strategies has surged in organic synthesis, yet achieving these transformations with high selectivity remains a formidable challenge. Here, we present a photoenzymatic platform for stereocontrolled C–CN bond cleavage of malononitriles, enabling access to diverse chiral nitriles. Directed evolution of the flavin-dependent enzyme OYE1 yielded a variant that efficiently converted a wide range of geminal dinitriles, affording products in high yields (up to &amp;gt;99%) and enantioselectivities (up to 3:97 e.r.). The platform was further extended to a one-pot cascade combining Michael addition with enzymatic decyanation. Mechanistic studies revealed a pathway involving a benzyl radical intermediate (Int1), followed by a carbanion species (Int2). This work establishes the first photobiocatalytic cyano group deletion strategy and provides a modular approach for sustainable synthesis of valuable chiral nitrile scaffolds.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/jacs.6c14337",
+          "doi": "10.1021/jacs.6c14337",
+          "title": "Photobiocatalytic Diastereo-\nand Enantioselective\nSynthesis of Noncanonical Amino Acids Bearing Challenging Stereochemical\nDyads and Triads",
+          "abstract": "Abstract Catalyst-controlled stereodivergent synthesis of acyclic molecules bearing multiple stereogenic centers remains a longstanding challenge in asymmetric catalysis, particularly through intermolecular radical C–C coupling. Here, we report the directed evolution of pyridoxal 5′-phosphate (PLP)-dependent biocatalysts for the stereodivergent synthesis of noncanonical amino acids bearing either skipped α,γ-stereochemical dyads or contiguous α,β,γ-stereochemical triads. Starting from a thermophilic tryptophan synthase β-subunit, protein engineering generated complementary enzyme variants that selectively construct three of the four possible α,γ-stereoisomers through biocatalyst-controlled reversal of both remote γ-stereochemistry and proximal α-stereochemistry. These engineered enzymes catalyzed intermolecular radical C–C bond formation with a broad range of secondary alkyltrifluoroborates, affording α,γ-disubstituted amino acids in excellent yields and stereoselectivities. Furthermore, directed evolution enabled efficient β-dehydroxylative radical coupling of the non-native threonine-derived aminoacrylate intermediate, providing amino acids bearing contiguous α,β,γ-stereochemical triads with up to 96:4:&amp;lt;0.1:&amp;lt;0.1 d.r. and &amp;gt;99:1 e.r. To further demonstrate the synthetic utility of this platform, the stereochemically enriched amino acids were transformed into valuable γ-chiral amines through engineered PLP-dependent tryptophan decarboxylases, establishing a dual PLP enzyme-based biocatalytic cascade for the enantiodivergent synthesis of privileged amine scaffolds. Molecular dynamics simulations reveal that enzyme-controlled γ-stereoselectivity originates from active-site remodeling that modulates π–π interactions and steric contacts governing the facial selectivity of the radical addition step. This work expands the synthetic capabilities of radical biocatalysis by enabling catalyst-controlled stereodivergent assembly of complex acyclic stereochemical arrays and establishes engineered PLP enzymes as versatile catalysts for the synthesis of stereochemically complex amino acids and chiral amines.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/jacs.6c08937",
+          "doi": "10.1021/jacs.6c08937",
+          "title": "Native\nMass Spectrometry-Based Proteoform Explicit\nMetrics System (PrEMS) Informs Structural Improvement of Artificial\nPhotocyclase Enzymes",
+          "abstract": "Abstract Directed evolution is a powerful strategy for enzyme engineering and has successfully enabled unique stereoselective biosynthesis of high-value organic molecules. Enantiomeric excess (ee) remains the gold standard to assess the enzyme performance, but only reflects the final reaction outcome and provides limited mechanistic insights, leaving design efforts effectively a ″black box″, especially for multimeric proteins and heterogeneous systems. Here, we introduce a Proteoform Explicit Metrics System (PrEMS) that links protein point mutations and catalytic enantioselectivity via structural features measured by native mass spectrometry (native MS). Using 11 artificial photocyclase mutants, we demonstrate that single-point mutations can have a profound impact on protein structure, resulting in a highly convoluted effect on protein function not easily explainable by a single variable. We derived a multiple linear regression (MLR) model from the proteoform explicit native MS data based on the enzyme’s oligomeric state, photosensitizer labeling efficiency, susceptibility to oxidation, and photodegradation half-life. PrEMS showed significantly higher correlation (adjusted R2 increases from 0.053 to 0.869) to the enzyme’s enantioselectivity than the conventional physicochemical descriptors of the mutated amino acids. PrEMS serves as a quantitative framework to fill the knowledge gap in structural descriptors between sequence mutation and the enzyme’s function, rationalizing enzyme improvement strategies. For example, our analysis indicated that photodamage can be suppressed by incorporating aromatic residues near the active site. Our study outlines a tangible path with quantifiable metrics for integrating native MS data into enzyme design workflows.",
+          "journal": "Journal of the American Chemical Society"
+        },
+        {
+          "id": "10.1021/acscatal.6c04944",
+          "doi": "10.1021/acscatal.6c04944",
+          "title": "Multiplexed Ultrahigh-Throughput Evolution for Esterase Selectivity across a Broad Substrate Scope",
+          "abstract": "Abstract Directed evolution of enzymes is generally performed toward a specific substrate, which predictably improves enzyme activity toward the probe substrate. However, it is difficult to predict whether evolved enzymes will be selective or promiscuous toward other substrates. Multiplexed directed evolution can identify enzyme variants with selectivity/promiscuity across multiple substrates, but is typically performed using plate-based screening assays that are limited to testing a few hundred mutants. Combining substrate multiplexing with ultrahigh-throughput evolution technologies is a promising avenue for deeper exploration of the mutational landscape, but it has not been investigated whether enzymes evolved using multiplexed ultrahigh-throughput methods exhibit selectivity/promiscuity toward a broader scope of small-molecule substrates beyond the probes used during evolution. Here, we performed multiplexed ultrahigh-throughput evolution of Bacillus subtilis (BS2) esterase, merging yeast surface display with masked acid chloride probes, to identify a panel of mutants with improved selectivity toward the phenylcyclopropyl (pCP) ester protecting group relative to not only the probe substrate, but also a broad panel of 90 additional esters. Additionally, we applied the platform to identify a promiscuous mutant with improved activity across a broad substrate scope. Finally, we applied the highly pCP-selective BS2 variant, together with a selective variant for the methylcyclopropyl (mCP) ester protecting group, to demonstrate proximity labeling in mammalian cells with two orthogonal enzyme/probe systems, opening new opportunities in multiplexed proximity labeling. Overall, this study presents an efficacious method to identify enzyme variants with desired selectivity profiles that may be extended to multiple applications in chemical biology and synthesis.",
+          "journal": "ACS Catalysis"
+        },
+        {
+          "id": "10.1021/acs.orglett.6c03958",
+          "doi": "10.1021/acs.orglett.6c03958",
+          "title": "Directed Evolution of Artificial Enzyme with a Catalytic\nNoncanonical Amino Acid for Asymmetric Friedel–Crafts Alkylation\nof Cyclic Enones with Indoles",
+          "abstract": "Abstract Direct activation of α,β-unsaturated ketones for enantioselective transformations has remained rare to enzyme catalysis due to their lower electrophilicity and challenging steric environment. In this work, we establish an enantioselective Friedel–Crafts alkylation of α,β-unsaturated cyclic ketones with indoles using a fully genetically encoded artificial enzyme featuring a catalytic primary amine residue. This abiological catalytic center enables iminium ion formation with cyclic enones, thereby unlocking a new reaction manifold for biocatalysis. This study offers a versatile platform for enantioselective transformations of α,β-unsaturated ketones, advancing the integration of new-to-nature catalysis into biocatalytic synthesis.",
+          "journal": "Organic Letters"
+        },
+        {
+          "id": "10.1002/anie.4133117",
+          "doi": "10.1002/anie.4133117",
+          "title": "Evolution‐Inspired Multi‐Objective Bayesian Optimization for Protein Engineering",
+          "abstract": "ABSTRACT Protein engineering requires efficient navigation of vast sequence spaces under limited evaluation budgets, especially when multiple properties must be optimized simultaneously. We developed evolution‐inspired multi‐objective Bayesian optimization (EvoMOBO), an active‐learning framework that integrates path‐dependent sequence generation, global candidate competition, and explicit multi‐objective optimization, enabling efficient prioritization of high‐value variants without exhaustive library enumeration. Compared with state‐of‐the‐art methods on complete steroid receptor DNA‐binding domain (DBD) and ParD3 antitoxin landscapes, EvoMOBO achieved greater target‐region enrichment while maintaining sequence diversity across two‐ and three‐objective tasks. In the DBD landscape, optimization guided by simulation‐derived geometric descriptors enriched variants with satisfactory experimental performance without experimental labels. Building on this validation, we applied EvoMOBO to two enzyme‐engineering tasks using mechanistic descriptors, with experiments reserved for final validation. For an old yellow enzyme from Geobacillus kaustophilus , probabilities of substrate binding and reaction preorganization guided optimization of a non‐native oxidative dehydrogenation, yielding a variant that increased substrate conversion from 17.5% to 95%. For a formate oxidase from Aspergillus oryzae , stability‐related descriptors identified aggregation‐resistant variants that nearly doubled diethyl phthalate degradation in a photoenzymatic cascade. Together, these results demonstrate robust multi‐objective optimization by EvoMOBO and show that mechanism‐derived descriptors can effectively guide protein engineering toward experimentally improved functions.",
+          "journal": "Angewandte Chemie International Edition"
+        },
+        {
+          "id": "10.1002/anie.4076828",
+          "doi": "10.1002/anie.4076828",
+          "title": "Resurrecting Robust CYP152 Peroxygenases for Versatile Biocatalysis",
+          "abstract": "ABSTRACT Cytochrome P450 CYP152s are attractive biocatalysts which catalyze decarboxylation and hydroxylation of fatty acids using H 2 O 2 as a co‐substrate (peroxygenase activity). Contemporary CYP152s have limited stability and substrate scope. Here we characterized eight reconstructed variants of CYP152 obtained using ancestral sequence reconstruction (ASR). The results showed that variants remote from Jeotgalicoccus sp. 8456 (CYP152L1) in the tree used for the ASR tended to catalyze hydroxylation, while nodes closer to CYP152L1 favored decarboxylation; this transition correlates with Q85H substitution and FG‐loop insertion alongside other structural features. Three reconstructed variants exhibit high T m (66°C–76°C), tolerance to solvents, H 2 O 2 , extreme pH, and use non‐native substrates. CYP152‐AncG2 can catalyze one‐pot chemoenzymatic C─C bond coupling reactions to synthesize methoxy stilbene and can serve as a template for directed evolution. X‐ray structure at 1.83 Å and molecular dynamics (MD) simulations indicate that loop structures, surface salt bridges, and optimized access tunnels in CYP152‐AncG2 are key for enabling its superior features. These findings provide insights into the structural and evolutionary features of robust peroxygenase templates for expanding peroxygenase biocatalysis.",
+          "journal": "Angewandte Chemie International Edition"
+        },
+        {
+          "id": "10.1002/anie.9814409",
+          "doi": "10.1002/anie.9814409",
+          "title": "Reprogramming Stereocontrol Through Progressive Substrate Reorganization in Artificial Triplet Photoenzymes",
+          "abstract": "ABSTRACT Precise control of stereoselectivity remains a fundamental challenge in artificial enzymatic catalysis, particularly for artificial photoenzymes that lack evolutionary coupling between photosensitizer positioning and substrate recognition. Herein, by integrating crystallography, kinetics, molecular simulations, and protein engineering, we show that the enantioselectivity of an artificial triplet photoenzyme TPe4.0_FBpA for [2+2] cycloaddition originates from a highly organized indole substrate assembly within the photoactive cavity. Guided by these insights, progressive remodeling of substrate organization through minimal active‐site engineering reverses enantiopreference (from 99.5:0.5 e.r. to 2:98 e.r.) while preserving the sequence position of the genetically encoded photosensitizer. Structural and computational analyses further support a switch in the dominant stereocontrol mode from template‐assisted substrate organization to dispersion‐driven conformational confinement. These findings establish substrate organization as a programmable determinant of stereochemical outcome in artificial photoenzymes and provide a mechanistic framework for stereodivergent excited‐state biocatalysis.",
+          "journal": "Angewandte Chemie International Edition"
+        },
+        {
+          "id": "10.1002/anie.1024447",
+          "doi": "10.1002/anie.1024447",
+          "title": "Atroposelective Construction of Tetra‐\n                    <i>ortho</i>\n                    ‐Substituted Dibenz[\n                    <i>c</i>\n                    ,\n                    <i>e</i>\n                    ]azepines Using an Engineered Imine Reductase",
+          "abstract": "ABSTRACT Atropisomeric dibenz[ c , e ]azepines are privileged scaffolds in asymmetric synthesis, medicinal chemistry, and materials science, yet their atroposelective preparation remains challenging due to the difficulty of controlling axial chirality while constructing a strained medium‐sized ring. Tetra‐ ortho ‐substituted dibenz[ c , e ]azepines are especially elusive, with no catalytic asymmetric method reported owing to extreme steric hindrance. Here, we report the first biocatalytic strategy for the atroposelective synthesis of these congested bridged biaryls, employing an engineered imine reductase (IRED) that catalyzes a sequential inter‐ and intramolecular reductive amination cascade. Structure‐guided directed evolution of an IRED from Streptomyces tricolor provided a triple mutant (IRED‐04‐M3) that delivers various tetra‐ ortho ‐substituted dibenz[ c , e ]azepines in high yields with excellent atroposelectivity (up to 97% yield, &gt;99:1 er) by dynamic kinetic resolution. Gram‐scale preparation was also demonstrated. Mechanistic studies and molecular dynamics simulations provide insight into the cascade reaction and stereocontrol exerted by the engineered enzyme.",
+          "journal": "Angewandte Chemie International Edition"
+        },
+        {
+          "id": "10.1002/anie.8507021",
+          "doi": "10.1002/anie.8507021",
+          "title": "Adaptation of a Fluorogenic RNA to N1‐Methylpseudouridine Nucleoside Chemistry",
+          "abstract": "ABSTRACT N1‐methylpseudouridine ( m Ψ) is a modified nucleoside that entirely replaces uridine in the design of many therapeutic messenger RNAs (mRNA) to alleviate their intrinsic immunogenicity while preserving their capacity to be translated into protein. However, the impact of such replacement in functional non‐coding RNAs has only been scarcely studied, and most studies have shown impairment in the function of the tested RNAs thereby limiting their potential applications. In this work, we further show that exchanging uridines by m Ψ in green‐emitting Fluorogenic Light‐up Aptamers (FLAP) is detrimental to their capacity of binding and enhancing the fluorescence of their cognate fluorogen. Moreover, combining directed evolution and rational design allowed not only to pinpoint the structural elements impacted by the replacement of uridine by m Ψ, but also to re‐establish the function of a m Ψ‐modified non‐coding RNA for the first time. This yielded Ψ‐Spinach, a FLAP suited for the precise labelling of m Ψ‐modified mRNA and usable for human cells transfection. This work thus paves the way for the adaptation of other functional non‐coding RNAs with m Ψ in view of engineering and optimizing therapeutic modified mRNAs.",
+          "journal": "Angewandte Chemie International Edition"
+        },
+        {
+          "id": "10.1002/anie.3845288",
+          "doi": "10.1002/anie.3845288",
+          "title": "Engineering of Redox‐Active Residues Enhances P450 Peroxygenase Performance",
+          "abstract": "ABSTRACT Cytochrome P450 peroxygenases depend on the high‐valent iron‐oxo intermediate Compound I (Cpd I) to activate C–H bonds. However, the nonproductive oxidative damage caused by Cpd I compromises enzyme stability and limits catalytic efficiency. Here, we report a rational protein engineering strategy to address this bottleneck by constructing additional “hole traps” on the enzyme surface. Guided by structural analysis, we introduced redox‐active tyrosine/tryptophan residues at spatially defined positions on the surface of the P450BM3 F87A mutant. The optimal engineered variant M8 (F87A/L215W/H408W) significantly enhances turnover numbers (TONs) across a range of peroxide‐driven hydroxylation reactions of aliphatic and aromatic substrates. Steady‐state kinetics, reductant supplementation assays, and half‐life measurements consistently indicated that the introduced Trp residues play a crucial protective role, improving both catalytic output and enzyme robustness. The crystal structure of M8 revealed that the mutations facilitate an expanded local network of π–π interactions, forming efficient surface hole traps. This strategy was then demonstrated to efficiently improve the catalytic performance of two engineered CYP199A4 peroxygenase variants (F182A and D251Q/T252E). These findings establish the rational construction of auxiliary hole traps as an effective strategy to enhance P450 peroxygenase performance, with potential applicability to other heme and even broad oxidizing enzymes.",
+          "journal": "Angewandte Chemie International Edition"
+        },
+        {
+          "id": "10.1073/pnas.2620010123",
+          "doi": "10.1073/pnas.2620010123",
+          "title": "Structure of a sparsely populated chimeric intermediate that facilitates fold-switching of a metamorphic protein",
+          "abstract": "Metamorphic proteins challenge the single-sequence-structure-function paradigm by switching between distinct folds that often adopt complementary functions. However, the conformational states sampled along the fold-switching pathway have remained elusive because they are transient and unstable. Using multinuclear chemical exchange saturation transfer and relaxation dispersion NMR, combined with chemical shift–based structure determination and protein engineering, we visualized the atomic resolution structure of an “invisible” state of the metamorphic chemokine lymphotactin. This state is a chimera that integrates the secondary and tertiary structure of one fold with the quaternary assembly of the other. Locking lymphotactin into a single conformation abolishes access to this state, supporting its role as an on-pathway intermediate in metamorphosis. The stabilization of such hybrid intermediates is likely to have facilitated the evolution of fold-switching and represents a powerful strategy for protein design.",
+          "journal": "Proceedings of the National Academy of Sciences"
+        }
+      ]
+    }
+  }
+}
