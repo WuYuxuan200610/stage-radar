@@ -77,5 +77,5 @@ fig.text(0.5, 0.012,
 fig.tight_layout(rect=[0, 0.06, 1, 0.955])
 for ext in ("svg",):
     fig.savefig(R / f"fig_preprint_coverage.{ext}")
-print("WROTE", R / "fig_preprint_coverage.png")
+print("WROTE", R / "fig_preprint_coverage.svg")
 print("实测 %.2f%% → 校正后 %.2f%%" % (overall, corrected))

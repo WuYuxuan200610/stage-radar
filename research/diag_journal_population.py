@@ -5,6 +5,21 @@ from pathlib import Path as _Path
 _HERE = _Path(__file__).resolve().parent
 _REPO = _HERE.parent
 _APP = _Path(_os.environ.get("STAGE_RADAR_APP", str(_REPO.parent / "stage-radar-app")))
+
+def _find(rel):
+    """优先在本仓找输入文件，找不到再回退到实现仓（_APP）。
+
+    发布这两个文件是为了让 §9 的实验**在只克隆本仓时也能复现**；
+    保留 _APP 回退是为了不破坏原开发环境。
+    """
+    for base in (_REPO, _APP):
+        p = base / rel
+        if p.exists():
+            return p
+    raise FileNotFoundError(
+        "缺少 %s。它随本仓发布（若你手动克隆，请确认没有用 --filter 之类跳过）；"
+        "也可用 STAGE_RADAR_APP 指向实现仓。" % rel)
+
 # --- 前导结束 ---
 
 """查清期刊语料里到底混了多少非研究内容——这决定了"缺预印本比例"测的是谁。
@@ -23,7 +38,7 @@ if hasattr(sys.stdout, "reconfigure"):
 
 R = Path(str(_HERE))
 jc = json.loads((R / "journal_titles_for_preprint_check.json").read_text(encoding="utf-8"))
-full = json.loads(Path(str(_APP / "data" / "benchmark_journal_corpus.json"))
+full = json.loads(_find("data/benchmark_journal_corpus.json")
                   .read_text(encoding="utf-8"))["items"]
 
 print("期刊语料：%d 条（完整字段），%d 条（含标题+期刊 id）" % (len(full), len(jc)))

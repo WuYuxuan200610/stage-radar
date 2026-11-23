@@ -5,6 +5,21 @@ from pathlib import Path as _Path
 _HERE = _Path(__file__).resolve().parent
 _REPO = _HERE.parent
 _APP = _Path(_os.environ.get("STAGE_RADAR_APP", str(_REPO.parent / "stage-radar-app")))
+
+def _find(rel):
+    """优先在本仓找输入文件，找不到再回退到实现仓（_APP）。
+
+    发布这两个文件是为了让 §9 的实验**在只克隆本仓时也能复现**；
+    保留 _APP 回退是为了不破坏原开发环境。
+    """
+    for base in (_REPO, _APP):
+        p = base / rel
+        if p.exists():
+            return p
+    raise FileNotFoundError(
+        "缺少 %s。它随本仓发布（若你手动克隆，请确认没有用 --filter 之类跳过）；"
+        "也可用 STAGE_RADAR_APP 指向实现仓。" % rel)
+
 # --- 前导结束 ---
 
 """独立验证「期刊论文有多少有预印本」——不依赖我自建的索引。
@@ -29,7 +44,7 @@ R = Path(str(_HERE))
 UA = {"User-Agent": "stage-radar/0.5 (mailto:stage-radar@example.org)"}
 PREPRINT_PREFIXES = ("10.1101/", "10.64898/", "10.21203/", "10.31219/")
 
-full = json.loads(Path(str(_APP / "data" / "benchmark_journal_corpus.json"))
+full = json.loads(_find("data/benchmark_journal_corpus.json")
                   .read_text(encoding="utf-8"))["items"]
 pool = [d for d in full if (d.get("abstract") or "").strip() and len(d.get("title") or "") > 25]
 random.seed(7)

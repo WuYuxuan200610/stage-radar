@@ -32,11 +32,17 @@ python make_figures.py               # 出图
 
 - `_HERE`：本目录（`research/`）
 - `_REPO`：仓库根（`benchmark.py` 所在处）
-- `_APP`：桌面管线所在仓库。默认取 `../stage-radar-app`，可用环境变量覆盖：
+- `_APP`：**仅在开发环境下使用**的桌面管线仓（默认 `../stage-radar-app`，可用 `STAGE_RADAR_APP` 覆盖）
 
-```bash
-export STAGE_RADAR_APP=/path/to/stage-radar-app
-```
+**本仓自带的实验输入**（克隆本仓即有，无需任何外部依赖）：
+
+| 文件 | 体积 | 用途 |
+|:---|---:|:---|
+| `sources_catalog.json` | 23 KB | 刊源机读目录（55 本期刊 + 4 本协议，含 ISSN / 路由 / 核验状态） |
+| `data/benchmark_journal_corpus.json` | 6.1 MB | 51 本刊的语料快照，§9.3 / §9.5 的输入 |
+
+> 脚本查找这两个文件时**优先看本仓**，找不到才回退到 `_APP`。
+> 因此**只克隆本仓即可复现 §9 的实验**，不必拥有实现仓。
 
 **未随仓库发布的大缓存**（可重新生成，`.gitignore` 已排除）：
 
@@ -47,6 +53,7 @@ export STAGE_RADAR_APP=/path/to/stage-radar-app
 | `journal_titles_for_preprint_check.json` | ~0.9 MB | `python exp_preprint_coverage.py`（会自动拉取） |
 
 > 不发布这些缓存的原因是体积与可重建性——把它们放进仓库会显著拖慢 clone，且它们是**数据快照而非代码**。
+> 未重建缓存时，依赖它的脚本会**报 `FileNotFoundError`**（而不是给出错误结果），按上表的命令重建即可。
 
 ---
 

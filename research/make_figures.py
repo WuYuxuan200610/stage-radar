@@ -142,7 +142,7 @@ def fig_overview():
     fig.tight_layout(rect=[0, 0.045, 1, 0.962])
     for ext in ("svg",):
         fig.savefig(R / f"fig_competitor_overview.{ext}")
-    print("WROTE", R / "fig_competitor_overview.png")
+    print("WROTE", R / "fig_competitor_overview.svg")
 
 
 def fig_timeliness():
@@ -171,7 +171,7 @@ def fig_timeliness():
     fig.tight_layout()
     for ext in ("svg",):
         fig.savefig(R / f"fig_timeliness.{ext}")
-    print("WROTE", R / "fig_timeliness.png")
+    print("WROTE", R / "fig_timeliness.svg")
 
 
 if __name__ == "__main__":

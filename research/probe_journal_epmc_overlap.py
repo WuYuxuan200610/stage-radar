@@ -5,6 +5,21 @@ from pathlib import Path as _Path
 _HERE = _Path(__file__).resolve().parent
 _REPO = _HERE.parent
 _APP = _Path(_os.environ.get("STAGE_RADAR_APP", str(_REPO.parent / "stage-radar-app")))
+
+def _find(rel):
+    """优先在本仓找输入文件，找不到再回退到实现仓（_APP）。
+
+    发布这两个文件是为了让 §9 的实验**在只克隆本仓时也能复现**；
+    保留 _APP 回退是为了不破坏原开发环境。
+    """
+    for base in (_REPO, _APP):
+        p = base / rel
+        if p.exists():
+            return p
+    raise FileNotFoundError(
+        "缺少 %s。它随本仓发布（若你手动克隆，请确认没有用 --filter 之类跳过）；"
+        "也可用 STAGE_RADAR_APP 指向实现仓。" % rel)
+
 # --- 前导结束 ---
 
 """查清「期刊 ∩ EPMC = 0」：是没被收录，还是时间定义错配？
@@ -25,7 +40,7 @@ sys.path.insert(0, str(_REPO))
 import benchmark as B  # noqa: E402
 
 UA = {"User-Agent": "stage-radar/0.5 (mailto:stage-radar@example.org)"}
-jc = json.loads(Path(str(_APP / "data" / "benchmark_journal_corpus.json"))
+jc = json.loads(_find("data/benchmark_journal_corpus.json")
                 .read_text(encoding="utf-8"))["items"]
 
 

@@ -99,4 +99,4 @@ fig.text(0.5, 0.012,
 fig.tight_layout(rect=[0, 0.05, 1, 0.955])
 for ext in ("svg",):
     fig.savefig(R / f"fig_coverage.{ext}")
-print("WROTE", R / "fig_coverage.png")
+print("WROTE", R / "fig_coverage.svg")

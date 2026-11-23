@@ -105,5 +105,5 @@ fig.text(0.5, 0.012,
 fig.tight_layout(rect=[0, 0.05, 1, 0.955])
 for ext in ("svg",):
     fig.savefig(R / f"fig_llm_layer.{ext}")
-print("WROTE", R / "fig_llm_layer.png")
+print("WROTE", R / "fig_llm_layer.svg")
 print("保留率：capping-ivt %.0f%%，peptide %.0f%%" % (rates[0], rates[1]))

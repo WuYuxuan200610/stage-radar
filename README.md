@@ -321,6 +321,8 @@ JACS `0002-7863` · ACS Catalysis `2155-5435` · ACS Nano `1936-0851` · Account
 | [benchmark_results.json](./benchmark_results.json) | 上述基准的**原始结果**（可复现凭据） |
 | [plot_benchmark.py](./plot_benchmark.py) | 基准作图 → `benchmark_summary.svg` |
 | [plot_capability.py](./plot_capability.py) | 能力对比矩阵作图 → `capability_matrix.svg`（用于 §1「优势」） |
+| [sources_catalog.json](./sources_catalog.json) | **刊源机读目录**：55 本期刊 + 4 本协议（ISSN / 接入路由 / 核验状态 / 核验日期） |
+| [data/benchmark_journal_corpus.json](./data/benchmark_journal_corpus.json) | 51 本刊的语料快照（6.1 MB），§9.3 / §9.5 的输入 |
 | [research/](./research/) | **§9 的实验代码、数据与图**，含运行说明、复现步骤与已修正的测量错误清单 |
 | [docs/](./docs/) | 阶段流程图：[显示用 PNG](./docs/stage-flow.png) + [可编辑 SVG 源](./docs/stage-flow.svg) |
 | [tools/draw_stage_flow.py](./tools/draw_stage_flow.py) | 重画阶段流程图（改顶部坐标区即可，SVG 与 PNG 同时更新） |

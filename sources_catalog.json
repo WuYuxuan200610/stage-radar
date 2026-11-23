@@ -1,0 +1,781 @@
+{
+  "schema_version": 1,
+  "canonical_source": "mobile-android/app/src/main/java/com/stageradar/app/SourceCatalog.kt",
+  "verified_on": "2026-11-19",
+  "verification_method": "GET https://api.crossref.org/journals/{ISSN}/works",
+  "note": "本文件是给 Python 桌面管线用的机器可读刊源清单，内容必须与 SourceCatalog.kt 一致（用 tools/check_sources_catalog.py 校验）。Kotlin 里还带有 note/UI 文案，Python 侧不需要，所以这里只保留检索所需字段。",
+  "families": [
+    {
+      "id": "nature",
+      "nameZh": "Nature 及子刊",
+      "publisher": "Springer Nature"
+    },
+    {
+      "id": "cell",
+      "nameZh": "Cell 及子刊",
+      "publisher": "Elsevier"
+    },
+    {
+      "id": "aaas",
+      "nameZh": "Science 及子刊",
+      "publisher": "AAAS"
+    },
+    {
+      "id": "acs",
+      "nameZh": "ACS 系列",
+      "publisher": "American Chemical Society"
+    },
+    {
+      "id": "wiley",
+      "nameZh": "Angew",
+      "publisher": "Wiley"
+    },
+    {
+      "id": "pnas",
+      "nameZh": "PNAS",
+      "publisher": "National Academy of Sciences"
+    },
+    {
+      "id": "vita",
+      "nameZh": "Vita 及子刊",
+      "publisher": "Higher Education Press"
+    },
+    {
+      "id": "protocols",
+      "nameZh": "协议 / 方法刊",
+      "publisher": "多家出版社"
+    }
+  ],
+  "journals": [
+    {
+      "id": "nature",
+      "familyId": "nature",
+      "name": "Nature",
+      "nameZh": "Nature",
+      "issn": "0028-0836",
+      "issnAlt": "1476-4687",
+      "audit": "CROSSREF_OK",
+      "doiCount": 448010,
+      "defaultOn": true
+    },
+    {
+      "id": "natmethods",
+      "familyId": "nature",
+      "name": "Nature Methods",
+      "nameZh": "Nature Methods",
+      "issn": "1548-7091",
+      "issnAlt": "1548-7105",
+      "audit": "CROSSREF_OK",
+      "doiCount": 8480,
+      "defaultOn": true
+    },
+    {
+      "id": "nbt",
+      "familyId": "nature",
+      "name": "Nature Biotechnology",
+      "nameZh": "Nature Biotechnology",
+      "issn": "1087-0156",
+      "issnAlt": "1546-1696",
+      "audit": "CROSSREF_OK",
+      "doiCount": 19515,
+      "defaultOn": true
+    },
+    {
+      "id": "natbiomedeng",
+      "familyId": "nature",
+      "name": "Nature Biomedical Engineering",
+      "nameZh": "Nature Biomedical Engineering",
+      "issn": "2157-846X",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 1782,
+      "defaultOn": true
+    },
+    {
+      "id": "natcommun",
+      "familyId": "nature",
+      "name": "Nature Communications",
+      "nameZh": "Nature Communications",
+      "issn": "2041-1723",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 92921,
+      "defaultOn": true
+    },
+    {
+      "id": "natgenet",
+      "familyId": "nature",
+      "name": "Nature Genetics",
+      "nameZh": "Nature Genetics",
+      "issn": "1061-4036",
+      "issnAlt": "1546-1718",
+      "audit": "CROSSREF_OK",
+      "doiCount": 11809,
+      "defaultOn": true
+    },
+    {
+      "id": "natchembiol",
+      "familyId": "nature",
+      "name": "Nature Chemical Biology",
+      "nameZh": "Nature Chemical Biology",
+      "issn": "1552-4450",
+      "issnAlt": "1552-4469",
+      "audit": "CROSSREF_OK",
+      "doiCount": 13902,
+      "defaultOn": true
+    },
+    {
+      "id": "natcatal",
+      "familyId": "nature",
+      "name": "Nature Catalysis",
+      "nameZh": "Nature Catalysis",
+      "issn": "2520-1158",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 1611,
+      "defaultOn": true
+    },
+    {
+      "id": "natmedicine",
+      "familyId": "nature",
+      "name": "Nature Medicine",
+      "nameZh": "Nature Medicine",
+      "issn": "1078-8956",
+      "issnAlt": "1546-170X",
+      "audit": "CROSSREF_OK",
+      "doiCount": 16647,
+      "defaultOn": true
+    },
+    {
+      "id": "natcellbiol",
+      "familyId": "nature",
+      "name": "Nature Cell Biology",
+      "nameZh": "Nature Cell Biology",
+      "issn": "1465-7392",
+      "issnAlt": "1476-4679",
+      "audit": "CROSSREF_OK",
+      "doiCount": 6812,
+      "defaultOn": true
+    },
+    {
+      "id": "natmaterials",
+      "familyId": "nature",
+      "name": "Nature Materials",
+      "nameZh": "Nature Materials",
+      "issn": "1476-1122",
+      "issnAlt": "1476-4660",
+      "audit": "CROSSREF_OK",
+      "doiCount": 7003,
+      "defaultOn": true
+    },
+    {
+      "id": "natphysics",
+      "familyId": "nature",
+      "name": "Nature Physics",
+      "nameZh": "Nature Physics",
+      "issn": "1745-2473",
+      "issnAlt": "1745-2481",
+      "audit": "CROSSREF_OK",
+      "doiCount": 7510,
+      "defaultOn": true
+    },
+    {
+      "id": "natnano",
+      "familyId": "nature",
+      "name": "Nature Nanotechnology",
+      "nameZh": "Nature Nanotechnology",
+      "issn": "1748-3387",
+      "issnAlt": "1748-3395",
+      "audit": "CROSSREF_OK",
+      "doiCount": 6010,
+      "defaultOn": true
+    },
+    {
+      "id": "natmicrobiol",
+      "familyId": "nature",
+      "name": "Nature Microbiology",
+      "nameZh": "Nature Microbiology",
+      "issn": "2058-5276",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 2287,
+      "defaultOn": true
+    },
+    {
+      "id": "natecoevo",
+      "familyId": "nature",
+      "name": "Nature Ecology & Evolution",
+      "nameZh": "Nature Ecology & Evolution",
+      "issn": "2397-334X",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 3157,
+      "defaultOn": true
+    },
+    {
+      "id": "natmetab",
+      "familyId": "nature",
+      "name": "Nature Metabolism",
+      "nameZh": "Nature Metabolism",
+      "issn": "2522-5812",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 1629,
+      "defaultOn": true
+    },
+    {
+      "id": "nataging",
+      "familyId": "nature",
+      "name": "Nature Aging",
+      "nameZh": "Nature Aging",
+      "issn": "2662-8465",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 1226,
+      "defaultOn": true
+    },
+    {
+      "id": "natsynth",
+      "familyId": "nature",
+      "name": "Nature Synthesis",
+      "nameZh": "Nature Synthesis",
+      "issn": "2731-0582",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 1169,
+      "defaultOn": true
+    },
+    {
+      "id": "cell",
+      "familyId": "cell",
+      "name": "Cell",
+      "nameZh": "Cell",
+      "issn": "0092-8674",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 26852,
+      "defaultOn": true
+    },
+    {
+      "id": "molcell",
+      "familyId": "cell",
+      "name": "Molecular Cell",
+      "nameZh": "Molecular Cell",
+      "issn": "1097-2765",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 10595,
+      "defaultOn": true
+    },
+    {
+      "id": "cellreports",
+      "familyId": "cell",
+      "name": "Cell Reports",
+      "nameZh": "Cell Reports",
+      "issn": "2211-1247",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 17233,
+      "defaultOn": true
+    },
+    {
+      "id": "cellstemcell",
+      "familyId": "cell",
+      "name": "Cell Stem Cell",
+      "nameZh": "Cell Stem Cell",
+      "issn": "1934-5909",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 3858,
+      "defaultOn": true
+    },
+    {
+      "id": "cellmetab",
+      "familyId": "cell",
+      "name": "Cell Metabolism",
+      "nameZh": "Cell Metabolism",
+      "issn": "1550-4131",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 4320,
+      "defaultOn": true
+    },
+    {
+      "id": "immunity",
+      "familyId": "cell",
+      "name": "Immunity",
+      "nameZh": "Immunity",
+      "issn": "1074-7613",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 6794,
+      "defaultOn": true
+    },
+    {
+      "id": "neuron",
+      "familyId": "cell",
+      "name": "Neuron",
+      "nameZh": "Neuron",
+      "issn": "0896-6273",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 14403,
+      "defaultOn": true
+    },
+    {
+      "id": "cancercell",
+      "familyId": "cell",
+      "name": "Cancer Cell",
+      "nameZh": "Cancer Cell",
+      "issn": "1535-6108",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 4268,
+      "defaultOn": true
+    },
+    {
+      "id": "cellhostmicrobe",
+      "familyId": "cell",
+      "name": "Cell Host & Microbe",
+      "nameZh": "Cell Host & Microbe",
+      "issn": "1931-3128",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 3639,
+      "defaultOn": true
+    },
+    {
+      "id": "cellchembiol",
+      "familyId": "cell",
+      "name": "Cell Chemical Biology",
+      "nameZh": "Cell Chemical Biology",
+      "issn": "2451-9456",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 1851,
+      "defaultOn": true
+    },
+    {
+      "id": "cellgenomics",
+      "familyId": "cell",
+      "name": "Cell Genomics",
+      "nameZh": "Cell Genomics",
+      "issn": "2666-979X",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 710,
+      "defaultOn": true
+    },
+    {
+      "id": "cellreportsphysci",
+      "familyId": "cell",
+      "name": "Cell Reports Physical Science",
+      "nameZh": "Cell Reports Physical Science",
+      "issn": "2666-3864",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 2738,
+      "defaultOn": true
+    },
+    {
+      "id": "cellreportsmethods",
+      "familyId": "cell",
+      "name": "Cell Reports Methods",
+      "nameZh": "Cell Reports Methods",
+      "issn": "2667-2375",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 986,
+      "defaultOn": true
+    },
+    {
+      "id": "oneearth",
+      "familyId": "cell",
+      "name": "One Earth",
+      "nameZh": "One Earth",
+      "issn": "2590-3322",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 1482,
+      "defaultOn": true
+    },
+    {
+      "id": "science",
+      "familyId": "aaas",
+      "name": "Science",
+      "nameZh": "Science",
+      "issn": "0036-8075",
+      "issnAlt": "1095-9203",
+      "audit": "CROSSREF_OK",
+      "doiCount": 384317,
+      "defaultOn": true
+    },
+    {
+      "id": "sciadvances",
+      "familyId": "aaas",
+      "name": "Science Advances",
+      "nameZh": "Science Advances",
+      "issn": "2375-2548",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 20493,
+      "defaultOn": true
+    },
+    {
+      "id": "scisignaling",
+      "familyId": "aaas",
+      "name": "Science Signaling",
+      "nameZh": "Science Signaling",
+      "issn": "1937-9145",
+      "issnAlt": "1945-0877",
+      "audit": "CROSSREF_OK",
+      "doiCount": 9322,
+      "defaultOn": true
+    },
+    {
+      "id": "scitranslmed",
+      "familyId": "aaas",
+      "name": "Science Translational Medicine",
+      "nameZh": "Science Translational Medicine",
+      "issn": "1946-6234",
+      "issnAlt": "1946-6242",
+      "audit": "CROSSREF_OK",
+      "doiCount": 7339,
+      "defaultOn": true
+    },
+    {
+      "id": "scirobotics",
+      "familyId": "aaas",
+      "name": "Science Robotics",
+      "nameZh": "Science Robotics",
+      "issn": "2470-9476",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 973,
+      "defaultOn": true
+    },
+    {
+      "id": "jacs",
+      "familyId": "acs",
+      "name": "Journal of the American Chemical Society",
+      "nameZh": "JACS",
+      "issn": "0002-7863",
+      "issnAlt": "1520-5126",
+      "audit": "CROSSREF_OK",
+      "doiCount": 221821,
+      "defaultOn": true
+    },
+    {
+      "id": "acscatal",
+      "familyId": "acs",
+      "name": "ACS Catalysis",
+      "nameZh": "ACS Catalysis",
+      "issn": "2155-5435",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 17851,
+      "defaultOn": true
+    },
+    {
+      "id": "acsnano",
+      "familyId": "acs",
+      "name": "ACS Nano",
+      "nameZh": "ACS Nano",
+      "issn": "1936-0851",
+      "issnAlt": "1936-086X",
+      "audit": "CROSSREF_OK",
+      "doiCount": 29477,
+      "defaultOn": true
+    },
+    {
+      "id": "accountscr",
+      "familyId": "acs",
+      "name": "Accounts of Chemical Research",
+      "nameZh": "Accounts of Chemical Research",
+      "issn": "1520-4898",
+      "issnAlt": "0001-4842",
+      "audit": "CROSSREF_OK",
+      "doiCount": 9292,
+      "defaultOn": true
+    },
+    {
+      "id": "chemrev",
+      "familyId": "acs",
+      "name": "Chemical Reviews",
+      "nameZh": "Chemical Reviews",
+      "issn": "0009-2665",
+      "issnAlt": "1520-6890",
+      "audit": "CROSSREF_OK",
+      "doiCount": 10739,
+      "defaultOn": true
+    },
+    {
+      "id": "acscentralscience",
+      "familyId": "acs",
+      "name": "ACS Central Science",
+      "nameZh": "ACS Central Science",
+      "issn": "2374-7943",
+      "issnAlt": "2374-7951",
+      "audit": "CROSSREF_OK",
+      "doiCount": 2867,
+      "defaultOn": true
+    },
+    {
+      "id": "acsami",
+      "familyId": "acs",
+      "name": "ACS Applied Materials & Interfaces",
+      "nameZh": "ACS Applied Materials & Interfaces",
+      "issn": "1944-8244",
+      "issnAlt": "1944-8252",
+      "audit": "CROSSREF_OK",
+      "doiCount": 70513,
+      "defaultOn": true
+    },
+    {
+      "id": "orglett",
+      "familyId": "acs",
+      "name": "Organic Letters",
+      "nameZh": "Organic Letters",
+      "issn": "1523-7060",
+      "issnAlt": "1523-7052",
+      "audit": "CROSSREF_OK",
+      "doiCount": 46166,
+      "defaultOn": true
+    },
+    {
+      "id": "inorgchem",
+      "familyId": "acs",
+      "name": "Inorganic Chemistry",
+      "nameZh": "Inorganic Chemistry",
+      "issn": "0020-1669",
+      "issnAlt": "1520-510X",
+      "audit": "CROSSREF_OK",
+      "doiCount": 78051,
+      "defaultOn": true
+    },
+    {
+      "id": "biochemistry",
+      "familyId": "acs",
+      "name": "Biochemistry",
+      "nameZh": "Biochemistry",
+      "issn": "0006-2960",
+      "issnAlt": "1520-4995",
+      "audit": "CROSSREF_OK",
+      "doiCount": 71404,
+      "defaultOn": true
+    },
+    {
+      "id": "jctc",
+      "familyId": "acs",
+      "name": "Journal of Chemical Theory and Computation",
+      "nameZh": "JCTC",
+      "issn": "1549-9618",
+      "issnAlt": "1549-9626",
+      "audit": "CROSSREF_OK",
+      "doiCount": 12115,
+      "defaultOn": true
+    },
+    {
+      "id": "angew",
+      "familyId": "wiley",
+      "name": "Angewandte Chemie International Edition",
+      "nameZh": "Angew（国际版）",
+      "issn": "1433-7851",
+      "issnAlt": "1521-3773",
+      "audit": "CROSSREF_OK",
+      "doiCount": 82499,
+      "defaultOn": true
+    },
+    {
+      "id": "angewde",
+      "familyId": "wiley",
+      "name": "Angewandte Chemie",
+      "nameZh": "Angew（德文版）",
+      "issn": "0044-8249",
+      "issnAlt": "1521-3757",
+      "audit": "CROSSREF_OK",
+      "doiCount": 226503,
+      "defaultOn": false
+    },
+    {
+      "id": "pnas",
+      "familyId": "pnas",
+      "name": "Proceedings of the National Academy of Sciences",
+      "nameZh": "PNAS",
+      "issn": "1091-6490",
+      "issnAlt": "0027-8424",
+      "audit": "CROSSREF_OK",
+      "doiCount": 172573,
+      "defaultOn": true
+    },
+    {
+      "id": "vita",
+      "familyId": "vita",
+      "name": "Vita",
+      "nameZh": "Vita",
+      "issn": "2097-7468",
+      "issnAlt": "",
+      "audit": "CROSSREF_OK",
+      "doiCount": 76,
+      "defaultOn": true
+    },
+    {
+      "id": "vitamicrobiology",
+      "familyId": "vita",
+      "name": "Vita Microbiology",
+      "nameZh": "Vita Microbiology",
+      "issn": "2097-8324",
+      "issnAlt": "",
+      "audit": "CROSSREF_ABSENT",
+      "doiCount": 0,
+      "defaultOn": false
+    },
+    {
+      "id": "natprotocols",
+      "familyId": "protocols",
+      "name": "Nature Protocols",
+      "nameZh": "Nature Protocols",
+      "issn": "1750-2799",
+      "audit": "CROSSREF_OK",
+      "doiCount": 4023,
+      "defaultOn": false
+    },
+    {
+      "id": "starprotocols",
+      "familyId": "protocols",
+      "name": "STAR Protocols",
+      "nameZh": "STAR Protocols",
+      "issn": "2666-1667",
+      "audit": "CROSSREF_OK",
+      "doiCount": 4849,
+      "defaultOn": false
+    },
+    {
+      "id": "cshprotocols",
+      "familyId": "protocols",
+      "name": "CSH Protocols",
+      "nameZh": "CSH Protocols",
+      "issn": "1559-6095",
+      "audit": "CROSSREF_OK",
+      "doiCount": 10649,
+      "defaultOn": false
+    },
+    {
+      "id": "bioprotocol",
+      "familyId": "protocols",
+      "name": "Bio-protocol",
+      "nameZh": "Bio-protocol",
+      "issn": "2331-8325",
+      "audit": "CROSSREF_OK",
+      "doiCount": 6818,
+      "defaultOn": false
+    }
+  ],
+  "platforms_note": "平台/聚合库类来源（非单刊）。audit 来自真实探测：2026-11-17 见 tools/probe_platform_sources.py，2026-11-19 复核 arXiv / ChemRxiv / ScienceDirect，见 tools/probe_three_sources.py 与 tools/probe_arxiv_catalog.py。UNAVAILABLE 的不得当成可查询源，也不得进入'已检索'表述。audit 描述核验状态，wired 描述是否已接入管线，两者独立。",
+  "platforms": [
+    {
+      "id": "europepmc",
+      "name": "Europe PMC",
+      "nameZh": "Europe PMC",
+      "audit": "VERIFIED",
+      "route": "官方 API（免费）",
+      "window": "服务端日期窗",
+      "windowParam": "FIRST_PDATE:[起 TO 止]",
+      "wired": true,
+      "defaultOn": true,
+      "evidence": "2026-11-17 实测：窗口内 hitCount=8。另实测 fromPubDate 参数被静默忽略，必须把日期写进 query。",
+      "note": "聚合库：期刊 + 预印本。当前桌面管线的主力来源，已接线。"
+    },
+    {
+      "id": "pubmed",
+      "name": "PubMed (E-utilities)",
+      "nameZh": "PubMed",
+      "audit": "VERIFIED",
+      "route": "官方 API（免费）",
+      "window": "服务端日期窗",
+      "windowParam": "datetype=pdat & mindate/maxdate",
+      "wired": true,
+      "defaultOn": true,
+      "evidence": "2026-11-17 实测：窗口内 count=28，ID 正常返回。已接入桌面管线（[tiab] 查询 + pdat 日期窗）。",
+      "note": "医学核心库，免费无 key。已接线。"
+    },
+    {
+      "id": "openalex",
+      "name": "OpenAlex",
+      "nameZh": "OpenAlex",
+      "audit": "VERIFIED",
+      "route": "官方 API（免费）",
+      "window": "服务端日期窗",
+      "windowParam": "from_publication_date / to_publication_date",
+      "wired": true,
+      "defaultOn": true,
+      "evidence": "2026-11-17 实测：窗口内 count=4802。",
+      "note": "宽覆盖。注意：它的全文检索（search=）噪音很大，只应用标题检索。已接线（title.search + from/to_publication_date 日期窗；摘要由 abstract_inverted_index 还原）。"
+    },
+    {
+      "id": "biorxiv",
+      "name": "bioRxiv",
+      "nameZh": "bioRxiv",
+      "audit": "VERIFIED",
+      "route": "官方 API（免费）",
+      "window": "服务端日期窗",
+      "windowParam": "/details/biorxiv/{起}/{止}/{游标}",
+      "wired": true,
+      "defaultOn": true,
+      "evidence": "2026-11-17 实测：3 天窗口 467 条，带 DOI 与摘要（约 1000–2000 字符）。已接入桌面管线。",
+      "note": "抢发信号最先出现的地方。接口把 total 返回成字符串，须转 int；无主题检索参数，只能整窗拉回本地过滤，故桌面管线只回看 7 天。"
+    },
+    {
+      "id": "medrxiv",
+      "name": "medRxiv",
+      "nameZh": "medRxiv",
+      "audit": "VERIFIED",
+      "route": "官方 API（免费）",
+      "window": "服务端日期窗",
+      "windowParam": "/details/medrxiv/{起}/{止}/{游标}",
+      "wired": true,
+      "defaultOn": true,
+      "evidence": "2026-11-17 实测：3 天窗口 126 条，带 DOI 与摘要。已接入桌面管线。",
+      "note": "医学预印本。已接线。"
+    },
+    {
+      "id": "arxiv",
+      "name": "arXiv",
+      "nameZh": "arXiv",
+      "audit": "VERIFIED",
+      "route": "官方 API（免费）",
+      "window": "服务端日期窗",
+      "windowParam": "submittedDate:[YYYYMMDDHHMM TO YYYYMMDDHHMM]（TO 两侧必须是空格）",
+      "wired": true,
+      "defaultOn": true,
+      "evidence": "2026-11-19 实测（窗口 11-12～11-19）：无主题时 totalResults=8437；加 cat:q-bio.BM 后 totalResults=14，返回条目日期 11-12～11-18 全部落在窗口内。踩过的坑：把 TO 写成 +TO+ 会静默返回 1 条无意义结果，且不报错。",
+      "note": "价值随领域陡变：同窗口 q-bio.BM 仅 14 条（约 2 条/天），全库约 1200 条/天。CS/ML/物理/数学题有产出，湿实验生物题返回空属正常（0≠错误）。已接线（ti 查询 + submittedDate 空格 TO 日期窗），默认启用。"
+    },
+    {
+      "id": "chemrxiv",
+      "name": "ChemRxiv",
+      "nameZh": "ChemRxiv",
+      "audit": "VERIFIED",
+      "route": "Crossref 按 DOI 前缀 10.26434（免费）",
+      "window": "服务端日期窗",
+      "windowParam": "filter=from-created-date:起,until-created-date:止",
+      "wired": true,
+      "defaultOn": true,
+      "evidence": "2026-11-19 实测：Figshare 与 ChemRxiv 官方接口对非浏览器请求一律 403（POST/GET 皆是）；改走 api.crossref.org/prefixes/10.26434/works 后 HTTP 200，7 天窗口 total-results=454，可按创建日期过滤，标题与 DOI 正常返回。",
+      "note": "这条路只给元数据（标题/DOI/日期），拿不到摘要与 PDF。防抢发够用，理解竞争点需另抓页面。已接线（Crossref 前缀 10.26434 + query.title + created 日期窗），默认启用。"
+    },
+    {
+      "id": "sciencedirect",
+      "name": "ScienceDirect (Elsevier)",
+      "nameZh": "ScienceDirect",
+      "audit": "UNAVAILABLE",
+      "route": "需订阅 key",
+      "window": "—",
+      "windowParam": "—",
+      "wired": false,
+      "defaultOn": false,
+      "evidence": "2026-11-19 复测：无 key 直连返回 HTTP 401，响应为 {\"service-error\":{\"status\":{\"statusCode\":\"AUTHENTICATION_ERROR\"}}}。",
+      "note": "判定为**不接入**，不是待办。除需付费凭据外，它不等于 Cell 一家：ScienceDirect 是 Elsevier 全平台，目录只收了 Cell Press 14 本，其余数千本未覆盖。补覆盖的正解是按 ISSN 把更多 Elsevier 刊加进目录走免费的 Crossref，而非接付费 API。"
+    }
+  ]
+}
