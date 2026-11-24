@@ -871,6 +871,15 @@ protocols-family:
    8. **必须把「过滤前 / 过滤后条数」写进报告与日志**——为的是让"过滤太严"**可被发现**：
       某源若 `raw>0` 却 `过滤后=0`，报告里必须显式列出，
       **不得**让它看起来像"这个源本来就没东西"。
+   9. **全链路只允许一套过滤规则（写死）**。实测事故（2026-11-24）：
+      实现里存在**两套**本地过滤——一套用于 OpenAlex/ChemRxiv，另一套（裸子串
+      `term in title or term in abstract`）用于 bioRxiv / medRxiv / Europe PMC / Crossref 刊源。
+      后果：在上面 1–8 条里加的"词形还原 / 镜像词排除 / 短词整词匹配"
+      **只作用在两条源上，其余全走旧路——修了等于没修**；
+      第六轮复测实测的"bioRxiv 该窗口 3 条 `capping` 命中全是 `decapping`"，
+      测的正是那条旧路。
+      **写死**：**所有**做本地过滤的来源（含整窗扫描的 bioRxiv / medRxiv、
+      按 ISSN 拉回的 Crossref 刊源）必须调用**同一个**判定函数，不得各写一份。
 2. **预印本源按领域选，不盲查 arXiv**：生物/医学题查 bioRxiv/medRxiv，CS/ML/物理题才查 arXiv，化学题查 ChemRxiv。实测「prime editing + off-target」在 arXiv 是 0 条——生物题查 arXiv 是浪费。
 3. **Crossref 窗口检索**：`filter=from-online-pub-date:FROM,until-online-pub-date:TO,type:journal-article`，
    首屏带 `cursor=*`，`rows=50`，随后跟随 `next-cursor`；`sort=created&order=desc`。
