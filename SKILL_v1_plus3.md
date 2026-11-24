@@ -195,7 +195,7 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
 | `cursor` | **旧格式兼容名**，按"取数游标"解释（= `fetched_until`）。**投递一律不得改写它** |
 | `seen` | 已推论文的 **ID 与全部别名**（别名也要记，否则换个来源会重复推） |
 | `delivered` | **逐通道**结算记录（内容哈希）。飞书成功不等于邮件成功 |
-| `pending` | 尚未结算完的待重试内容；**存在时不推进 `settled_until`**（取数照常推进） |
+| `pending` | 尚未结算完的待重试内容；**存在时不推进 `settled_until`**（取数照常推进）。**内含字段**：`first_pending_at`（最早一批进清单的时刻，停滞计时只认它、并入不刷新）、`created_at`（最近一次并入的时间，仅用于展示）、`cursor`（产出该批次时的 `fetched_until`，**与顶层 `cursor` 同名不同物**） |
 | `consecutive_fetch_failures` | 连续检索失败次数；达 3 次才通知用户 |
 | `lookback_days` | 首次运行的回看天数（无 `cursor` 时使用） |
 
