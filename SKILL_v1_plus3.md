@@ -827,9 +827,9 @@ protocols-family:
     {
       "rank": 1,
       "title": "...",
-      "source": "openalex | arxiv | biorxiv | medrxiv | journal",
+      "source": ["openalex", "arxiv"],        // **数组**：多源命中时要列全，见 §13.2
       "id": "openalex_id / arxiv_id / doi",
-      "date": "上线/发表日期",
+      "dates": {"submitted": "未取得", "online": "2026-11-20", "issue": "未取得"},  // **三栏**：投稿/在线/见刊，取不到写「未取得」，见 §13.2
       "url": "原文链接",
       "tl_dr": "一句话学术概述：这篇自己做了什么（对象/方法/结果），不含与你的关系",
       "reason": "为什么推给你（阶段对应：启发:可迁移 / 选题中:方向 / 定题:前人·类似思路·方法可复用 / 已开题:竞争解释）",
