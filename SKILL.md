@@ -820,8 +820,9 @@ protocols-family:
 
    **写死「词元 AND」规则**：
 
-   1. 查询按空白切词 → 去停用词（`the/and/of/for/role/effect/analysis/new/novel/…`）→
-      **只留长度 ≥3 的词元**，全小写；
+   1. 查询按空白切词，**连字符与斜杠也要切开**（`PET-RAFT` → `pet` + `raft`；
+      否则标题写成 `PET RAFT`（空格）就匹配不上，实测会漏真论文）→ 去停用词
+      （`the/and/of/for/role/effect/analysis/new/novel/…`）→ **只留长度 ≥3 的词元**，全小写；
    2. 词元匹配范围 = **标题 ∪ 摘要**（有摘要就一起用）；
       **子串匹配**（`capping` 命中 `decapping` 也算——防抢发宁可多留）；
    3. **保留条件：命中的不同词元数 ≥ min(2, 词元总数)**。
