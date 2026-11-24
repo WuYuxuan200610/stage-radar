@@ -563,6 +563,27 @@
   > `requests` 实际请求次数、`server_hits` 服务端命中总数、`fetched` 实际取回条数、
   > `truncated` 是否触顶（true/false）、`notes` 说明（如"已切窗 3 次"）。
   > **只报耗时不给覆盖账 = 用户无法知道漏了多少**，而漏查不会报错。
+  >
+  > **落盘形状（写死，第十一轮指出"只有要求、没有落点"）**：
+  > 写到 `outbox/<project_id>/history_screen.json`：
+  >
+  > ```json
+  > {
+  >   "completed_at": "2026-11-24T20:00:00+08:00",
+  >   "sources": [
+  >     {"source": "europepmc", "requests": 12, "server_hits": 843,
+  >      "fetched": 843, "truncated": false, "notes": ""},
+  >     {"source": "openalex",  "requests": 4,  "server_hits": 1472,
+  >      "fetched": 400, "truncated": true,  "notes": "用 page 翻页，未取完"}
+  >   ],
+  >   "total_titles": 486,
+  >   "titles": [ {"id": "doi:…", "title": "…", "url": "…", "source": "europepmc"} ]
+  > }
+  > ```
+  >
+  > - **`coverage` 里的 `raw`/`kept` 描述的是"每日窗口的三层过滤"，不要拿它当初筛覆盖账**；
+  >   初筛的账在 `history_screen.json` 的 `sources[]` 里，**两者不是一个东西**。
+  > - `fetched < server_hits` 且 `truncated=false` **就是实现有 bug**（静默漏取）。
 
   > **`cursor_fetch` 的首次初值与初筛结果去向（第十一轮指出全文没写）**
   > - **初筛不推进 `cursor_fetch`**：初筛是"看历史"，不是"扫窗口"。
