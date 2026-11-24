@@ -1843,6 +1843,12 @@ PubMed 有三个容易混用的日期概念，用错会**把几个月前的文�
 
 1. **必须按 `type` 过滤** OpenAlex 的非研究类型（`review` / `decision` / `dataset` /
    `grant` / `peer-review` 等），并**排除 `10.5555` 之类的非 DOI 记录**；
+   **另外必须按标题再滤一遍"同行评议附件"**（`Review for …` / `Decision letter for …` /
+   `Author response for …` / `Reviewer report …`）——实测（2026-11-24，90 天窗口
+   `mRNA capping`）不滤时 **50 条里留 46 条**，其中一半是评议附件，真正的研究文献被稀释；
+   滤完是 **raw 28 → kept 14**，剩下的才是帽子结构/加帽酶/帽类似物这类正主。
+   **并且 coverage 里必须同时给 `raw`（过滤前）与 `kept`（过滤后）两个数**——
+   只给一个数，"过滤太严"就会伪装成"这个源本来就没东西"（§9.5 规则 1 第 8 条）。
 2. **歧义短词必须在主档里声明一份「负词表」**（如 `cap1` → 排除 `cyclase-associated`、
    `pulp capping`、`capping layer`），**不得只写在代码里**——声明在主档里才可被检查、可被用户修改；
 3. **负词表只能减少噪音，不能消除**：实测加表后仍有漏网（1 条 CAP1 基因）。
