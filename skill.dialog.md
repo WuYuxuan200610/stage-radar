@@ -218,7 +218,10 @@
 > **示例就是 schema，不是随手写的**：`cursor` 是**旧格式兼容名**（镜像取数游标），
 > 新实现必须同时写 `cursor_fetch` 与 `cursor_delivered`；两者**本来就可以不同**
 > （例如"已查到 11-24、已推送到 11-23、待审 3 篇"）。
-> `pending` 是**单个对象**（`{text, token, cursor, ids}`）或 `null`；
+> `pending` 是**单个对象**或 `null`；**它的形状以 §13.4 的规范形状为准**
+> （`{first_pending_at, created_at, text, token, cursor, items, batch_ids}`），
+> **不是**这里原先写的 `{text, token, cursor, ids}`——那个旧串**漏掉 `first_pending_at`**，
+> 照抄会让停滞计时读到 `null`，**12h/48h 告警永不触发**（第十四轮点名 N-5）。
 > 需要同时挂多批时**不要**把它改成数组——用 §13.4 的合并规则并进同一批。
 >
 > 这个等式随回补机制一起作废——**现在没有"待补天数"这个概念了**。
