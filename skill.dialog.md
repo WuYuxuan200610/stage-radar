@@ -226,7 +226,7 @@
 | `delivered` | **逐通道**结算记录（内容哈希）。飞书成功不等于邮件成功 |
 | `pending` | 尚未结算完的待重试内容；**存在时不得推进 `cursor_delivered`**（取数游标不受影响） |
 | `consecutive_fetch_failures` | 连续检索失败次数；达 3 次才通知用户 |
-| `lookback_days` | 首次运行的回看天数（无 `cursor` 时使用）；**默认 7**，见 §14.7⑦——bioRxiv 单日实测 30–50 秒，30 天窗口跑不完 |
+| `lookback_days` | 首次运行的回看天数（无 `cursor` 时使用）；**默认 3650（≈全部历史）**，见 §14.7⑦。**不得因为"跑得慢"而缩小它**——防抢发工具漏掉旧文献同样是失职 |
 
 **outbox**：`data/outbox/<project_id>/latest.json`，供下游（前端 / 调试）读取本轮结果：
 
