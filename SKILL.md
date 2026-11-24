@@ -143,7 +143,7 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
 | `tracking_enabled` | 布尔 | **是否已获用户明确授权每日推送**。未获授权的课题**不得投递** |
 | `schedule` | 对象 | `frequency` / `time` / `tz`（是 `frequency`，不是 `freq`） |
 | `channels` | 字符串数组 | `feishu` / `email` / `local`（本地推送，默认不外发；**不是** `feishu_webhook`） |
-| `sources` | 字符串数组 | 本课题订阅的源（人可读名称，含用户个性化添加的）。**期刊必须能解析回 ISSN**（§14.11A：ISSN 才是权威键，slug 只是短名） |
+| `sources` | 字符串数组 | 本课题订阅的源。**期刊一律写成 `"<人可读名> <ISSN>"`**（如 `"Nature 0028-0836"`），**ISSN 必须出现**——它才是权威键（§14.11A）；平台源直接写 id（`europepmc` 等）。**不得**只写名字（跨实现就没法对上刊） |
 | `negative_terms` | 对象（可选） | **歧义短词的负词表**：`{ "cap1": ["cyclase-associated", "cap1 gene", …] }`。§14.11E 要求"必须在主档里声明"，原文却没给字段——就是这里 |
 
 可选字段：`scope_evolution`（方向演进说明）、`needs_dsh_review`（待用户在 DSH 里确认的事项）、
@@ -184,6 +184,7 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
   "first_pending_at": null,
   "coverage_target_days": 90,
   "backfill_windows": [ ["2026-09-22", "2026-09-29"], ["2026-09-15", "2026-09-22"] ],
+  "backlog_windows": [ ["2026-10-27", "2026-11-03"] ],
   "backfill_done_days": 21,
   "uncoverable_days": [],
   "consecutive_fetch_failures": 0,
@@ -196,6 +197,9 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
 > （例如"已查到 11-24、已推送到 11-23、待审 3 篇"）。
 > `pending` 是**单个对象**（`{text, token, cursor, ids}`）或 `null`；
 > 需要同时挂多批时**不要**把它改成数组——用 §13.4 的合并规则并进同一批。
+> **`backfill_windows` 与 `backlog_windows` 是两条不同的队列，不得混用**：
+> 前者是"还没轮到扫的历史段"，后者是"扫过但没扫完的段（§9.3 规则 3b 的待补清单）"。
+> 段从 `backfill_windows` 出来、没扫完就进 `backlog_windows`，**不得直接删**。
 
 | 字段 | 说明 |
 |:---|:---|
@@ -504,7 +508,13 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
   > 1. 状态里加 **`coverage_target_days`**（已开题默认为 **90**，其余阶段按 §5 各节的目标取值）；
   > 2. 冷启动时计算 `backfill_from = now - coverage_target_days`，即"还想回到多远"；
   > 3. **`backfill_windows`**：把 `[backfill_from, now-7d)` 按 7 天切段，**从新到旧**逐个补；
-  >    每补完一段就从队列里删掉一段；`backfill_windows` 为空 = 目标范围已覆盖；
+  >    **只有整段真正扫完才从队列里删掉**。
+  >    **被截断（`partial` / 有源 `error`）的段不得删除，必须转投 `backlog_windows`**
+  >    （与 §9.3 规则 3b 的待补清单是**同一个队列**，不要造两个名字）。
+  >    第六轮复测实测：按旧写法"每补完一段就删"，**3 段并成 21 天、只扫完 8 天，
+  >    却照样把 3 段全删了 → 净丢 14 天覆盖**，而报告打出的
+  >    「目标 90 天 / 已覆盖 7 天 / 待补 9 段」**7+63=70≠90，算术自己就露了馅**。
+  >    **判据**：删段的条件是"这段的每一天都 `status=ok`"，**不是"这段跑过"**；
   > 4. **补历史段不得阻塞当前段**：当天的新内容永远优先（`cursor_fetch` 那一路），
   >    历史段用**剩余预算**去补；
   > 5. 报告里**必须写**「目标 N 天 / 已覆盖 M 天 / 待补 K 段」——
@@ -931,7 +941,7 @@ protocols-family:
     {
       "rank": 1,
       "title": "...",
-      "source": "openalex | arxiv | biorxiv | medrxiv | journal",
+      "source": ["europepmc", "pubmed"],
       "id": "openalex_id / arxiv_id / doi",
       "aliases": ["doi:...", "pmid:...", "pmcid:...", "openalex:..."],
       "url": "原文链接",
@@ -959,6 +969,13 @@ protocols-family:
 >   且禁止拿投稿日或索引日冒充首次公开。原有的单 `date` 字段**删除**。
 > - **`aliases`** 必须带：投递成功要把 `paper_id` 与**全部别名**写入 `seen`（§13.4 / §14.11B），
 >   没有别名就只能记一个 id，换个来源会重复推送。
+> - **`source` 必须是数组，且取值只能是 §14.11A 的 8 个平台 id 或 `crossref:<刊id>`**
+>   （`europepmc` / `pubmed` / `openalex` / `biorxiv` / `medrxiv` / `arxiv` /
+>   `chemrxiv` / `sciencedirect`）。
+>   **原文这里写的是 `"openalex | arxiv | biorxiv | medrxiv | journal"`——错的**：
+>   它缺 `europepmc`、`pubmed`、`chemrxiv`，而 §14.10B **明令**主题查全必须走 Europe PMC，
+>   照原文实现**写不出一张合法卡片**（第六轮复测实测撞到）；
+>   而 `journal` 不是任何 id。**同一篇常被多个源命中，§13.2 又要求"列全"，单值字段根本装不下。**
 
 - 推送形态字段（`rank` 编号 + `title` + `tl_dr`(文章学术概述) + `reason`(为什么推你) + `source` + **三栏日期**（投稿 / 在线公开 / 见刊，取不到写「未取得」，见 §10 与 §13.2）+ `url`）即投递层卡片内容，**推摘要+理由+链接，不推全文**（见 README §推送形态）。**不放逐篇打分按钮**（IM 单向收不到），改为推送末尾一句固定引导。
 - **三条铁律**：①每篇候选按 `rank` 顺序编号（#1、#2…）；②`tl_dr` 只概述文章本身（学术化，讲它自己做了什么），`reason` 才讲“与你课题的关系”，两者不得重叠；③推送末尾统一附一句固定引导：“给文章打分（附编号）”那句（见 §8）。飞书只发已定稿的文章推送；方向确认等对话性步骤只在产品 AI 里做（见 §0 铁律 4）。
@@ -1738,8 +1755,10 @@ PubMed 有三个容易混用的日期概念，用错会**把几个月前的文�
   >    归一化为 `NNNN-NNNN` 的 8 位形式）。**不得**用 id 字符串比较来判定"是不是同一本刊"。
   > 2. `id` 只是**人看与日志用的短名**。实现可以自取（如刊名 slug），
   >    **只要在报告与日志里能对上 ISSN 即可**。
-  > 3. 主档的 `sources` 里**必须能解析回 ISSN**：要么直接存 ISSN，
-  >    要么存"人可读名 + ISSN"，**不得**只存一个自造的 slug。
+  > 3. 主档的 `sources` 里**必须能解析回 ISSN**。**写法定死**（否则"要么…要么…"
+  >    与 §3.2 的"字符串数组"打架，第六轮复测被迫违反 §3.2）：
+  >    期刊元素一律写成 **`"<人可读名> <ISSN>"`**（如 `"Nature 0028-0836"`），
+  >    **ISSN 必须出现**；平台源直接写 id。**不得**只存一个自造的 slug。
   > 4. 只有**平台源**（Europe PMC / PubMed / …）才用固定 id（见下），因为它们没有 ISSN。
   >
   > 这样即使 A 实现叫 `angewde`、B 实现叫 `angewandtechemie-de`，
