@@ -186,7 +186,7 @@
                          "why": "与本课题无具体关系（须写具体）", "dropped_at": "…" } ],
   "dropped_total": 1,
   "first_pending_at": null,
-  "coverage_target_days": 90,
+  "coverage_target_days": 3650,
   "current_window_days": 7,
   "backfill_windows": [ ["2026-09-22", "2026-09-29"], ["2026-09-15", "2026-09-22"] ],
   "backlog_windows": [ ["2026-10-27", "2026-11-03"] ],
@@ -230,13 +230,22 @@
 
 **outbox**：`data/outbox/<project_id>/latest.json`，供下游（前端 / 调试）读取本轮结果：
 
+> **`window` / `batch_windows` / `coverage[].raw` / `coverage[].kept` 全部必填（写死）**。
+> 第九轮实测：实现写出的 `latest.json` 里 `window` 是 `null`（而同一轮的日志里 window 是对的），
+> `coverage` 每条只有 `source/status`、`raw` 与 `kept` 都是 `null`。
+> 后果：**下游无从知道这批候选属于哪个时间窗**，也无从判断"某源取回很多却一条没留"
+> ——而后者正是"过滤太严"的唯一可发现信号（§9.5 规则 8）。
+> **`null` 不等于"没数据"，等于"这份产物不可用"**。
+
 ```json
 {
   "schema_version": 1,
   "run_id": "capping-ivt-20261118T090218",
   "project_identity": "capping-ivt",
   "created_at": "2026-11-18T09:02:18+08:00",
-  "coverage": [ { "source": "pubmed", "status": "ok", "count": 12 } ],
+  "window": ["2026-11-17T00:00:00+08:00", "2026-11-24T00:00:00+08:00"],
+  "batch_windows": [["2026-11-17T00:00:00+08:00", "2026-11-24T00:00:00+08:00"]],
+  "coverage": [ { "source": "pubmed", "status": "ok", "raw": 40, "kept": 12 } ],
   "cards": [],
   "status": "awaiting_ai",
   "reviewed": false
@@ -524,10 +533,16 @@
   > 冷启动从 `now-7d` 开始、前缀只会往前走，`now-90d` 到 `now-7d` 那 83 天**永远不会被扫**。
   > **写死补齐机制（必须有，否则"3 个月"是空话）**：
   >
-  > 1. 状态里加 **`coverage_target_days`**（已开题默认为 **90**，其余阶段按 §5 各节的目标取值）；
+  > 1. 状态里加 **`coverage_target_days`**——**它必须恒等于 `lookback_days`**（默认 3650，即全部历史）。
+  >    **不得再写死 90 之类的阶段目标值**：第九轮实测，实现里同时出现 `lookback_days: 3650`
+  >    与 `coverage_target_days: 90`，两个数打架，实现者只能猜"到底要覆盖到多远"。
+  >    **一个课题只有一个覆盖目标，就是 `lookback_days`**；`coverage_target_days` 只是它在账本里的分母。
   > 2. 冷启动时计算 `backfill_from = now - coverage_target_days`，即"还想回到多远"；
   > 3. **`backfill_windows`**：把 `[backfill_from, now-7d)` 按 7 天切段，**从新到旧**逐个补；
   >    **只有整段真正扫完才从队列里删掉**。
+  >    **⚠️ 区间左闭右开，右端必须是 `now-7d`（当前窗口之前）——`backfill_windows` 里绝不能
+  >    出现当前窗口那一段。** 第九轮实测：实现把 `[11-17, 11-24]`（正是当前窗口）也塞进了回补队列，
+  >    而 `current_window_days` 又把这 7 天算了一次 → **同一段时间计两遍，账本必然虚高**。
   >    **被截断（`partial` / 有源 `error`）的段不得删除，必须转投 `backlog_windows`**
   >    （与 §9.3 规则 3b 的待补清单是**同一个队列**，不要造两个名字）。
   >    第六轮复测实测：按旧写法"每补完一段就删"，**3 段并成 21 天、只扫完 8 天，
