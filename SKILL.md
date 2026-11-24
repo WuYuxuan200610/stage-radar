@@ -195,8 +195,9 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
   "first_pending_at": null,
   "uncoverable_days": [],
   "consecutive_fetch_failures": 0,
-  "history_screen": {"completed_at": "2026-11-24T20:00:00+08:00",
-                     "sources": ["europepmc", "openalex", "pubmed"], "total_titles": 486},
+  "history_screen": {"completed_at": "2026-11-20T20:00:00+08:00",
+                     "screened_sources": ["europepmc", "openalex", "pubmed"],
+                     "total_titles": 486},
   "last_success": "…", "last_count": 0, "last_coverage": []
 }
 ```
@@ -583,7 +584,8 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
   > **只报耗时不给覆盖账 = 用户无法知道漏了多少**，而漏查不会报错。
   >
   > **落盘形状（写死，第十一轮指出"只有要求、没有落点"）**：
-  > 写到 `outbox/<project_id>/history_screen.json`：
+  > 写到 `data/outbox/<project_id>/history_screen.json`（**路径必须带 `data/` 前缀**，与 §3.4 的
+  > `data/<project_id>.state.json` 同根）：
   >
   > ```json
   > {
@@ -611,7 +613,12 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
   > - **初筛结果不入 `seen`**：`seen` 是"已推送集合"，初筛清单**没有推送过**（它是一份报告）。
   >   若把初筛结果写进 `seen`，用户之后在 24h 窗口里再遇到同一篇时**会被当成已推而跳过**，
   >   那正好丢掉"它今天有新进展"的信号。
-  > - **但初筛清单要留档**（写进 outbox 的 `history_screen.json`），供用户随时回看。
+  > - **但初筛清单要留档**（写进 `data/outbox/<project_id>/history_screen.json`），供用户随时回看。
+  > - **字段名不要与别处混**：**`state.history_screen.screened_sources`** 是**字符串数组**（只记源名，
+  >   给状态文件用）；**文件里的 `history_screen.json.sources[]`** 是**对象数组**
+  >   （每项含 `requests/server_hits/fetched/truncated/notes`）。
+  >   第十二轮指出这两个同名字段"同名不同形"，实现者会照抄错——
+  >   **因此状态里改名 `screened_sources`，对象数组只出现在文件里**。
   >
   > **这不是"缩小范围"，是换对了工具**：同一个目标（全历史），
   > 一次主题检索 vs 逐日翻页，成本差三个数量级。
@@ -1752,7 +1759,7 @@ protocols-family:
    > 以为已经查全，而实际上大部分历史从未被扫过，**且不会报错**。
    > 因此：
    > - 未补完时，**每日正常推送照发**，但报告**必须带一行进度**：
-   >   「历史回补进行中：已覆盖 X/Y 天，还剩 Z 段」；
+   >   「~~历史回补进行中：已覆盖 X/Y 天，还剩 Z 段~~」；
    > - 补完后该行消失；
    > - **不得在未补完时宣称"已覆盖全部历史"**。
    > **⚠️ 上面「未补完时报告带一行『已覆盖 X/Y 天』」那条随之作废（2026-11-24，第十一轮指出此处仍在要求）**：
@@ -1848,7 +1855,7 @@ protocols-family:
    - **量的真实来源是窗口本身**：日常窗口是 `cursor_fetch → now`（约 24 小时），
      这个量本来就小（bioRxiv 约 13 页/天、51 本刊各 1 页、5 个聚合源各若干次，
      合计约 100 次/天），**没有任何跑不动的理由**。
-   - **首次回看全部历史时**，长窗口按 §9.3 规则 3b 的「连续已扫完前缀」**分多轮推进**，
+   - **首次回看全部历史时**，~~长窗口按 §9.3 规则 3b 的「连续已扫完前缀」**分多轮推进**~~，
      **~~但仍不得削减要扫的范围~~——只是把它摊到多轮，并在报告里如实显示进度。**
   **（2026-11-24 作废：第十二轮指出"分多轮推进+报进度"与"不存在回补队列"正面互斥。
   首次全历史改走 §5.4 的一次性标题初筛，不是分多轮，也没有进度可报。

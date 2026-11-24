@@ -188,8 +188,9 @@
   "first_pending_at": null,
   "uncoverable_days": [],
   "consecutive_fetch_failures": 0,
-  "history_screen": {"completed_at": "2026-11-24T20:00:00+08:00",
-                     "sources": ["europepmc", "openalex", "pubmed"], "total_titles": 486},
+  "history_screen": {"completed_at": "2026-11-20T20:00:00+08:00",
+                     "screened_sources": ["europepmc", "openalex", "pubmed"],
+                     "total_titles": 486},
   "last_success": "…", "last_count": 0, "last_coverage": []
 }
 ```
@@ -578,7 +579,8 @@
   > **只报耗时不给覆盖账 = 用户无法知道漏了多少**，而漏查不会报错。
   >
   > **落盘形状（写死，第十一轮指出"只有要求、没有落点"）**：
-  > 写到 `outbox/<project_id>/history_screen.json`：
+  > 写到 `data/outbox/<project_id>/history_screen.json`（**路径必须带 `data/` 前缀**，与 §3.4 的
+  > `data/<project_id>.state.json` 同根）：
   >
   > ```json
   > {
@@ -606,7 +608,12 @@
   > - **初筛结果不入 `seen`**：`seen` 是"已推送集合"，初筛清单**没有推送过**（它是一份报告）。
   >   若把初筛结果写进 `seen`，用户之后在 24h 窗口里再遇到同一篇时**会被当成已推而跳过**，
   >   那正好丢掉"它今天有新进展"的信号。
-  > - **但初筛清单要留档**（写进 outbox 的 `history_screen.json`），供用户随时回看。
+  > - **但初筛清单要留档**（写进 `data/outbox/<project_id>/history_screen.json`），供用户随时回看。
+  > - **字段名不要与别处混**：**`state.history_screen.screened_sources`** 是**字符串数组**（只记源名，
+  >   给状态文件用）；**文件里的 `history_screen.json.sources[]`** 是**对象数组**
+  >   （每项含 `requests/server_hits/fetched/truncated/notes`）。
+  >   第十二轮指出这两个同名字段"同名不同形"，实现者会照抄错——
+  >   **因此状态里改名 `screened_sources`，对象数组只出现在文件里**。
   >
   > **这不是"缩小范围"，是换对了工具**：同一个目标（全历史），
   > 一次主题检索 vs 逐日翻页，成本差三个数量级。
