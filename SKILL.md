@@ -818,23 +818,41 @@ protocols-family:
    这是全文唯一"自己点名必须裁决、却直到最后都没裁决"的空白。第五轮复测实测：同一窗口下
    严格短语给 0 条、不滤给 1034 条，**同一课题同一窗口，三种实现会给出三种产品**）。
 
-   **写死「词元 AND」规则**：
+   **写死「词元命中」规则**（下面这一版是**第六轮复测实测证伪上一版之后**重写的）：
 
-   1. 查询按空白切词，**连字符与斜杠也要切开**（`PET-RAFT` → `pet` + `raft`；
-      否则标题写成 `PET RAFT`（空格）就匹配不上，实测会漏真论文）→ 去停用词
-      （`the/and/of/for/role/effect/analysis/new/novel/…`）→ **只留长度 ≥3 的词元**，全小写；
-   2. 词元匹配范围 = **标题 ∪ 摘要**（有摘要就一起用）；
-      **子串匹配**（`capping` 命中 `decapping` 也算——防抢发宁可多留）；
-   3. **保留条件：命中的不同词元数 ≥ min(2, 词元总数)**。
-      单关键词查询命中 1 个即可；两个及以上词元的查询**要求至少两个都出现**；
-   4. **词元总数为 0 时不过滤**（避免误杀一切）；
-   5. **必须把「过滤前 / 过滤后条数」写进报告与日志**——为的是让"过滤太严"**可被发现**：
+   > **上一版写的是「词元 AND」（要求命中数 ≥ min(2, 词元总数)），实测它是错的**：
+   > - OpenAlex 90 天窗口 12 条被它丢掉 **7 条（假阴性 58%）**，丢的含
+   >   《Structural basis of eIF4E recognition of synthetic mRNA 5' cap analogues》
+   >   《RNA Demethylase FTO … Recognize the mRNA 5' Cap》——**课题正主**，
+   >   因为标题写 `5' cap`、不写 `capping`；
+   > - **Crossref 6 个源 657 条 → 全 0**（Nature 106→0、Nat Commun 204→0、JACS 101→0）；
+   > - **PubMed 1 → 0**：`esummary` **没有摘要**，AND 退化成"标题里必须同时出现两个词"；
+   > - 查询 **`PE`** 长度 <3 被切掉 → 词元数 0 → 命中"不过滤"分支 → **完全放行**。
+   >
+   > **防抢发场景下，漏掉一篇竞争论文是灾难，多看几篇噪音只是成本**
+   > （中文审核本来就要逐篇丢弃）。所以规则改为**召回优先、短词与镜像词单独挡**。
+
+   1. 切词：空白 / **连字符** / **斜杠**都切开（`PET-RAFT` → `pet` + `raft`）；
+      去停用词；**只留长度 ≥2 的词元**（**不得**砍掉 `PE`、`SPR` 这类 2 字母高危词）；
+   2. 匹配范围 = **标题 ∪ 摘要**；
+   3. **词形要还原**：`capping` → `cap`、`capped` → `cap`（去 `ing/ed/ation/ion/s`
+      并还原重叠辅音）。**不还原词形，"措辞不同就丢"这个病治不好**——
+      上面的正主标题写的就是 `5' cap`；
+   4. **镜像词必须排除**（写死一份默认表）：
+      `decapping`/`uncapping` 不算 `capping`，`demethylation` 不算 `methylation`，
+      `depolymerization` 不算 `polymerization`，`deactivation`/`inactivation` 不算 `activation`。
+      **理由**：去帽是加帽的镜像领域、**每天大量出现**；实测 bioRxiv 某窗口
+      3 条 `capping` 子串命中**全是去帽**、真阳性 0 条；
+   5. **短词（≤4 字母）必须整词匹配**：`cap` 不得命中 `capacity`/`capital`；
+   6. **保留条件**：
+      - 命中 **≥2 个词元** → 留；
+      - 恰好命中 **1 个**：该词元长度 **≥5** → 留；
+        短词时——若查询**只有这一个词元**（如 `RAFT`）→ 留（整词命中就是最强证据）；
+        若查询有多个词元而只命中这个短词 → **需要佐证，丢弃**；
+   7. **词元总数为 0 时不得放行**（旧版"不过滤"会让 `PE` 全放行）；
+   8. **必须把「过滤前 / 过滤后条数」写进报告与日志**——为的是让"过滤太严"**可被发现**：
       某源若 `raw>0` 却 `过滤后=0`，报告里必须显式列出，
       **不得**让它看起来像"这个源本来就没东西"。
-
-   > **为什么是 AND 而不是 OR**：OR 会让 `mRNA` 或 `capping` 单独出现就进候选，
-   > 实测会把 "pulp capping"、"capping layer" 整个淹进来。AND 会漏掉改写措辞的真论文，
-   > 所以第 5 条是它的配套——**漏了要能看见，而不是悄悄归零**。
 2. **预印本源按领域选，不盲查 arXiv**：生物/医学题查 bioRxiv/medRxiv，CS/ML/物理题才查 arXiv，化学题查 ChemRxiv。实测「prime editing + off-target」在 arXiv 是 0 条——生物题查 arXiv 是浪费。
 3. **Crossref 窗口检索**：`filter=from-online-pub-date:FROM,until-online-pub-date:TO,type:journal-article`，
    首屏带 `cursor=*`，`rows=50`，随后跟随 `next-cursor`；`sort=created&order=desc`。
