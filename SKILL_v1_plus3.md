@@ -735,7 +735,7 @@ protocols-family:
 
 ### 9.5 检索硬规则（实测教训，写死）
 
-1. **只用标题/摘要检索，禁用全文检索**：OpenAlex 全文检索（`search=`）噪音极大，会把只在正文提一次关键词的无关论文捞进来。必须用标题检索（OpenAlex `title.search` / PubMed `[tiab]` / Crossref `query.title`）；只有启发思路阶段允许放宽到摘要。
+1. **只用标题/摘要检索，禁用全文检索**：OpenAlex 全文检索（`search=`）噪音极大，会把只在正文提一次关键词的无关论文捞进来。必须用标题检索（OpenAlex `title.search` / PubMed `[tiab]`）；只有启发思路阶段允许放宽到摘要。**注意：Crossref 的 `query.title` 不在此列——它只排序、不过滤**，用它必须配本地二次过滤（见 §14.2 的说明）。
 2. **预印本源按领域选，不盲查 arXiv**：生物/医学题查 bioRxiv/medRxiv，CS/ML/物理题才查 arXiv，化学题查 ChemRxiv。实测「prime editing + off-target」在 arXiv 是 0 条——生物题查 arXiv 是浪费。
 3. **Crossref 窗口检索**：`filter=from-online-pub-date:FROM,until-online-pub-date:TO,type:journal-article`，
    首屏带 `cursor=*`，`rows=50`，随后跟随 `next-cursor`；`sort=created&order=desc`。
@@ -999,7 +999,7 @@ protocols-family:
 | Europe PMC / PubMed | 能（`TITLE:` / `ABSTRACT:` 字段查询） | 按关键词查 |
 | OpenAlex | 能（`title.search`，禁用 `search=`） | 按标题 + 出版日期窗（摘要须还原 `abstract_inverted_index`） |
 | arXiv | 能（`ti:"…"`） | 按标题 + `submittedDate` 日期窗（空格 `TO`） |
-| ChemRxiv | 能（Crossref 前缀 `query.title`） | 按标题 + `created` 日期窗（仅元数据，无摘要） |
+| ChemRxiv | **只排序不过滤**（Crossref 前缀 `query.title`） | 按标题 + `created` 日期窗（仅元数据，无摘要）；**必须本地二次过滤** |
 
 > **⚠️ 更正：Crossref 的 `query.title` / `query.bibliographic` **只排序、不过滤**（原版把它
 > 和"会过滤"的 `title.search`、`[tiab]` 并列，是错的）**
