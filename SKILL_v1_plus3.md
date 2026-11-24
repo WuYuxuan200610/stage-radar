@@ -578,7 +578,7 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
 ### 9.1 来源：两类，再按「快慢」分层
 
 来源整体分**两类**：**期刊刊源**（§9.2 的 53 本期刊 + 4 本协议，按 ISSN 查 Crossref）＋
-**平台/聚合库**（8 个：Europe PMC、PubMed、OpenAlex、bioRxiv、medRxiv、arXiv、ChemRxiv、Crossref）。**ScienceDirect 不在此列**——已判定不接入（见 §14.10 第 7 条）。
+**平台/聚合库**（8 个：Europe PMC、PubMed、OpenAlex、bioRxiv、medRxiv、arXiv、ChemRxiv、Crossref）。**ScienceDirect 不在此列**——已判定不接入（见 §9.5 第 7 条）。
 下表再按「快慢」分层——层越靠前，抢发信号出现得越早：
 
 | 层 | 源 | 接入方式 | 作用 |
@@ -840,7 +840,7 @@ protocols-family:
 }
 ```
 
-- 推送形态字段（`rank` 编号 + `title` + `tl_dr`(文章学术概述) + `reason`(为什么推你) + `source` + `date` + `url`）即投递层卡片内容，**推摘要+理由+链接，不推全文**（见 README §推送形态）。**不放逐篇打分按钮**（IM 单向收不到），改为推送末尾一句固定引导。
+- 推送形态字段（`rank` 编号 + `title` + `tl_dr`(文章学术概述) + `reason`(为什么推你) + `source` + **三个日期（投稿/在线/见刊）** + `url`）即投递层卡片内容，**推摘要+理由+链接，不推全文**（见 README §推送形态）。**不放逐篇打分按钮**（IM 单向收不到），改为推送末尾一句固定引导。
 - **三条铁律**：①每篇候选按 `rank` 顺序编号（#1、#2…）；②`tl_dr` 只概述文章本身（学术化，讲它自己做了什么），`reason` 才讲“与你课题的关系”，两者不得重叠；③推送末尾统一附一句固定引导：“给文章打分（附编号）”那句（见 §8）。飞书只发已定稿的文章推送；方向确认等对话性步骤只在产品 AI 里做（见 §0 铁律 4）。
 
 ## 11. 依赖
@@ -1016,21 +1016,6 @@ protocols-family:
 | OpenAlex | 能（`title.search`，禁用 `search=`） | 按标题 + 出版日期窗（摘要须还原 `abstract_inverted_index`） |
 | arXiv | 能（`ti:"…"`） | 按标题 + `submittedDate` 日期窗（空格 `TO`） |
 | ChemRxiv | **只排序不过滤**（Crossref 前缀 `query.title`） | 按标题 + `created` 日期窗（仅元数据，无摘要）；**必须本地二次过滤** |
-
-> **⚠️ 更正：Crossref 的 `query.title` / `query.bibliographic` **只排序、不过滤**（原版把它
-> 和"会过滤"的 `title.search`、`[tiab]` 并列，是错的）**
->
-> 实测：不做本地过滤时，Crossref 的 `query.title` 会把**该库当天的全部结果**都返回，
-> 只是把"看起来相关"的排在前面。后果是**每个课题每天都被灌进大量无关文献**，
-> 而且看起来像"真的查到了"。
->
-> **写死**：所有走 Crossref `query.*` 的路由（**按 ISSN 的期刊路由、ChemRxiv 前缀路由**）
-> **一律必须在本地再做一次过滤**，判据与标题/摘要检索相同：
-> - 切词（空白 / 连字符 / 斜杠），去停用词，只留长度 ≥2 的词元；
-> - **命中 ≥1 个词元**即留（召回优先，精度交给后续审核）；
-> - **镜像词必须排除**：`decapping`/`uncapping` ≠ `capping`，`demethylation` ≠ `methylation`；
-> - **短词（≤4 字母）必须整词匹配**：`cap` 不得命中 `capacity`/`capital`；
-> - **必须把「过滤前 / 过滤后条数」写进报告**，否则"过滤太严"会被误当成"这个源本来就没东西"。
 | Crossref 按刊 | **只排序不过滤**（按 ISSN 定位到刊） | 逐刊按时窗翻页 |
 | bioRxiv / medRxiv | **不能** | **整窗扫描 + 本地过滤** |
 
@@ -1053,6 +1038,21 @@ protocols-family:
 | 投稿日（`received`） | 首次投出 | **不是**新公开，不能当推送依据（注意：**Crossref 的 `created` 不属此列**——它是记录进库时间，可当新公开依据，见 §14.1） |
 | 在线公开日（`published` electronic） | 首次对公众可见 | 判断"新不新"的主依据 |
 | 见刊日（issue / collection） | 正式卷期 | 展示用 |
+
+> **⚠️ 更正：Crossref 的 `query.title` / `query.bibliographic` **只排序、不过滤**（原版把它
+> 和"会过滤"的 `title.search`、`[tiab]` 并列，是错的）**
+>
+> 实测：不做本地过滤时，Crossref 的 `query.title` 会把**该库当天的全部结果**都返回，
+> 只是把"看起来相关"的排在前面。后果是**每个课题每天都被灌进大量无关文献**，
+> 而且看起来像"真的查到了"。
+>
+> **写死**：所有走 Crossref `query.*` 的路由（**按 ISSN 的期刊路由、ChemRxiv 前缀路由**）
+> **一律必须在本地再做一次过滤**，判据与标题/摘要检索相同：
+> - 切词（空白 / 连字符 / 斜杠），去停用词，只留长度 ≥2 的词元；
+> - **命中 ≥1 个词元**即留（召回优先，精度交给后续审核）；
+> - **镜像词必须排除**：`decapping`/`uncapping` ≠ `capping`，`demethylation` ≠ `methylation`；
+> - **短词（≤4 字母）必须整词匹配**：`cap` 不得命中 `capacity`/`capital`；
+> - **必须把「过滤前 / 过滤后条数」写进报告**，否则"过滤太严"会被误当成"这个源本来就没东西"。
 
 **取不到就写「未取得」**，不得用索引日期、抓取日期或接收年份顶替。
 
