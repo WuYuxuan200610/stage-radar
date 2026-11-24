@@ -192,7 +192,6 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
   "dropped_history": [ { "paper_id": "doi:…", "title": "…", "aliases": ["doi:…"],
                          "why": "与本课题无具体关系（须写具体）", "dropped_at": "…" } ],
   "dropped_total": 1,
-  "first_pending_at": null,
   "uncoverable_days": [],
   "consecutive_fetch_failures": 0,
   "history_screen": {"completed_at": "2026-11-20T20:00:00+08:00",
@@ -201,6 +200,13 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
   "last_success": "…", "last_count": 0, "last_coverage": []
 }
 ```
+
+> **`first_pending_at` 不在 state 顶层（2026-11-24 更正，第十三轮点名为 C-2）**：
+> 上一版本的状态示例把它列在顶层，而 §13.4 写死"**放在 `pending` 内层，不是 state 顶层**"，
+> 且明确"停滞计时只认 `first_pending_at`"。
+> **照顶层示例实现 → 计时读到 `null` → 12h/48h 告警永不触发**，正是 §5 要防的静默冻结。
+> **现在本示例只有 `pending: null`；有积压时 `pending` 是 §13.4 那个规范形状，
+> `first_pending_at` 在它里面。**
 
 > **四个字段整体作废；`backlog_windows` 保留但只服务每日 24h 窗口
 > （2026-11-24；第十二轮指出"一刀切禁写"与 §9.3 3b 正面互斥）**：
