@@ -970,6 +970,13 @@ protocols-family:
 
 - 端点：`GET https://api.crossref.org/journals/{ISSN}/works`
 - 新公开判定用**秒级**创建时间窗：`filter=from-created-date:2026-11-17,until-created-date:2026-11-18`
+
+  > **`created` 有两个同名但完全不同的东西，必须分开（否则会自相矛盾）**
+  > - **Crossref 的 `created`** = 该记录在 Crossref 库里**首次出现**的时间，**接近"上线"**，
+  >   **可以**当新公开依据（本节用的就是它）。
+  > - **期刊自己声明的 `received`（投稿日）** = 首次投出，
+  >   **不是**新公开，**绝不能**当推送依据（见 §13.2 的日期口径）。
+  > 二者名字里都带 created/received，但**指的不是一回事**：实现必须**分别取字段**，不得混用一个。
 - **坑**：日期**不带 `Z`、不带时分秒**。带 `Z` 会被判为非法而报错或静默返回空。
 - 分页：`rows`（页大小）+ `offset`；响应里 `message.total-results` 是总数，据此判断是否翻完。
 - 单刊取数时**不要依赖 RSS**——实测只覆盖部分刊、且字段不全。
@@ -1027,7 +1034,7 @@ protocols-family:
 
 | 字段 | 含义 | 用法 |
 |:---|:---|:---|
-| 投稿日（received / `created`） | 首次投出 | **不是**新公开，不能当推送依据 |
+| 投稿日（`received`） | 首次投出 | **不是**新公开，不能当推送依据（注意：**Crossref 的 `created` 不属此列**——它是记录进库时间，可当新公开依据，见 §14.1） |
 | 在线公开日（`published` electronic） | 首次对公众可见 | 判断"新不新"的主依据 |
 | 见刊日（issue / collection） | 正式卷期 | 展示用 |
 
