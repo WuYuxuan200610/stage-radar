@@ -187,6 +187,7 @@
   "dropped_total": 1,
   "first_pending_at": null,
   "coverage_target_days": 90,
+  "current_window_days": 7,
   "backfill_windows": [ ["2026-09-22", "2026-09-29"], ["2026-09-15", "2026-09-22"] ],
   "backlog_windows": [ ["2026-10-27", "2026-11-03"] ],
   "backfill_done_days": 21,
@@ -204,6 +205,17 @@
 > **`backfill_windows` 与 `backlog_windows` 是两条不同的队列，不得混用**：
 > 前者是"还没轮到扫的历史段"，后者是"扫过但没扫完的段（§9.3 规则 3b 的待补清单）"。
 > 段从 `backfill_windows` 出来、没扫完就进 `backlog_windows`，**不得直接删**。
+>
+> **覆盖账本必须加得起来（第七轮复测实测"7+76≠90"）**：
+> 报告里的三个数必须满足
+> **`coverage_target_days` = 已覆盖 + 待补 + 洞**，其中
+> - 已覆盖 = `backfill_done_days` + **`current_window_days`**（当前窗口那几天也必须计入，
+>   原写法漏了它，于是"目标 90 / 已覆盖 7 / 待补 9 段"→ 7+63=70≠90 算术都不通）；
+> - 待补 = `backfill_windows` 与 `backlog_windows` 里的天数之和；
+> - 洞 = `uncoverable_days` 的长度。
+>
+> **三个数加不起来就是实现有 bug**，不得照原样报给用户——那会让人以为"进度慢"，
+> 而实际上是"账本身错了"。
 
 | 字段 | 说明 |
 |:---|:---|
