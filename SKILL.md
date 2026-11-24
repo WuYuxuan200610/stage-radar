@@ -182,6 +182,10 @@ description: 面向“课题选择全过程”的多课题并行文献雷达。�
                          "why": "与本课题无具体关系（须写具体）", "dropped_at": "…" } ],
   "dropped_total": 1,
   "first_pending_at": null,
+  "coverage_target_days": 90,
+  "backfill_windows": [ ["2026-09-22", "2026-09-29"], ["2026-09-15", "2026-09-22"] ],
+  "backfill_done_days": 21,
+  "uncoverable_days": [],
   "consecutive_fetch_failures": 0,
   "last_success": "…", "last_count": 0, "last_coverage": []
 }
