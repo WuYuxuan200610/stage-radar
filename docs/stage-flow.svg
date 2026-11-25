@@ -1,83 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="780" viewBox="0 0 1120 780" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
-<rect width="1120" height="780" fill="#FFF9F2"/>
-<text x="60" y="52" font-size="30" fill="#2B1A0E">你卡在哪一步？—— 一句话就能定阶段</text>
-
-<!-- 问 1 -->
-<rect x="60" y="90" width="330" height="150" rx="16" fill="#FFFFFF" stroke="#E9D8C8" stroke-width="3"/>
-<text x="225.0" y="132.0" font-size="22" fill="#2B1A0E" text-anchor="middle" font-weight="bold">
-<tspan x="225.0" dy="0.0">你现在卡在哪一步？</tspan>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="800" viewBox="0 0 1120 800" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+<rect width="1120" height="800" fill="#FFF9F2"/>
+<text x="60" y="52" font-size="30" fill="#2B1A0E">你处在哪个阶段？问两句话就知道</text>
+<rect x="60" y="90" width="340" height="170" rx="16" fill="#FFFFFF" stroke="#E9D8C8" stroke-width="3"/>
+<text x="230.0" y="154.0" font-size="20" fill="#2B1A0E" text-anchor="middle">
+<tspan x="230.0" dy="0.0">你现在卡在哪一步？</tspan>
+<tspan x="230.0" dy="28.0">A  不知道下一步该做什么</tspan>
+<tspan x="230.0" dy="28.0">B  有方向，不知选哪个切口</tspan>
 </text>
-<text x="225.0" y="172.0" font-size="19" fill="#6B5545" text-anchor="middle">
-<tspan x="225.0" dy="0.0">A 不知道下一步该做什么</tspan>
+<rect x="60" y="430" width="340" height="120" rx="16" fill="#FFFFFF" stroke="#E9D8C8" stroke-width="3"/>
+<text x="230.0" y="483.0" font-size="20" fill="#2B1A0E" text-anchor="middle">
+<tspan x="230.0" dy="0.0">C  已经定了具体题目</tspan>
+<tspan x="230.0" dy="28.0">实验开题了吗？</tspan>
 </text>
-<text x="225.0" y="207.0" font-size="19" fill="#6B5545" text-anchor="middle">
-<tspan x="225.0" dy="0.0">B 有方向，不知选哪个切口</tspan>
+<rect x="580" y="90" width="440" height="110" rx="16" fill="#F5B482" stroke="#C97B3F" stroke-width="3"/>
+<text x="800.0" y="137.2" font-size="25" fill="#2B1A0E" text-anchor="middle">
+<tspan x="800.0" dy="0.0">启发思路</tspan>
+<tspan x="800.0" dy="33.0">往外扩：别人的什么能搬过来</tspan>
 </text>
-
-<!-- A 启发思路 -->
-<rect x="560" y="90" width="500" height="110" rx="16" fill="#F5B482" stroke="#C97B3F" stroke-width="3"/>
-<text x="810.0" y="132.2" font-size="25" fill="#2B1A0E" text-anchor="middle">
-<tspan x="810.0" dy="0.0">启发思路</tspan>
-<tspan x="810.0" dy="33.0">往外扩：别人的什么能搬过来</tspan>
+<rect x="580" y="250" width="440" height="110" rx="16" fill="#F5B482" stroke="#C97B3F" stroke-width="3"/>
+<text x="800.0" y="297.2" font-size="25" fill="#2B1A0E" text-anchor="middle">
+<tspan x="800.0" dy="0.0">选题中</tspan>
+<tspan x="800.0" dy="33.0">往里收：哪块值得挖、别人还没占</tspan>
 </text>
-<line x1="390.0" y1="172.0" x2="560.0" y2="145.0" stroke="#C97B3F" stroke-width="3.5"/>
-<rect x="452.0" y="141.6" width="44.0" height="31.5" fill="#FFF9F2"/>
-<text x="474.0" y="165.1" font-size="21" fill="#C97B3F" text-anchor="middle">A</text>
-<polygon points="560.0,145.0 544.0,139.0 544.0,151.0" fill="#C97B3F"/>
-
-<!-- B 选题中 -->
-<rect x="560" y="230" width="500" height="110" rx="16" fill="#F5B482" stroke="#C97B3F" stroke-width="3"/>
-<text x="810.0" y="272.2" font-size="25" fill="#2B1A0E" text-anchor="middle">
-<tspan x="810.0" dy="0.0">选题中</tspan>
-<tspan x="810.0" dy="33.0">往里收：哪块值得挖、别人还没占</tspan>
+<rect x="580" y="430" width="440" height="110" rx="16" fill="#F5B482" stroke="#C97B3F" stroke-width="3"/>
+<text x="800.0" y="477.2" font-size="25" fill="#2B1A0E" text-anchor="middle">
+<tspan x="800.0" dy="0.0">定题设计实验</tspan>
+<tspan x="800.0" dy="33.0">前人工作 · 类似思路 · 方法可复用</tspan>
 </text>
-<line x1="390.0" y1="207.0" x2="560.0" y2="285.0" stroke="#C97B3F" stroke-width="3.5"/>
-<rect x="452.0" y="229.6" width="44.0" height="31.5" fill="#FFF9F2"/>
-<text x="474.0" y="253.1" font-size="21" fill="#C97B3F" text-anchor="middle">B</text>
-<polygon points="560.0,285.0 544.0,279.0 544.0,291.0" fill="#C97B3F"/>
-
-<!-- C → 问 2 -->
-<line x1="225.0" y1="240.0" x2="225.0" y2="380.0" stroke="#C97B3F" stroke-width="3.5"/>
-<rect x="196.0" y="288.0" width="58.0" height="31.5" fill="#FFF9F2"/>
-<text x="225.0" y="311.5" font-size="21" fill="#C97B3F" text-anchor="middle">C</text>
-<polygon points="225.0,380.0 231.0,364.0 219.0,364.0" fill="#C97B3F"/>
-
-<!-- 问 2 -->
-<rect x="60" y="380" width="330" height="160" rx="16" fill="#FFFFFF" stroke="#E9D8C8" stroke-width="3"/>
-<text x="225.0" y="420.0" font-size="22" fill="#2B1A0E" text-anchor="middle" font-weight="bold">
-<tspan x="225.0" dy="0.0">C 已经定了具体题目</tspan>
-<tspan x="225.0" dy="33.0">实验开题了吗？</tspan>
+<rect x="580" y="590" width="440" height="110" rx="16" fill="#F5B482" stroke="#C97B3F" stroke-width="3"/>
+<text x="800.0" y="637.2" font-size="25" fill="#2B1A0E" text-anchor="middle">
+<tspan x="800.0" dy="0.0">已开题未结题</tspan>
+<tspan x="800.0" dy="33.0">防抢发：谁可能已经抢在你前面</tspan>
 </text>
-<text x="225.0" y="492.0" font-size="19" fill="#6B5545" text-anchor="middle">
-<tspan x="225.0" dy="0.0">还在设计 · 已经在做</tspan>
-</text>
-
-<!-- 定题设计实验 -->
-<rect x="560" y="380" width="500" height="110" rx="16" fill="#F5B482" stroke="#C97B3F" stroke-width="3"/>
-<text x="810.0" y="422.2" font-size="25" fill="#2B1A0E" text-anchor="middle">
-<tspan x="810.0" dy="0.0">定题设计实验</tspan>
-<tspan x="810.0" dy="33.0">前人工作 · 类似思路 · 方法可复用</tspan>
-</text>
-<line x1="390.0" y1="432.0" x2="560.0" y2="435.0" stroke="#C97B3F" stroke-width="3.5"/>
-<rect x="409.2" y="416.6" width="101.7" height="31.5" fill="#FFF9F2"/>
-<text x="460.0" y="440.1" font-size="21" fill="#C97B3F" text-anchor="middle">还在设计</text>
-<polygon points="560.0,435.0 544.0,429.0 544.0,441.0" fill="#C97B3F"/>
-
-<!-- 已开题未结题 -->
-<rect x="560" y="520" width="500" height="110" rx="16" fill="#E26D4E" stroke="#B2452C" stroke-width="3"/>
-<text x="810.0" y="562.2" font-size="25" fill="#FFF9F2" text-anchor="middle">
-<tspan x="810.0" dy="0.0">已开题未结题（防抢发）</tspan>
-<tspan x="810.0" dy="33.0">谁可能已经抢在你前面发文</tspan>
-</text>
-<line x1="390.0" y1="492.0" x2="560.0" y2="575.0" stroke="#C97B3F" stroke-width="3.5"/>
-<rect x="409.2" y="518.6" width="101.7" height="31.5" fill="#FFF9F2"/>
-<text x="460.0" y="542.1" font-size="21" fill="#C97B3F" text-anchor="middle">已经在做</text>
-<polygon points="560.0,575.0 544.0,569.0 544.0,581.0" fill="#C97B3F"/>
-
-<!-- 底部说明 -->
-<rect x="60" y="668" width="1000" height="80" rx="14" fill="#FFF1E6" stroke="#E9D8C8" stroke-width="2"/>
-<text x="560.0" y="702.0" font-size="19" fill="#6B5545" text-anchor="middle">
-<tspan x="560.0" dy="0.0">「有没有前期积累」要单独问一句，但它不决定阶段：</tspan>
-<tspan x="560.0" dy="28.0">任何领域的积累都算（交叉最有用）；有积累也可能不知道下一步做什么，零积累也可能已经定了方向。</tspan>
-</text>
+<line x1="400.0" y1="190.0" x2="580.0" y2="145.0" stroke="#C97B3F" stroke-width="3.5"/>
+<rect x="471.3" y="151.1" width="37.4" height="31.5" fill="#FFF9F2"/>
+<text x="490.0" y="174.6" font-size="21" fill="#C97B3F" text-anchor="middle">A</text>
+<polygon points="580.0,145.0 564.0,139.0 564.0,151.0" fill="#C97B3F"/>
+<line x1="400.0" y1="230.0" x2="580.0" y2="305.0" stroke="#C97B3F" stroke-width="3.5"/>
+<rect x="471.3" y="251.1" width="37.4" height="31.5" fill="#FFF9F2"/>
+<text x="490.0" y="274.6" font-size="21" fill="#C97B3F" text-anchor="middle">B</text>
+<polygon points="580.0,305.0 564.0,299.0 564.0,311.0" fill="#C97B3F"/>
+<line x1="230.0" y1="260.0" x2="230.0" y2="430.0" stroke="#C97B3F" stroke-width="3.5"/>
+<rect x="211.3" y="328.6" width="37.4" height="31.5" fill="#FFF9F2"/>
+<text x="230.0" y="352.1" font-size="21" fill="#C97B3F" text-anchor="middle">C</text>
+<polygon points="230.0,430.0 236.0,414.0 224.0,414.0" fill="#C97B3F"/>
+<line x1="400.0" y1="490.0" x2="580.0" y2="485.0" stroke="#C97B3F" stroke-width="3.5"/>
+<rect x="439.2" y="471.1" width="101.7" height="31.5" fill="#FFF9F2"/>
+<text x="490.0" y="494.6" font-size="21" fill="#C97B3F" text-anchor="middle">还在设计</text>
+<polygon points="580.0,485.0 564.0,479.0 564.0,491.0" fill="#C97B3F"/>
+<line x1="230.0" y1="550.0" x2="230.0" y2="645.0" stroke="#C97B3F" stroke-width="3.5"/>
+<line x1="230.0" y1="645.0" x2="580.0" y2="645.0" stroke="#C97B3F" stroke-width="3.5"/>
+<rect x="354.2" y="628.6" width="101.7" height="31.5" fill="#FFF9F2"/>
+<text x="405.0" y="652.1" font-size="21" fill="#C97B3F" text-anchor="middle">已经在做</text>
+<polygon points="580.0,645.0 564.0,639.0 564.0,651.0" fill="#C97B3F"/>
+<text x="560" y="755" font-size="19" fill="#8A6B4F" text-anchor="middle">「有没有前期积累」单独问一句，但它不决定阶段：任何领域的积累都算（交叉最有用）</text>
 </svg>
