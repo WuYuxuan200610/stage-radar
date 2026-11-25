@@ -114,7 +114,7 @@ AI 会问**你卡在哪一步**（而不是"你手里有什么"），理解后�
 **"有没有前期积累"会单独问一句，但它不决定阶段**：有积累也可能不知道下一步做什么；
 零积累也可能已经定了方向只想挑切口。
 
-![你处在哪个阶段？](./docs/stage-flow.png)
+![你卡在哪一步？—— 一句话就能定阶段](./docs/stage-flow.png)
 
 **推送怎么设置由用户选择**：每个课题单独设置推送时间——每天？每周？还是你问的时候再推送？都可以
 
@@ -331,7 +331,7 @@ JACS `0002-7863` · ACS Catalysis `2155-5435` · ACS Nano `1936-0851` · Account
 | [sources_catalog.json](./sources_catalog.json) | **刊源机读目录**：55 本期刊 + 4 本协议（ISSN / 接入路由 / 核验状态 / 核验日期） |
 | [data/benchmark_journal_corpus.json](./data/benchmark_journal_corpus.json) | 51 本刊的语料快照（6.1 MB），§9.3 / §9.5 的输入 |
 | [research/](./research/) | **§9 的实验代码、数据与图**，含运行说明、复现步骤与已修正的测量错误清单 |
-| [docs/](./docs/) | 阶段流程图：[显示用 PNG](./docs/stage-flow.png) + [可编辑 SVG 源](./docs/stage-flow.svg) |
+| [docs/](./docs/) | 阶段判断流程图（「你卡在哪一步？」）：[显示用 PNG](./docs/stage-flow.png) + [可编辑 SVG 源](./docs/stage-flow.svg) |
 | [tools/draw_stage_flow.py](./tools/draw_stage_flow.py) | 重画阶段流程图（改顶部坐标区即可，SVG 与 PNG 同时更新） |
 
 
