@@ -1091,11 +1091,20 @@ protocols-family:
    3. **词形要还原**：`capping` → `cap`、`capped` → `cap`（去 `ing/ed/ation/ion/s`
       并还原重叠辅音）。**不还原词形，"措辞不同就丢"这个病治不好**——
       上面的正主标题写的就是 `5' cap`；
-   4. **镜像词必须排除**（写死一份默认表）：
-      `decapping`/`uncapping` 不算 `capping`，`demethylation` 不算 `methylation`，
-      `depolymerization` 不算 `polymerization`，`deactivation`/`inactivation` 不算 `activation`。
-      **理由**：去帽是加帽的镜像领域、**每天大量出现**；实测 bioRxiv 某窗口
-      3 条 `capping` 子串命中**全是去帽**、真阳性 0 条；
+   4. **镜像词不再排除（2026-11-27 用户改定，写死）**：
+      曾经这里硬挡 `decapping`/`uncapping` 不算 `capping`，依据是"bioRxiv 某窗口 3 条
+      `capping` 命中全是去帽、真阳性 0 条"。
+      **那条依据只证明「词元层分不清」，不证明「去帽与加帽无关」。** 用户原话：
+      > **「万一真有关系呢？LLM 看内容判断一下呗。」**
+      **去帽和加帽是同一个战场**——做去帽的人就是你的对手。你在抢"加帽"，
+      他发表一篇"去帽机制"，对你的课题是**必须知道的事**。
+      硬挡掉等于把**最该看的对手**挡在门外，换来的只是"推送干净一点"。
+      **真正的过滤在下一层**：LLM 复核 + 「**说不出具体推荐理由就按篇删除**」（见第 3 层）。
+      同理放宽 `demethylation`↔`methylation`、`depolymerization`↔`polymerization`、
+      `deacetylation`↔`acetylation`、`dephosphorylation`↔`phosphorylation`。
+      **保留的相邻规则**：多词查询只命中 1 个词元时仍要挡（第 6 条）——
+      理由不是镜像词，而是"一个泛词不足以代表一个多词主题"（实测 `capping enzyme`
+      会退化成搜 `enzyme`，bioRxiv 单日 24 条候选 24/24 只靠 `enzyme` 命中、34 张卡 0 相关）；
    5. **短词（≤4 字母）必须整词匹配**：`cap` 不得命中 `capacity`/`capital`；
    6. **保留条件（第 1 层是"召回"，宁多勿少）**：
       - 命中 **≥1 个词元** → 留；
