@@ -1102,9 +1102,15 @@ protocols-family:
         泛词（`enzyme` `gene` `protein` `cell` `study` `effect` `role` `analysis`
         `method` `system` `mechanism` `structure` `function` `activity` `expression`
         `regulation` `pathway` `model` `design` `application` `novel` `human` `mouse` …）
-        ∪ 短歧义词（`pe` `pet` `spr` `gel` `cap` `array` `assay`）。
+        ∪ 短歧义词（`pe` `pet` `spr` `gel` `cap` `array` `assay`）
+        ∪ **通用形容词**（`high` `low` `efficient` `efficiency` `enhanced` `improved`
+        `rapid` `simple` `direct` `facile` `versatile` `robust` `scalable` `advanced`
+        `sensitive` `selective` `stable` `optimal` `engineered` …）。
         依据：实测查询 `capping enzyme` 若允许只靠 `enzyme` 命中，
         bioRxiv 单日 24 条候选 **24/24 全中**，最终 34 张卡 0 相关。
+        **通用形容词同理且更危险**：工程卖点"high efficiency capping"生成的查询里，
+        `high` 单独命中 bioRxiv 当日 413 条中的脑成像、服装热调节、城市排名等无关论文——
+        一批 20 条候选里 19 条是噪音。弱词表必须覆盖形容词，不能只覆盖名词。
    6. **词元总数为 0**（查询全由停用词或长度 <2 的词组成）→ **挡**，返回 0。
    7. **必须把「过滤前 / 过滤后条数」写进报告与日志**：某源若 `raw>0` 而过滤后 =0，
       报告必须显式列出，**不得**让它看起来像"这个源本来就没东西"。
